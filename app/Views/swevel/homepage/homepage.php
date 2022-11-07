@@ -1,57 +1,71 @@
-<?= $this->extend("layout/template"); 
+<?= $this->extend("layout/template");
 $this->section('content'); ?>
 <?= $this->include('swevel/navbar'); ?>
 <?php
-function circle(){makeCircle();}
-function circle1(){makeCircle();}
+function circle()
+{
+    makeCircle();
+}
+function circle1()
+{
+    makeCircle();
+}
 ?>
 <style>
-    #about-us .page-1{        
-        padding-bottom:  20px;
-        min-height : calc(100vh - 70px);
+    #about-us .page-1 {
+        padding-bottom: 20px;
+        min-height: calc(100vh - 70px);
         background: rgb(216, 185, 255);
-        background: linear-gradient(340deg, rgba(159, 136, 195, 1) -20%, rgba(255, 255, 255, 1) 62%);        
-    }
-    #about-us .page-2{
-        margin-top:  -5px;      
-        padding-bottom: 10px;  
-        background: rgb(216, 185, 255);
-        background: linear-gradient(590deg, rgba(159, 136, 195, 1) -20%, rgba(255, 255, 255, 1) 70%);        
-    } 
-    .card-profile{
-        border-radius: 15px;
-        min-height: 120px;
-        padding: 10px 20px;        
-        font-size: 18px;        
-    }    
-    .semi-circle{
-        display:flex;
-    }
-    .semi-circle .img{
-        clip-path: circle(49.9% at 0 50%);        
-        width: 350px;
-        position: relative;
-        z-index:5
-    }    
-    .semi-circle .bg{
-        position:absolute;
-        width:380px;
-        margin-top: -50px;
-        margin-left:-70px;
-    }   
-    .btn-more-milestone{
-        padding:15px;
-        border-radius:25px;
+        background: linear-gradient(340deg, rgba(159, 136, 195, 1) -20%, rgba(255, 255, 255, 1) 62%);
     }
 
-    @media only screen and (max-width: 992px){
-        .semi-circle{
-            display:none;
+    #about-us .page-2 {
+        margin-top: -5px;
+        padding-bottom: 10px;
+        background: rgb(216, 185, 255);
+        background: linear-gradient(590deg, rgba(159, 136, 195, 1) -20%, rgba(255, 255, 255, 1) 70%);
+    }
+
+    .card-profile {
+        border-radius: 15px;
+        min-height: 120px;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .semi-circle {
+        display: flex;
+    }
+
+    .semi-circle .img {
+        clip-path: circle(49.9% at 0 50%);
+        width: 350px;
+        position: relative;
+        z-index: 5
+    }
+
+    .semi-circle .bg {
+        position: absolute;
+        width: 380px;
+        margin-top: -50px;
+        margin-left: -70px;
+    }
+
+    .btn-more-milestone {
+        padding: 15px;
+        border-radius: 25px;
+    }
+
+    @media only screen and (max-width: 992px) {
+        .semi-circle {
+            display: none;
         }
-        #about-us .page-1{
-            min-height : calc(50vh - 70px);
+
+        #about-us .page-1 {
+            min-height: calc(50vh - 70px);
         }
-        .image-customer-review{
+
+        .image-customer-review {
             display: none;
         }
     }
@@ -65,27 +79,27 @@ function circle1(){makeCircle();}
                     <h1 class="fw-bold">One of <span class="ch_color">Information Technology</span> Service Industry</h1>
                     <p class="cover-text my-5">PT. Swevel Universal Media is one of Information Technology Service Industry that gives service excellence quality. Point of product of PT. Swevel Universal Media prioritize System End User and gives creative solution IT. PT. Swevel
                         Universal Media focus in WEB Developer and Mobile Smart Phone Application.</p>
-                </div>                
+                </div>
             </div>
             <div class="col-lg-4">
                 <div class="image-homepage">
                     <img src="/img/Gambar.png" class="mt-5" alt="...">
-                </div>                
+                </div>
                 <div class="circle-3"><?= circle(); ?></div>
             </div>
         </div>
     </div>
     <div id="aboutUs" class="page-2 py-5">
         <div class="container mt-5 pt-lg-5">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="semi-circle justify-content-center">
-                    <img src="/img/image 9.png" alt="" class="img">                    
-                    <img src="/img/Group 2317.png" alt="" class="bg">                                        
-                </div>                
-            </div>
-            <div class="col-lg-6">                
-                       <div class="card card-profile mb-4 border-0 shadow cursor-pointer">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="semi-circle justify-content-center">
+                        <img src="/img/image 9.png" alt="" class="img">
+                        <img src="/img/Group 2317.png" alt="" class="bg">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card card-profile mb-4 border-0 shadow cursor-pointer">
                         <div class="card-body">
                             <div class="row btn-card-profile">
                                 <div class="col-lg-9">Lorem ipsum dolor, sit amet.</div>
@@ -97,12 +111,12 @@ function circle1(){makeCircle();}
                                     Lorem ipsum dolor sit amet consectetur adipisicing, elit. Inventore delectus cumque repudiandae, possimus, nobis iste sed doloremque eum cupiditate placeat!
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
-    </div>    
 </div>
 
 <section id="service" class="pb-5">
@@ -138,7 +152,7 @@ function circle1(){makeCircle();}
                 </a>
             </div>
         </div>
-    </div>    
+    </div>
     <!-- <div class="circle-1 d-sm-none d-md-none d-lg-block"><?= circle1(); ?></div>
     <div class="circle-2 d-sm-none d-md-none d-lg-block"><?= circle1(); ?></div> -->
 </section>
@@ -149,9 +163,9 @@ function circle1(){makeCircle();}
     <div id="card-popular-course" class="row"></div>
     <input type="hidden" name="" id="limit-course" value="3">
 
-<div class="d-flex justify-content-center mt-3">
-    <a href="/course" class="btn btn-purple px-3">Lihat semua</a>
-</div>
+    <div class="d-flex justify-content-center mt-3">
+        <a href="/course" class="btn btn-purple px-3">Lihat semua</a>
+    </div>
 
 </div>
 
@@ -167,16 +181,136 @@ function circle1(){makeCircle();}
             </div>
         </div>
         <div class="image-portofolio text-center">
+            <div class="row fadeInUp" data-wow-delay="0.5s">
+                <div class="portfolioFilter clearfix">
+                    <a href="#" data-filter="*" class="current">All Categories Project</a>
+                    <a href="#" data-filter="#perencanaan">Perencanaan</a>
+                    <a href="#" data-filter="#pengawasan">Pengawasan</a>
+                    <a href="#" data-filter="#konsultasi">Konsultasi Lainnya</a>
+                </div>
+            </div>
             <div class="mt-lg-3 mb-3">
-                <div class="">
-                    <?php for ($i=1; $i<=8; $i++) : ?>                        
-                        <img src="https://imgsrv2.voi.id/53SPlz77W6svUtBMlJXhxw1VIVgnye05zJ7rm2UKiTg/auto/1280/853/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy80NjA5MS8yMDIxMDQyMTE3MjUtbWFpbi5jcm9wcGVkXzE2MTkwMDA3NjIuanBlZw.jpg" class="mx-2 mb-4">                        
-                    <?php endfor; ?>
+                <div class="row g-4 portfolio-container wow fadeInUp" id="foto" data-wow-delay="0.5s">
+                    <div class="col-lg-4 col-md-6 portfolio-item" id="perencanaan">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
+                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-primary mb-0">Solar Panels</p>
+                            <hr class="text-primary w-25 my-2">
+                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item" id="pengawasan">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
+                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-primary mb-0">Wind Turbines</p>
+                            <hr class="text-primary w-25 my-2">
+                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item" id="konsultasi">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
+                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-primary mb-0">Hydropower Plants</p>
+                            <hr class="text-primary w-25 my-2">
+                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item" id="perencanaan">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
+                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-primary mb-0">Solar Panels</p>
+                            <hr class="text-primary w-25 my-2">
+                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item" id="perencanaan">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
+                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-primary mb-0">Wind Turbines</p>
+                            <hr class="text-primary w-25 my-2">
+                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item" id="pengawasan">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
+                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-primary mb-0">Hydropower Plants</p>
+                            <hr class="text-primary w-25 my-2">
+                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://isotope.metafizzy.co/v1/jquery.isotope.min.js"></script>
+<script>
+    $(window).load(function() {
+        var $container = $('#foto');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        $('.portfolioFilter a').click(function() {
+            $('.portfolioFilter .current').removeClass('current');
+            $(this).addClass('current');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    });
+</script>
 
 <link rel="stylesheet" href="/css/splide.min.css">
 <section id="client">
@@ -211,7 +345,7 @@ function circle1(){makeCircle();}
 <script src="/js/splide.min.js"></script>
 
 <script>
-    $(document).ready(function() {        
+    $(document).ready(function() {
         sliderClient();
     })
 
@@ -426,10 +560,10 @@ function circle1(){makeCircle();}
 
 <script>
     $(document).ready(function() {
-        $('body').css('overflow-x','hidden');
-        getCourse('https://lms.lazy2.codes/api/course','');
+        $('body').css('overflow-x', 'hidden');
+        getCourse('https://lms.lazy2.codes/api/course', '');
 
-    })    
+    })
 </script>
 <script src="/js/course.js"></script>
 
