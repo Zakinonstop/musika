@@ -158,13 +158,17 @@ function circle1()
 </section>
 
 
-<div class="container">
+<div class="container" id="course">
     <div class="text-center h1 mb-5 text-purple">Course</div>
     <div id="card-popular-course" class="row"></div>
     <input type="hidden" name="" id="limit-course" value="3">
 
     <div class="d-flex justify-content-center mt-3">
+<<<<<<< HEAD
         <a href="/course" class="btn btn-purple px-3">Lihat semua</a>
+=======
+        <a href="/course" class="btn btn-purple px-5">Lihat semua</a>
+>>>>>>> a608f24a73c78323a904a0cf8ba454ccf2700e53
     </div>
 
 </div>

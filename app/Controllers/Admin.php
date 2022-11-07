@@ -273,7 +273,10 @@ class Admin extends BaseController
     public function deletePortofolio()
     {
         $id = $this->request->getVar('id_portofolio');
-        unlink('img/portofolio/' . $this->request->getVar('old_file'));
+        $file_lama = 'img/portofolio/' . $this->request->getVar('old_file');
+        if(file_exists($file_lama)){
+            unlink($file_lama);
+        }
         $delete = $this->PortofolioModel->delete($id);
         if ($delete) {
             session()->setFlashdata('message', 'data portofolio berhasil di hapus');
