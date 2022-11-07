@@ -36,6 +36,15 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+// percobaan
+$routes->get('coba',function(){
+    $data = [
+        'title' => 'Percobaan',
+    ];
+    return view('swevel/course/coba-template-course',$data);
+});
+
+
 // login 
 $routes->get('/', 'Home::index');
 $routes->get('/login', 'Auth::auth');

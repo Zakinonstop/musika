@@ -30,38 +30,28 @@
 
         <section id="login">
             <div class="row justify-content-center h-100">
-                <div class="col-sm-12 col-md-5 my-auto px-4">
-                    <div class="card p-3">
+                <div class="col-sm-12 col-md-10 col-lg-5 my-auto px-4 mt-md-5">
+                    <div class="card p-3 shadow">
                         <div class="card-body">
-                            <div class="text-center fw-bold fs-5 my-4">
+                            <div class="text-center h4 my-4">
                                 User Login
                             </div>
                             <div class="message-register success my-3"></div>
                             <form action="#" method="POST" autocomplete="off" id="form-login">
                                 <?= csrf_field(); ?>
                                 <div class="mb-3">
-                                    <input id="email" type="text" class="form-control" name="email" placeholder="email" autofocus>
+                                    <input id="email" type="text" class="form-control" name="email" placeholder="Email" autofocus>
                                     <div class="invalid-feedback email"></div>
                                 </div>
                                 <div class="mb-3">
                                     <input id="password" type="password" class="form-control" name="password" placeholder="Password">
-                                    <div class="invalid-feedback password"></div>
-                                    <div class="small text-end"><input type="checkbox" name="" id="show-password-login"><label for="show-password-login" class="text-muted ms-2 mt-2 cursor-pointer">Lihat password</label></div>
+                                    <div class="invalid-feedback password"></div>                                    
                                 </div>
                                 <div class="mb-3">
                                     <button id="btnLogin" type="button" class="btn btn-login w-100" name="login">LOGIN</button>
                                 </div>
                                 <input type="hidden" name="payment" id="" value="<?= $payment; ?>">
-                            </form>
-                            <div class="text-center">
-                                <code class="text-dark">
-                                    <em>forget password? klik </em>
-                                    <a href="#">here</a><br>
-                                </code>
-                                <code class="text-dark">
-                                    <a id="toRegister" href="#register" class="w-100">Create Your Account</a>
-                                </code>
-                            </div>
+                            </form>                            
                         </div>
                     </div>
                 </div>

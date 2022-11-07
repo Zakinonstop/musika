@@ -6,24 +6,18 @@ function circle(){makeCircle();}
 function circle1(){makeCircle();}
 ?>
 <style>
-    #about-us .page-1{
-        border-top: 1px solid white;
-        min-height: calc(100vh - 100px);
+    #about-us .page-1{        
+        padding-bottom:  20px;
+        min-height : calc(100vh - 70px);
         background: rgb(216, 185, 255);
         background: linear-gradient(340deg, rgba(159, 136, 195, 1) -20%, rgba(255, 255, 255, 1) 62%);        
     }
     #about-us .page-2{
-        min-height: 100vh;        
+        margin-top:  -5px;      
+        padding-bottom: 10px;  
         background: rgb(216, 185, 255);
         background: linear-gradient(590deg, rgba(159, 136, 195, 1) -20%, rgba(255, 255, 255, 1) 70%);        
-    }
-    #about-us .btn-more{
-        padding: 15px 50px;        
-        border-radius : 40px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 17px;
-    }
+    } 
     .card-profile{
         border-radius: 15px;
         min-height: 120px;
@@ -54,19 +48,24 @@ function circle1(){makeCircle();}
         .semi-circle{
             display:none;
         }
+        #about-us .page-1{
+            min-height : calc(50vh - 70px);
+        }
+        .image-customer-review{
+            display: none;
+        }
     }
 </style>
 
 <div id="about-us">
-    <div class="page-1 ">
+    <div class="page-1 pt-5">
         <div class="container">
-            <div class="col-lg-8 col-md-12 col-12 mt-5 mb-5">
+            <div class="col-lg-8 col-md-12 col-12 mb-5">
                 <div class="text pt-5">
                     <h1 class="fw-bold">One of <span class="ch_color">Information Technology</span> Service Industry</h1>
                     <p class="cover-text my-5">PT. Swevel Universal Media is one of Information Technology Service Industry that gives service excellence quality. Point of product of PT. Swevel Universal Media prioritize System End User and gives creative solution IT. PT. Swevel
                         Universal Media focus in WEB Developer and Mobile Smart Phone Application.</p>
-                </div>
-                <a href="#aboutUs" class="btn btn-purple btn-more">More</a>
+                </div>                
             </div>
             <div class="col-lg-4">
                 <div class="image-homepage">
@@ -77,7 +76,7 @@ function circle1(){makeCircle();}
         </div>
     </div>
     <div id="aboutUs" class="page-2 py-5">
-        <div class="container mt-5 pt-5">
+        <div class="container mt-5 pt-lg-5">
         <div class="row">
             <div class="col-lg-6">
                 <div class="semi-circle justify-content-center">
@@ -85,27 +84,28 @@ function circle1(){makeCircle();}
                     <img src="/img/Group 2317.png" alt="" class="bg">                                        
                 </div>                
             </div>
-            <div class="col-lg-6">
-                <?php foreach ($profile as $x) : ?>
-                    <div class="card card-profile mb-4 border-0 shadow cursor-pointer">
+            <div class="col-lg-6">                
+                       <div class="card card-profile mb-4 border-0 shadow cursor-pointer">
                         <div class="card-body">
                             <div class="row btn-card-profile">
-                                <div class="col-lg-9"><?= $x['title']; ?></div>
+                                <div class="col-lg-9">Lorem ipsum dolor, sit amet.</div>
                                 <div class="text-muted mt-2">PT. Swevel Universal Media</div>
                             </div>
-                            <div class="deskripsi-profile mt-5 hide">
-                                <div><?= $x['description']; ?></div>
+                            <div class="deskripsi-profile mt-5">
+                                <div>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing, elit. Inventore delectus cumque repudiandae, possimus, nobis iste sed doloremque eum cupiditate placeat!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing, elit. Inventore delectus cumque repudiandae, possimus, nobis iste sed doloremque eum cupiditate placeat!
+                                </div>
                             </div>
                         </div>                        
                     </div>
-                <?php endforeach; ?>
             </div>
         </div>
     </div>
     </div>    
 </div>
 
-<section id="service">
+<section id="service" class="pb-5">
     <div class="container pt-5">
         <div class="text-center mb-5 pb-5 ">
             <h1 class="fw-bold">Our <span class="text-purple">Servive</span></h1>
@@ -115,7 +115,7 @@ function circle1(){makeCircle();}
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-4 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-center d-flex justify-content-center">
                 <a href="/course" class="text-decoration-none text-dark">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <div class="card-body">
@@ -126,7 +126,7 @@ function circle1(){makeCircle();}
                     </div>
                 </a>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-lg-start justify-content-md-center justify-content-sm-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-4 d-flex justify-content-lg-start justify-content-md-center justify-content-sm-center d-flex justify-content-center">
                 <a href="/course" class="text-decoration-none text-dark">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <img src="https://img.business.com/w/700/aHR0cHM6Ly9pbWFnZXMuYnVzaW5lc3NuZXdzZGFpbHkuY29tL2FwcC91cGxvYWRzLzIwMjIvMDQvMDQwNzQ1NTMvMTU1NDI0NDAxMC5qcGVn" class="card-img-top" alt="...">
@@ -139,192 +139,46 @@ function circle1(){makeCircle();}
             </div>
         </div>
     </div>    
-    <div class="circle-1 d-sm-none d-md-none d-lg-block"><?= circle1(); ?></div>
-    <div class="circle-2 d-sm-none d-md-none d-lg-block"><?= circle1(); ?></div>
+    <!-- <div class="circle-1 d-sm-none d-md-none d-lg-block"><?= circle1(); ?></div>
+    <div class="circle-2 d-sm-none d-md-none d-lg-block"><?= circle1(); ?></div> -->
 </section>
 
-<section id="portofolio">
-    <div class="container mb-5 pb-5">
+
+<div class="container">
+    <div class="text-center h1 mb-5 text-purple">Course</div>
+    <div id="card-popular-course" class="row"></div>
+    <input type="hidden" name="" id="limit-course" value="3">
+
+<div class="d-flex justify-content-center mt-3">
+    <a href="/course" class="btn btn-purple px-3">Lihat semua</a>
+</div>
+
+</div>
+
+<section id="portofolio" class="">
+    <div class="container py-5 my-5">
         <div class="row">
             <div class="col-lg-6 d-sm-none d-lg-block d-md-none">
                 <img src="/img/GroupImg.png" alt="" class="decoration" style="z-index: 5;">
             </div>
-            <div class="col-lg-6 text-end">
+            <div class="col-lg-6 text-lg-end text-md-center text-sm-center">
                 <h2 class="text-purple fw-bold">Portofolio</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem reiciendis dolorum doloremque eius facilis voluptatum corporis.</p>
             </div>
         </div>
         <div class="image-portofolio text-center">
-            <div class="mt-3 mb-3">
-                <div class="img">
-                    <?php foreach ($portofolio as $x) : ?>
-                        <img src="/img/portofolio/<?= $x['image']; ?>" alt="" style="width: 200px;" class="mx-2 mb-3">
-                    <?php endforeach; ?>
+            <div class="mt-lg-3 mb-3">
+                <div class="">
+                    <?php for ($i=1; $i<=8; $i++) : ?>                        
+                        <img src="https://imgsrv2.voi.id/53SPlz77W6svUtBMlJXhxw1VIVgnye05zJ7rm2UKiTg/auto/1280/853/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy80NjA5MS8yMDIxMDQyMTE3MjUtbWFpbi5jcm9wcGVkXzE2MTkwMDA3NjIuanBlZw.jpg" class="mx-2 mb-4">                        
+                    <?php endfor; ?>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="milestone">
-    <div class="mt-5 container-milestone bg-dark-blue text-white pt-5">
-        <div class="h1 text-center mb-5 text-purple fw-bold">Milestone</div>
-        <?php foreach ($milestoneLimit as $x) : ?>
-            <div class="row milestone-content">
-                <div class="col-lg-2 col-md-12 col-sm-12 text-lg-end text-md-center text-sm-center fw-bold h4"><?= $x['year']; ?></div>
-                <div class="col-lg-1 col-md-12 col-sm-12 box-line d-sm-none d-md-none d-lg-block">
-                    <div class="line-milestone-1"></div>
-                    <div class="bead"></div>
-                    <div class="line-milestone-2"></div>
-                </div>
-                <div class="col-lg-3 col-md-12 col-sm-12 text-center"><img src="/img/milestone/<?= $x['image']; ?>" alt="" style="max-width: 10rem;border-radius: 15px;"></div>
-                <div class="col-lg-5 col-md-12 col-sm-12 mb-5 pb-5 text-lg-end text-md-center text-sm-center"><?= $x['description']; ?></div>
-            </div>
-        <?php endforeach; ?>
-        <div class="text-center mt-4">
-            <button class="btn btn-purple btn-more-milestone" data-bs-toggle="modal" data-bs-target="#modalMilestone">Lihat Semua Milestone</button>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modalMilestone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable modal-fullscreen-md-down">
-            <div class="modal-content modal-content-milestone bg-dark-blue">
-                <div class="modal-header text-white border-0">
-                    <h5 class="modal-title" id="exampleModalLabel"></h5>
-                    <button type="button" class="btn text-white border-0" data-bs-dismiss="modal"><i class="fa-solid fa-xmark me-2"></i> Tutup</button>
-                </div>
-                <div class="modal-body">
-                    <div class="text-white">
-                        <div class="h1 text-center mb-5 text-purple fw-bold">Milestone</div>
-                        <?php foreach ($milestone as $y) : ?>
-                            <div class="row milestone-content">
-                                <div class="col-lg-2 col-md-12 col-sm-12 text-lg-end text-md-center text-sm-center fw-bold h4"><?= $y['year']; ?></div>
-                                <div class="col-lg-1 col-md-12 col-sm-12 box-line d-sm-none d-md-none d-lg-block">
-                                    <div class="line-milestone-1"></div>
-                                    <div class="bead"></div>
-                                    <div class="line-milestone-2"></div>
-                                </div>
-                                <div class="col-lg-3 col-md-12 col-sm-12 text-lg-end text-md-center text-sm-center"><img src="/img/milestone/<?= $y['image']; ?>" alt="" style="max-width: 10rem;border-radius: 15px;"></div>
-                                <div class="col-lg-5 col-md-12 col-sm-12 mb-5 text-lg-start text-md-center text-sm-center"><?= $y['description']; ?></div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
-<section id="article-homepage" class="pt-5 mb-5 pb-5">
-    <div class="container pt-5">
-        <div class="row">
-            <div class="col-lg-4">
-                <h1 class="text-purple">
-                    <span>Newest <span class="fw-bold">Article</span></span>
-                    <p> of Swevel</p>
-                </h1>
-            </div>
-            <div class="col-lg-8 d-sm-none d-lg-block">
-                <img src="/img/GroupImg.png" alt="" class="decoration">
-            </div>
-        </div>
-        <div class="row mt-5 pt-5 justify-content-center">
-            <?php foreach ($artikel as $x) : ?>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-sm-4">
-                    <a href="/detail-artikel/<?= $x['slug']; ?>" class="text-decoration-none text-dark">
-                        <div class="card card-article border-0 mx-2 cursor-pointer">
-                            <img src="/img/artikel/<?= $x['poster']; ?>" class="card-img-top" alt="...">
-                            <div class="card-body px-0">
-                                <h5 class="card-title"><?= $x['judul']; ?></h5>
-                                <p class="card-text"><?= substr($x['isi_artikel'], 0, 20); ?></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
 <link rel="stylesheet" href="/css/splide.min.css">
-
-<section id="team" class="bg-purple pt-5">
-    <div class="container pt-5 mb-4">
-        <div class="row text-white">
-            <div class="col-lg-6">
-                <h1 class="text-white lh-base">Our <span class="fw-bold">Experience & Professional Team</span> in Swevel</h1>
-            </div>
-            <div class="col-lg-6">
-                <p>PT. Swevel Universal Media is one of Information Technology Service Industry that gives service excellence quality. Point of product of PT. </p>
-                <p>Swevel Universal Media prioritize System End User and gives creative solution IT.
-                    PT. Swevel Universal Media focus in WEB Developer and Mobile Smart Phone Application.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="box-team pt-5 pb-5">
-        <div class="row pb-5">
-            <div class="splide splide-team">
-                <div class="splide__track">
-                    <div class="splide__list">
-                        <?php foreach ($team as $x) : ?>
-                            <div class="splide__slide">
-                                <div class="card card-team opacity-50 mx-0">
-                                    <div class="gradient"></div>
-                                    <div class="card-body">
-                                        <img src="/img/team/<?= $x['image']; ?>" alt="" class="img-primary">
-                                    </div>
-                                    <div class="card-footer bg-white pb-4 pt-3 border-0">
-                                        <div class="social-media h4">
-                                            <a href="<?= $x['linkedin']; ?>" class="me-1"><i class="fa-brands fa-linkedin text-primary"></i></a>
-                                            <a href="<?= $x['facebook']; ?>" class="me-1"><i class="fa-brands fa-square-facebook text-primary"></i></a>
-                                            <a href="<?= $x['instagram']; ?>" class="me-1"><i class="fa-brands fa-square-instagram text-danger"></i></a>
-                                        </div>
-                                        <p class="ls-1 m-0 fw-bold text-purple-100"><?= $x['nama']; ?></p>
-                                        <p><?= $x['jabatan']; ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script src="/js/splide.min.js"></script>
-<script>
-    $(document).ready(function() {
-        // Slider Team
-        sliderTeam();
-    })
-
-    let sliderTeam = () => {
-        let mediaSm = window.matchMedia("(max-width: 576px)");
-        let mediaMd = window.matchMedia("(max-width: 768px)");
-        let mediaLg = window.matchMedia("(min-width: 992px)");
-        if (mediaSm.matches) {
-            var perPage = 1;
-        } else if (mediaMd.matches) {
-            var perPage = 2;
-        } else if (mediaLg.matches) {
-            var perPage = 4;
-        } else {
-            var perPage = 4;
-        }
-        var splide = new Splide('.splide.splide-team', {
-            // type: 'loop',
-            perPage: perPage,
-            rewind: true,
-            arrows: false,
-            // autoplay: true,
-            // speed: 2000,
-            // width: '100%',
-            // padding: '10px',
-        });
-
-        splide.mount();
-    }
-</script>
 <section id="client">
     <div class="container pt-5">
         <div class="text-center mb-5 mt-4">
@@ -338,9 +192,10 @@ function circle1(){makeCircle();}
                         <?php for ($i = 0; $i < 10; $i++) : ?>
                             <div class="splide__slide">
                                 <div class="card card-client mx-1 border-0 bg-transparent">
-                                    <div class="card-body text-center">
-                                        <img src="http://new2.beecons.co.id/wp-content/uploads/2020/04/Logo-BEE.png" alt="" class="img-primary" style="max-width: 130px;">
-                                        <div class="mt-3">PT Baracipta Esa Engineering</div>
+                                    <div class="card-body text-center pb-5">
+                                        <div class="pb-3">
+                                            <img src="http://new2.beecons.co.id/wp-content/uploads/2020/04/Logo-BEE.png" alt="" class="img-primary" style="max-width: 130px;">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -352,9 +207,11 @@ function circle1(){makeCircle();}
     </div>
 </section>
 
+
+<script src="/js/splide.min.js"></script>
+
 <script>
-    $(document).ready(function() {
-        // Slider Team
+    $(document).ready(function() {        
         sliderClient();
     })
 
@@ -381,7 +238,6 @@ function circle1(){makeCircle();}
             // width: '100%',
             // padding: '10px',
         });
-
         splide.mount();
     }
 </script>
@@ -393,10 +249,10 @@ function circle1(){makeCircle();}
         <div class="bg1 mt-5">
             <div class="container bg-transparent p-3">
                 <div class="row flex-row-reverse">
-                    <div class="col-sm-12 col-md-6 text-center my-auto">
+                    <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
                         <img src="asset/image/contactUs/img.png" alt="" width="150px">
                     </div>
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
                         <p class="fs-4">
                             <span class="fw-bold">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro esse commodi.
@@ -414,10 +270,10 @@ function circle1(){makeCircle();}
         <div class="bg2 mt-5">
             <div class="container bg-transparent p-3">
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 text-center my-auto">
+                    <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
                         <img src="asset/image/contactUs/img.png" alt="" width="150px">
                     </div>
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
                         <p class="fs-4">
                             <span class="fw-bold">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro esse commodi.
@@ -435,10 +291,10 @@ function circle1(){makeCircle();}
         <div class="bg1 mt-5">
             <div class="container bg-transparent p-3">
                 <div class="row flex-row-reverse">
-                    <div class="col-sm-12 col-md-6 text-center my-auto">
+                    <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
                         <img src="asset/image/contactUs/img.png" alt="" width="150px">
                     </div>
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
                         <p class="fs-4">
                             <span class="fw-bold">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro esse commodi.
@@ -461,12 +317,12 @@ function circle1(){makeCircle();}
                 <h1 class="mt-5 fw-bold text-center">Contact <strong>Us</strong></h1>
                 <p class="text-center">Any question or Remarks? Just Write Us a Message</p>
             </div>
-            <div class="card mt-5">
+            <div class="card mt-5 border-0 shadow">
                 <div class="card-body p-0">
                     <div class="container">
                         <div class="row">
 
-                            <div class="col1 col-sm-12 col-md-4 bg-purple">
+                            <div class="col1 col-sm-12 col-md-12 col-lg-4 bg-purple">
                                 <div class="row justify-content-center text-white">
                                     <div class="col-12 text-center">
                                         <h3 class="fw-bold">Contact Information</h3>
@@ -487,6 +343,7 @@ function circle1(){makeCircle();}
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="col col-11">
                                         <div class="row">
                                             <div class="col-2">
@@ -501,7 +358,8 @@ function circle1(){makeCircle();}
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col col-11">
+
+                                    <div class="col col-11 pb-5">
                                         <div class="row">
                                             <div class="col-2">
                                                 <i class="fa-solid fa-location-dot fs-5"></i>
@@ -514,8 +372,8 @@ function circle1(){makeCircle();}
                                 </div>
                             </div>
 
-                            <div class="col2 col-sm-12 col-md-8">
-                                <form class="row g-3 justify-content-between">
+                            <div class="col2 col-sm-12 col-md-12 col-lg-8">
+                                <form class="row g-3 justify-content-between p-5">
                                     <div class="col-sm-12 col-md-5">
                                         <label class="form-input-label">first name</label>
                                         <input type="text" class="form-control" placeholder="write your first name">
@@ -568,36 +426,12 @@ function circle1(){makeCircle();}
 
 <script>
     $(document).ready(function() {
-
         $('body').css('overflow-x','hidden');
+        getCourse('https://lms.lazy2.codes/api/course','');
 
-        // About Us
-        $(".card-profile").click(function(){
-            $('.deskripsi-profile').hide(400);            
-            $(this).find('.deskripsi-profile').show(400);            
-        })
-
-        // Milestone
-        // mengatur tinggi garis
-        let heightBoxLine = $(".row.milestone-content")[0].scrollHeight;
-        let heightBead = $(".bead")[0].scrollHeight;
-        $('.line-milestone-1').css('height', (heightBoxLine / 2) - heightBead);
-        $('.line-milestone-2').css('height', (heightBoxLine / 2) + heightBead);
-
-        $(".milestone-content").hover(function() {
-            $(this).addClass("active").css('transition', 'ease .5s').prevAll().removeClass("active");
-            $(this).nextAll().removeClass("active");
-            $(this).find('.bead').addClass('active').css('transition', 'all .7s');
-            $('.line-milestone-1, .line-milestone-2').css('opacity', '.4')
-        });
-        $('.milestone-content').mouseleave(function() {
-            $(this).find('.bead').removeClass('active');
-        })
-
-        $('.modal-content-milestone').css('border-radius', '20px');
-    })
+    })    
 </script>
-
+<script src="/js/course.js"></script>
 
 <?= $this->include('swevel/homepage/footer'); ?>
 <?= $this->endSection(); ?>

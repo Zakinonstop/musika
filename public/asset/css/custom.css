@@ -1,6 +1,7 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap"); */
 /* margin padding */
+*{
+  font-family: 'Poppins', sans-serif;
+}
 .mt-6 {
   margin-top: 5rem !important;
 }
@@ -49,17 +50,7 @@
 .pb-9 {
   padding-bottom: 8rem !important;
 }
-/* html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  color: #000;  
-  font-family: "Gill Sans MT", sans-serif;
-  font-weight: 100;
-} */
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -276,7 +267,11 @@ footer .bg-white {
     border-bottom-left-radius: 30px;
   }
   #contact #contactUs .col1 .col {
-    margin-top: 3rem;
+    margin-top: 1rem;
+  }
+  @media (max-width: 992px){
+   #contact #contactUs .col1 {
+    border-radius: 30px 30px 0 0;   
   }
   #contact #contactUs form {
     padding-top: 5rem;
@@ -663,14 +658,16 @@ margin-top: 120px;
   left: 0;
 }
 #auth .card {
-  border-top-left-radius: 0;
+  /*border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-top: 1px solid transparent;
-  border-bottom: 3px solid #ddd;
+  border-bottom-right-radius: 50px;*/
+  border: none;
+  border-radius:  25px;
+  /*border-top: 1px solid transparent;
+  border-bottom: 1px solid #ddd;
   border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #ddd;*/
 }
 #auth input {
   padding-left: 2rem;
@@ -685,12 +682,13 @@ margin-top: 120px;
   box-shadow: none;
   border: none;
 }
-.btn-login, .btn-register {
-  font-family: monospace;
+.btn-login, .btn-register {  
   color: #fff;
-  font-weight: 700;
+  /*font-weight: 700;*/
+  letter-spacing: 1px;
   font-size: 1em;
-  background-image: linear-gradient(
+  background-color: #773cd3 !important;
+ /* background-image: linear-gradient(
     90deg,
     hsl(263deg 71% 32%) 0%,
     hsl(264deg 56% 37%) 5%,
@@ -715,7 +713,7 @@ margin-top: 120px;
     hsl(266deg 45% 41%) 91%,
     hsl(264deg 56% 37%) 95%,
     hsl(263deg 71% 32%) 100%
-  );
+  );*/
 }
 .btn-login:hover {
   background: #45188b;
@@ -727,8 +725,7 @@ margin-top: 120px;
 #auth a {
   text-decoration: none;
   color: #773cd3;
-  font-size: 12pt;
-  font-family: monospace;
+  font-size: 12pt;  
   cursor: pointer;
 }
 #auth #login a {
