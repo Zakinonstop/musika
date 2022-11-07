@@ -144,14 +144,14 @@ function circle1(){makeCircle();}
 </section>
 
 
-<div class="container">
+<div class="container" id="course">
     <div class="text-center h1 mb-5 text-purple">Course</div>
     <div id="card-popular-course" class="row"></div>
     <input type="hidden" name="" id="limit-course" value="3">
 
-<div class="d-flex justify-content-center mt-3">
-    <a href="/course" class="btn btn-purple px-3">Lihat semua</a>
-</div>
+    <div class="d-flex justify-content-center mt-3">
+        <a href="/course" class="btn btn-purple px-5">Lihat semua</a>
+    </div>
 
 </div>
 
