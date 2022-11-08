@@ -1,6 +1,6 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
-<?= $this->include('swevel/navbar'); ?>
+<?= $this->include('swevel/course/navbar-course'); ?>
 
 <style>
     .detail-img {
@@ -9,7 +9,7 @@
 </style>
 <section id="detail-training">
     <div class="container">
-        <div class="title text-center mt-5 mb-lg-5 pb-4 fw-bold h3">Training Softskill</div>
+        <div class="title text-center mt-5 mb-lg-5 pb-4 fw-bold h3">Pelatihan Softskill</div>
         <div class="row mb-5">
             <div class="col-lg-6 overflow-hidden">
                 <img src="/img/Frame 69.png" alt="" class="detail-img">
@@ -17,15 +17,15 @@
             <div class="col-lg-6 mt-sm-4">
                 <!-- <div class="h5 fw-bold mb-3">Penjelasan Course</div> -->
                 <div class="row mb-4">
-                    <div class="col-lg-6"></div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-6 col-sm-9 d-block text-sm-end">
                                 <div class="card-text text-decoration-line-through text-secondary"><small>Rp 500.000</small></div>
                                 <div class="card-text h5 fw-bold text-danger">Rp 325.000</div>
                             </div>
                             <div class="col-lg-6 col-sm-3 text-sm-start">
-                                <button class="btn btn-sm btn-purple-100">Join Now</button>
+                                <button class="btn btn-sm btn-purple-100">Gabung Sekarang</button>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
         </div>
 
         <div class="text-center mb-5">
-            <button class="btn btn-purple-100">Join Now</button>
+            <button class="btn btn-purple-100">Gabung Sekarang</button>
         </div>
 
         <div class="similiar-event mb-5">
@@ -130,7 +130,7 @@
                                                         <div class="text-danger fw-bold">Rp 325.000</div>
                                                     </div>
                                                     <div class="col-6 text-center">
-                                                        <button class="btn btn-sm btn-purple">Join Now</button>
+                                                        <button class="btn btn-sm btn-purple">Gabung Sekarang</button>
                                                     </div>
                                                 </div>
                                             </div>

@@ -7,10 +7,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
                 <li class="nav-item mx-1 ms-lg-5 ps-lg-5">
-                    <a class="nav-link" aria-current="page" href="#kursus">Kursus</a>
+                    <a class="nav-link" aria-current="page" href="/course">Kursus</a>
                 </li>
                 <li class="nav-item mx-1">
-                    <a class="nav-link" aria-current="page" href="#pelatihan">Pelatihan</a>
+                    <a class="nav-link" aria-current="page" href="/training">Pelatihan</a>
                 </li>
                 <li class="nav-item mx-1">
                     <a class="nav-link" aria-current="page" href="#penerapan">Penerapan</a>

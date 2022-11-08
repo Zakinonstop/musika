@@ -26,15 +26,15 @@ var formatRupiah = function(num) {
 
 // login
 $('#modal-login').append(`
-    <div class="close-modal-login d-flex justify-content-end px-5 pt-5">
-        <div class="my-auto pt-2 me-2">Close</div>
-        <div class="my-auto"><i class="fa-solid fa-xmark small"></i></div>
-    </div>
+   
     <section id="login" class="pt-lg-5">
     <div class="row justify-content-center h-100">
         <div class="col-sm-12 col-md-10 col-lg-5 my-auto px-4 mt-md-5">
             <div class="card p-3 shadow border-0 br-20">
                 <div class="card-body">
+                    <div class="close-modal-login text-dark d-flex justify-content-end">
+                        <div class="my-auto"><i class="fa-solid fa-xmark small"></i></div>
+                    </div>
                     <div class="text-center h4 my-4">
                         User Login
                     </div>
@@ -70,42 +70,42 @@ $('#btnLogin').click(function() {
         $(this).html('LOGIN');
         $('#login #email').addClass("is-invalid").focus();
         $('.invalid-feedback.email').html("Masukan Email");
-    }else if ( password == '') {
+    } else if (password == '') {
         $(this).html('LOGIN');
         $('#login #password').addClass("is-invalid").focus();
         $('.invalid-feedback.password').html("Masukan Password");
-    }else{
+    } else {
         $.ajax({
             url: '/verifikasi-login',
             type: 'post',
             dataType: 'json',
             data: $('#form-login').serialize(),
-            success : function(result){
+            success: function(result) {
                 $('#btnLogin').html('LOGIN');
-                if(result.message == 'email tidak ditemukan'){
+                if (result.message == 'email tidak ditemukan') {
                     $("#email").addClass('is-invalid').focus();
                     $('.invalid-feedback.email').html(result.message);
                 }
-                if(result.message == 'password salah'){
+                if (result.message == 'password salah') {
                     $("#password").addClass('is-invalid').focus();
                     $('.invalid-feedback.password').html(result.message);
                 }
-                if(result.message == 'login success'){
+                if (result.message == 'login success') {
                     window.location.href = result.redirect;
                 }
             }
         })
     }
-});              
-$('#login #email,#login #password').keypress(function(e){
-    if(e.which == 13){
+});
+$('#login #email,#login #password').keypress(function(e) {
+    if (e.which == 13) {
         $('#btnLogin').click();
     }
 })
-$('.close-modal-login').click(function(){
-    $("#modal-login").removeClass('active');
-})
-// end login
+$('.close-modal-login').click(function() {
+        $("#modal-login").removeClass('active');
+    })
+    // end login
 
 // ================== Team =====================
 $(".card-team").hover(function() {
