@@ -1,25 +1,25 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
-<?= $this->include('swevel/navbar'); ?>
+<?= $this->include('swevel/course/navbar-course'); ?>
 <?= $this->include('swevel/training/page_first'); ?>
 <section id="course" class="pb-5 mb-5">
-    <div class="container mt-5">      
-        <section id="popular-course"> 
+    <div class="container mt-5">
+        <section id="popular-course">
             <div class="row my-5 pb-3">
                 <div class="col-lg-7">
                     <div class="h1 fw-bold"><span class="text-purple-100">Course</span></div>
                     <div class="list-category-course">
-                        <span class="fw-bold">Category : </span>      
-                        <button class="btn btn-light btn-sm mx-2 btn-category-course">All</button>                                         
+                        <span class="fw-bold">Category : </span>
+                        <button class="btn btn-light btn-sm mx-2 btn-category-course">All</button>
                     </div>
                 </div>
-                <div class="col-lg-5 col-search-course">                    
+                <div class="col-lg-5 col-search-course">
                     <div class="search-event">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" name="search" data-kategori="course" id="search-course-training" placeholder="Search">
                             <button class="btn btn-purple" type="button" id="btn-search-course-training">search</button>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>
     </div>
 </section>
 
@@ -53,8 +53,8 @@
             if (e.which == 13) {
                 refreshCourse();
             }
-        });                
-    })   
+        });
+    })
 </script>
 <script src="/js/course.js"></script>
 <?= $this->include('swevel/homepage/footer'); ?>
