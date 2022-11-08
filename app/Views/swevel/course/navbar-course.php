@@ -15,12 +15,8 @@
                 <li class="nav-item mx-1">
                     <a class="nav-link" aria-current="page" href="#penerapan">Penerapan</a>
                 </li>
-            </ul>
-            <?php if (!session()->get('swevel_email')) : ?>
-                <div>
-                    <a href="/login" class="btn fw-bold text-purple text-decoration-none br-20">Login</a>
-                </div>
-            <?php endif; ?>
+            </ul>            
+            <a href="/login" class="btn fw-bold text-purple text-decoration-none br-20">Login</a>                
         </div>
     </div>
 </nav>
