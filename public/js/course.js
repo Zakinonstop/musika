@@ -1,6 +1,6 @@
  function refreshCourse() {
         $('.skeleton').removeClass('hide')
-        $('#card-popular-course').html('');
+        $('#card-list-course').html('');
         let inputSearch = $('#search-course-training').val();
         if (inputSearch == '') {
             getCourse('https://lms.lazy2.codes/api/course');
@@ -19,9 +19,9 @@
                 let countData = result.length;
                 if (countData >= 1) {
                     $('.skeleton').addClass('hide')
-                    $('#card-popular-course').html('');
+                    $('#card-list-course').html('');
                     $.each(result, function(i, data) {
-                        $('#card-popular-course').append(`
+                        $('#card-list-course').append(`
                         <div class="col-md-6 col-lg-4 col-sm-12 col-course mb-5">
                             <div class="card card-course border-0 cursor-pointer shadow br-15" data-id="`+data.course_id+`">                
                                 <div class="image-content card-thumbnail-course" data-id="`+data.course_id+`">
@@ -55,6 +55,7 @@
                         `);
                     });
 
+                    $('.btn-more-course').removeClass("hide");
                     $(".btn-buy-course, .btn-chart-course").click(function(){
                         alert()
                     })
@@ -107,7 +108,7 @@
                     });
                 } else {
                     $('.skeleton').addClass('hide')
-                    $('#card-popular-course').append(`
+                    $('#card-list-course').append(`
                     <div class="alert alert-warning w-100 text-center" role="alert">
                     Maaf, keyword yang anda cari tidak ditemukan.
                     </div>
@@ -121,7 +122,7 @@
             },
             error: function(result, ajaxOptions, thrownError) {
                 $('.skeleton').addClass('hide')
-                $('#card-popular-course').append(`
+                $('#card-list-course').append(`
                     <div class="alert alert-danger w-100 text-center" role="alert">
                     Maaf, untuk saat ini course belum bisa di akses.
                     </div>
