@@ -76,7 +76,7 @@ function circle1()
         <div class="container">
             <div class="col-lg-8 col-md-12 col-12 mb-5">
                 <div class="text pt-5">
-                    <h1 class="fw-bold">One of <span class="ch_color">Information Technology</span> Service Industry</h1>
+                    <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Teknologi Informasi</span> yang Terbaik dan Berkualitas</h1>
                     <p class="cover-text my-5">PT. Swevel Universal Media is one of Information Technology Service Industry that gives service excellence quality. Point of product of PT. Swevel Universal Media prioritize System End User and gives creative solution IT. PT. Swevel
                         Universal Media focus in WEB Developer and Mobile Smart Phone Application.</p>
                 </div>
@@ -122,7 +122,7 @@ function circle1()
 <section id="service" class="pb-5">
     <div class="container pt-5">
         <div class="text-center mb-5 pb-5 ">
-            <h1 class="fw-bold">Our <span class="text-purple">Servive</span></h1>
+            <h1 class="fw-bold" style="letter-spacing: 0px;"><span class=" text-purple">Pelayanan</span> Kami</h1>
             <div class="">
                 <span class="d-block">Swevel Universal Media focus in Software Development</span>
                 <span class="d-block">and Learning Management</span>
@@ -133,7 +133,7 @@ function circle1()
                 <a href="/course" class="text-decoration-none text-dark">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <div class="card-body">
-                            <h3 class="card-title">Software Development</h3>
+                            <h3 class="card-title">Pelatihan Teknik</h3>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                         <img src="https://img.business.com/w/700/aHR0cHM6Ly9pbWFnZXMuYnVzaW5lc3NuZXdzZGFpbHkuY29tL2FwcC91cGxvYWRzLzIwMjIvMDQvMDQwNzQ1NTMvMTU1NDI0NDAxMC5qcGVn" class="card-img-bottom" alt="...">
@@ -145,7 +145,7 @@ function circle1()
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <img src="https://img.business.com/w/700/aHR0cHM6Ly9pbWFnZXMuYnVzaW5lc3NuZXdzZGFpbHkuY29tL2FwcC91cGxvYWRzLzIwMjIvMDQvMDQwNzQ1NTMvMTU1NDI0NDAxMC5qcGVn" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h3 class="card-title">Learning Management</h3>
+                            <h3 class="card-title">Konsultasi Projek</h3>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
@@ -161,7 +161,7 @@ function circle1()
 <div class="container" id="course">
     <div class="row">
         <div class="col-lg-4">
-            <div class="text-purple h1 fw-bold position-absolute">Course</div>
+            <div class="text-purple h1 fw-bold position-absolute">Kursus</div>
         </div>
         <div class="col-lg-8 d-sm-none d-lg-block">
             <img src="/img/GroupImg.png" alt="" class="decoration">
@@ -189,7 +189,7 @@ function circle1()
         <div class="image-portofolio text-center">
             <div class="row fadeInUp" data-wow-delay="0.5s">
                 <div class="portfolioFilter clearfix mb-4">
-                    <a href="#all-portofolio" data-filter="*" class="current">All Categories Project</a>
+                    <a href="#all-portofolio" data-filter="*" class="current">Semua</a>
                     <a href="#" data-filter="#perencanaan">Perencanaan</a>
                     <a href="#" data-filter="#pengawasan">Pengawasan</a>
                     <a href="#" data-filter="#konsultasi">Konsultasi Lainnya</a>
@@ -229,10 +229,10 @@ function circle1()
                         </div>
                     <?php endforeach; ?>
                     <div id="loadMore" style="">
-                        <a href="#" class="btn-primary">Load More</a>
+                        <a href="#" class="btn btn-primary">Lihat Lagi</a>
                     </div>
                     <div id="loadLess" style="">
-                        <a href="#" class="btn-primary">Load Less</a>
+                        <a href="#" class="btn btn-primary">Kembali</a>
                     </div>
                 </div>
             </div>
@@ -301,7 +301,7 @@ function circle1()
 <section id="client">
     <div class="container pt-5">
         <div class="text-center mb-5 mt-4">
-            <h2 class="text-purple-100">Our <span class="fw-bold">Client</span></h2>
+            <h2 class="text-purple-100"><span class="fw-bold">Klien</span> Kami</h2>
             <p>Colaboration with various top companies</p>
         </div>
         <div class="pb-5">
@@ -363,7 +363,7 @@ function circle1()
 <main id="contact">
     <section id="customer-review" class="pt-5 pb-5">
         <div class="container mt-3">
-            <h1><strong><span class="text-dark-purple">Customer </span><span>Review</span></strong></h1>
+            <h1 style="letter-spacing: 0px;"><strong><span class=" text-dark-purple">Ulasan</span><span> Pelanggan</span></strong></h1>
         </div>
         <div class="bg1 mt-5">
             <div class="container bg-transparent p-3">
@@ -433,7 +433,7 @@ function circle1()
     <section id="contactUs" class="pb-5" style="background-color: #FAF6FF">
         <div class="container">
             <div class="row">
-                <h1 class="mt-5 fw-bold text-center">Contact <strong>Us</strong></h1>
+                <h1 class="mt-5 fw-bold text-center" style="letter-spacing: 0px;"><span class=" text-dark-purple">Kontak</span> Kami</h1>
                 <p class="text-center">Any question or Remarks? Just Write Us a Message</p>
             </div>
             <div class="card mt-5 border-0 shadow">
@@ -444,7 +444,7 @@ function circle1()
                             <div class="col1 col-sm-12 col-md-12 col-lg-4 bg-purple">
                                 <div class="row justify-content-center text-white">
                                     <div class="col-12 text-center">
-                                        <h3 class="fw-bold">Contact Information</h3>
+                                        <h3 class="fw-bold">Informasi Kontak</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae id rerum saepe.</p>
                                     </div>
 
@@ -494,34 +494,34 @@ function circle1()
                             <div class="col2 col-sm-12 col-md-12 col-lg-8">
                                 <form class="row g-3 justify-content-between p-5">
                                     <div class="col-sm-12 col-md-5">
-                                        <label class="form-input-label">first name</label>
+                                        <label class="form-input-label">Nama Pertama</label>
                                         <input type="text" class="form-control" placeholder="write your first name">
                                     </div>
                                     <div class="col-sm-12 col-md-5">
-                                        <label class="form-input-label">last name</label>
+                                        <label class="form-input-label">Nama Terakhir</label>
                                         <input type="text" class="form-control" placeholder="write your last name">
                                     </div>
                                     <div class="col-sm-12 col-md-5">
-                                        <label class="form-input-label">mail</label>
+                                        <label class="form-input-label">Email</label>
                                         <input type="email" class="form-control" placeholder="write your mail">
                                     </div>
                                     <div class="col-sm-12 col-md-5">
-                                        <label class="form-input-label">phone</label>
+                                        <label class="form-input-label">Telepon</label>
                                         <input type="text" class="form-control" placeholder="08123456789">
                                     </div>
                                     <div class="col-sm-12 col-md-12">
-                                        <label class="form-input-label">message</label>
+                                        <label class="form-input-label">Pesan</label>
                                         <textarea class="form-control" placeholder="write your message" rows="1"></textarea>
                                     </div>
                                     <div class="col-md-12">
-                                        <p class="mt-3 fs-7 fw-bold">what topic you need to ask ?</p>
+                                        <p class="mt-3 fs-7 fw-bold">Apa topik yang ingin ditanyakan?</p>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="softwareDevelopment">
-                                            <label class="form-check-label" for="inlineRadio1">software development</label>
+                                            <label class="form-check-label" for="inlineRadio1">Kursus</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="learningManagement">
-                                            <label class="form-check-label" for="inlineRadio2">learning management</label>
+                                            <label class="form-check-label" for="inlineRadio2">Pelatihan</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="inlineRadio3" value="other">
