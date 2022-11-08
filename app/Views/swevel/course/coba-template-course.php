@@ -1,45 +1,44 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
+<style>
+    #modal-login{
+            
+    }
+</style>
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="card card-course border-0 cursor-pointer shadow br-15" data-id="`+data.course_id+`">                
-                <div class="image-content">
-                    <div class="card-image.">
-                        <div class="course-img-polygon">
-                            <img src="/img/Poster.png" alt="" class="card-img">
+<div id="modal-login">    
+        <div class="close-modal-login d-flex justify-content-end px-5 pt-5">
+            <div class="my-auto pt-2 me-2">Close</div>
+            <div class="my-auto"><i class="fa-solid fa-xmark small"></i></div>
+        </div>    
+    <section id="login" class="pt-lg-5">
+        <div class="row justify-content-center h-100">
+            <div class="col-sm-12 col-md-10 col-lg-5 my-auto px-4 mt-md-5">
+                <div class="card p-3 shadow border-0 br-20">
+                    <div class="card-body">
+                        <div class="text-center h4 my-4">
+                            User Login
                         </div>
-                        <div class="text-center p-2 btn-purple-50-hover-0 w-50 position-absolute small br-end-10" style="z-index:5; margin-top: -35px;">Intermediate</div>
-                    </div>
-                </div>                
-                <div class="card-content ps-4 py-4">
-                    <h5 class="card-title fw-bold lh-base ">Judul Course</h5>                                        
-                    <div class="small text-purple">Mahasiswa / Umum</div>
-                    <div class="row">
-                        <div class="col-sm-8 col-md-6 col-lg-12">
-                            <p class="card-text h6 text-decoration-line-through text-secondary">Rp 500.000</p>
-                            <p class="card-text h5 fw-bold text-red">Rp 200.000</p>
-                        </div>                        
+                        <div class="message-register success my-3"></div>
+                        <form action="#" method="POST" autocomplete="off" id="form-login">
+                            <?= csrf_field(); ?>
+                            <div class="mb-3">
+                                <input id="email" type="text" class="form-control" name="email" placeholder="Email" autofocus>
+                                <div class="invalid-feedback email"></div>
+                            </div>
+                            <div class="mb-3">
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                                <div class="invalid-feedback password"></div>                                    
+                            </div>
+                            <div class="mb-3">
+                                <button id="btnLogin" type="button" class="btn btn-login w-100" name="login">LOGIN</button>
+                            </div>                                
+                        </form>                            
                     </div>
                 </div>
-                <div class="row m-0 mb-3">
-                    <div class="col-10">
-                        <a href="#" class="btn btn-purple w-100 btn-buy-course">Buy Course</a>
-                    </div>
-                    <div class="col-2 p-0 align-self-center">                        
-                        <div class="btn-chart-course"><i class="fa-solid fa-cart-shopping"></i></div>                                                
-                    </div>
-                </div>                
             </div>
         </div>
-    </div>
+    </section>
 </div>
-
-<script>
-    $(".btn-buy-course, .btn-chart-course").click(function(){
-        alert()
-    })
-</script>
-
+<script src="/js/auth.js"></script>
 <?= $this->endSection(); ?>

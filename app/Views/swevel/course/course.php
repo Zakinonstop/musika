@@ -2,15 +2,25 @@
 <?= $this->section('content'); ?>
 <?= $this->include('swevel/navbar'); ?>
 <?= $this->include('swevel/training/page_first'); ?>
-<?= $this->include('swevel/course/menu_course_training_event'); ?>
-
 <section id="course" class="pb-5 mb-5">
     <div class="container mt-5">      
         <section id="popular-course"> 
-            <div class="h1 mt-5 pt-4 mt-3 fw-bold"><span class="text-purple-100">Course</span></div>
-            <div class="list-category-course pb-5">
-                <span class="fw-bold">Category : </span>      
-                <button class="btn btn-light btn-sm mx-2 btn-category-course">All</button>                                         
+            <div class="row my-5 pb-3">
+                <div class="col-lg-7">
+                    <div class="h1 fw-bold"><span class="text-purple-100">Course</span></div>
+                    <div class="list-category-course">
+                        <span class="fw-bold">Category : </span>      
+                        <button class="btn btn-light btn-sm mx-2 btn-category-course">All</button>                                         
+                    </div>
+                </div>
+                <div class="col-lg-5 col-search-course">                    
+                    <div class="search-event">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="search" data-kategori="course" id="search-course-training" placeholder="Search">
+                            <button class="btn btn-purple" type="button" id="btn-search-course-training">search</button>
+                        </div>
+                    </div>                    
+                </div>
             </div>
 
             <div class="d-flex justify-content-center">
@@ -23,13 +33,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <div class="h1 mt-5 pt-4 pb-3 fw-bold">Paket <span class="text-purple-100">Bundling</span></div>
-        <div class="h3 text-muted col-lg-5 mb-5 ">Ambil paket bundling untuk raih lebih banyak</div>
-        <section id="bundling-course">
-            <div class="d-flex justify-content-center"><img src="/img/loaderpurple1.gif" alt="" class="skeleton-bundling"></div>
-            <div class="row bundling-course card-group"></div>
-        </section>
+        </section>        
     </div>
 </section>
 

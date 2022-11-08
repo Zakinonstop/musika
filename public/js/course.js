@@ -57,8 +57,8 @@
 
                     $('.btn-more-course').removeClass("hide");
                     $(".btn-buy-course, .btn-chart-course").click(function(){
-                        alert()
-                    })
+                        $('#modal-login').addClass('active');
+                    });
                     let limit = $('#limit-course').val();
                     if(limit > 0){                          
                         $('.col-course').slice(limit, countData).remove();
@@ -124,7 +124,7 @@
                 $('.skeleton').addClass('hide')
                 $('#card-list-course').append(`
                     <div class="alert alert-danger w-100 text-center" role="alert">
-                    Maaf, untuk saat ini course belum bisa di akses.
+                    Maaf, course tidak tersedia.
                     </div>
                 `)
             }

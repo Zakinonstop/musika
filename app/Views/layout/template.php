@@ -24,6 +24,7 @@
 
     <?= $this->renderSection('content'); ?>
 
+    <div id="modal-login" class="hide"></div>
 
     <script src="/asset/custom_vendor/bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="/asset/custom_vendor/fontawesome612/js/all.min.js"></script>

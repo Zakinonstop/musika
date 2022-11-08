@@ -126,6 +126,21 @@
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px #9f88c3;
 }
 
+#modal-login.active{
+  display: block;
+  background: rgba(0,0,0,.6);
+  height: 100vh;    
+  width: 100%;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 100;
+}
+.close-modal-login{
+  color: #fff;
+  cursor: pointer;
+}
+
 /* custom bootstrap */
 
 .accordion-button:focus {
@@ -272,6 +287,7 @@
   margin-top: -100px;
   z-index: -2;
 }
+
 
 #course img.decoration {
   height: 350px;
@@ -704,6 +720,10 @@ section#footer {
 
 /* Course */
 
+.col-search-course{
+  display: flex;
+  justify-content: end;
+}
 .slide-content-course {
   margin: 0 40px;
   overflow: hidden;
@@ -893,6 +913,10 @@ section#footer {
     min-height: 130vh;
   }
   /* course trainin */
+  .col-search-course{
+    justify-content: start;
+    margin-top: 30px;
+  }
   #page-first {
     min-height: 5vh;
   }
