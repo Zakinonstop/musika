@@ -212,7 +212,6 @@
                     i.removeClass('text-dark-purple');
                 }
             })
-
         }
         searchHover();
 

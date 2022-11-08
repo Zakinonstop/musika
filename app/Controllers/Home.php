@@ -29,7 +29,7 @@ class Home extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Swevel',
+            'title' => 'PT Multi Visi Karya',
             'profile' => $this->ProfileModel->findAll(),
             'milestoneLimit' => $this->MilestoneModel->orderBy('year', 'asc')->findAll(2),
             'milestone' => $this->MilestoneModel->orderBy('year', 'asc')->findAll(),

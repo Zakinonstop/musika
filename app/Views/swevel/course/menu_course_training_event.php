@@ -1,10 +1,10 @@
 <main id="menu-course-training">
     <section>
         <div class="container">
-            <div class="d-flex justify-content-center text-center">            
-                <a class="btn btn-category text-decoration-none mx-2 h3" href="/course" role="button">Course</a>                            
-                <a class="btn btn-category text-decoration-none mx-2 h3" href="/event" role="button">Event</a>                            
-                <a class="btn btn-category text-decoration-none mx-2 h3" href="/training" role="button">Training</a>                
+            <div class="d-flex justify-content-center text-center">
+                <a class="btn btn-category text-decoration-none mx-2 h3" href="/course" role="button">Course</a>
+                <a class="btn btn-category text-decoration-none mx-2 h3" href="/event" role="button">Event</a>
+                <a class="btn btn-category text-decoration-none mx-2 h3" href="/training" role="button">Training</a>
             </div>
         </div>
     </section>
@@ -15,7 +15,7 @@
                 <div class="h1 fw-bold text-uppercase"><?= $title; ?></div>
             </div>
 
-            <div class="d-flex justify-content-center">                
+            <div class="d-flex justify-content-center">
                 <div class="search-event mt-4">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" name="search" data-kategori="course" id="search-course-training" placeholder="Search">
