@@ -17,10 +17,17 @@
 
     <div class="container">
         <div class="row mb-5 pb-5" id="section2.">
-            <div class="text-lg-end text-md-start mb-lg-0 mb-md-5 mb-sm-5 border-kotak">
+            <div class="text-start mb-lg-0 mb-md-5 mb-sm-5 border-kotak">
                 <h5><s class="old_price">Rp </s></h5>
                 <h4 class="text-red new_price">Rp </h4>
-                <?= $link; ?>
+                <div class="row mb-3 col-lg-2">
+                    <div class="col-10">
+                        <div class="btn btn-purple w-100 btn-sm btn-buy-course">Buy Course</div>
+                    </div>
+                    <div class="col-2 p-0 align-self-center">
+                        <div class="btn-chart-course"><i class="fa-solid fa-cart-shopping"></i></div>
+                    </div>
+                </div>
             </div>
         </div>
 
