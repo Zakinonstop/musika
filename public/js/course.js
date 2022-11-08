@@ -1,4 +1,4 @@
- function refreshCourse() {
+    function refreshCourse() {
         $('.skeleton').removeClass('hide')
         $('#card-list-course').html('');
         let inputSearch = $('#search-course-training').val();

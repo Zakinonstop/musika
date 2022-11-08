@@ -47,13 +47,59 @@
                 <div class="description-course"></div>
             </div>
         </div>
-
-        <!-- <div class="row mb-5 ">
-            <h2 class="fw-bold text-dark">Related Course</h2>
-        </div> -->
-
     </div>
 
+    <div class="container">
+        <?php for($i=1; $i<=5; $i++) : ?>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow br-15 mb-5 p-2">
+                        <div class="card-body">
+                            <div class="step mb-2"> <i class="fa-solid fa-chart-simple text-purple me-2"></i> <span>Langkah <?= $i; ?> </span></div>
+                            <div class="title-course h5 my-3">Memulai Pemrograman dengan kotlin</div>
+                            <div class="row">
+                                <div class="col-3 d-flex">
+                                    <div class="me-4"><i class="fa-solid fa-clock text-success"></i></div>
+                                    <div class="my-auto mt-2">50 Jam</div>
+                                </div>
+                                <div class="col-3 d-flex">
+                                    <div class="me-3"><i class="fa-solid fa-star text-orange"></i></div>
+                                    <div class="my-auto mt-2">4,8</div>
+                                </div>
+                                <div class="col-4 d-flex">
+                                    <div class="me-3"><i class="fa-solid fa-chart-pie"></i></div>
+                                    <div class="my-auto mt-2">Intermediate</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1 text-center col-line">
+                    <div class="line-before"></div>
+                    <div class="step-number"><?= $i; ?></div>
+                    <div class="line-after"></div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="h5">Langkah <?= $i; ?></div>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, esse libero. Voluptatibus illum doloremque autem neque at! Dolores, dolorem soluta!</div>
+                </div>
+            </div>
+        <?php endfor; ?>
+    </div>
+
+    <div class="container my-5 pb-3" id="course">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="text-purple h1 fw-bold position-absolute">Course</div>
+            </div>            
+        </div>
+        <div class="mt-4"></div>
+        <div id="card-list-course" class="row mt-5 pt-5"></div>
+        <input type="hidden" name="" id="limit-course" value="3">
+        <div class="d-flex justify-content-center mt-3">
+            <a href="/course" class="btn btn-purple px-5 btn-more-course hide">Lihat semua</a>
+        </div>
+    </div>
 </section>
 
 <script>
@@ -62,37 +108,34 @@
         $.ajax({
             url: 'https://lms.lazy2.codes/api/course/detail/' + id_course,
             type: 'GET',
-            dataType: 'json',
-            // data: {
-            //     // apikey: '9fd3ac6f',
-            //     // i: id_course,
-            //     id: id_course
-            // },
+            dataType: 'json',         
             success: function(result) {
                 $('.title-course').html(result.title);
                 $('.key_takeaways').html(result.key_takeaways);
                 $('.description-course').html(result.description);
                 $(".old_price").html('Rp ' + formatRupiah(result.old_price));
                 $(".new_price").html('Rp ' + formatRupiah(result.new_price));
-                // $('.detail-img').attr('src', result.thumbnail);
-                $('.detail-img').attr('src', '/img/loaderpurple2.gif');
+                $('.detail-img').attr('src', result.thumbnail);
+                // $('.detail-img').attr('src', '/img/loaderpurple2.gif');
                 $('.detail-img2').attr('src', result.thumbnail);
             }
         })
+
+        getCourse('https://lms.lazy2.codes/api/course');
 
         $("img").bind("error", function() {
             $(this).attr("src", "/img/loaderpurple2.gif");
         });
 
 
+        $(".line-before, .line-after").css({'background':'#61AF11','width':'2px','margin':'0 auto'})
         // mengatur tinggi line
         // hitung dulu colom pertama
-        let heightCol1 = $('.timeline .col2')[0].scrollHeight;
+        let heightCol1 = $('.col-line')[0].scrollHeight;
         // hitung tinggi step number
-        let heightStepNumber = $('.timeline .step-number')[0].scrollHeight;
+        let heightStepNumber = $('.step-number')[0].scrollHeight;
         // mengatur line pertama
-        $('.line-before').css('height', (heightCol1 / 2) - heightStepNumber);
-        // mengatur line kedua
+        $('.line-before').css('height', (heightCol1 / 2) - heightStepNumber);        
         $('.line-after').css('height', (heightCol1 / 2) + heightStepNumber);
 
 
@@ -101,39 +144,11 @@
         })
         $(".timeline").find('.card').mouseleave(function() {
             $(this).removeClass("shadow");
-        })
-
-        relatedCourse();
-    })
-
-    let relatedCourse = () => {
-        let mediaSm = window.matchMedia("(max-width: 576px)");
-        let mediaMd = window.matchMedia("(max-width: 768px)");
-        let medialg = window.matchMedia("(max-width: 1200px)");
-        if (mediaSm.matches) {
-            var perPage = 1;
-        } else if (mediaMd.matches) {
-            var perPage = 2;
-        } else if (medialg.matches) {
-            var perPage = 3;
-        } else {
-            var perPage = 3;
-        }
-        var splide = new Splide('.splide.related-course', {
-            // type: 'loop',
-            perPage: perPage,
-            rewind: true,
-            arrows: false,
-            // autoplay: true,
-            // speed: 2000,
-            // width: '100%',
-            // padding: '10px',
-        });
-
-        splide.mount();
-    }
+        })        
+    })    
 </script>
 
+<script src="/js/course.js"></script>
 <?= $this->include('swevel/homepage/footer'); ?>
 <?= $this->include('swevel/training/footer'); ?>
 <?= $this->endSection(); ?>
