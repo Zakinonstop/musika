@@ -22,7 +22,7 @@
                 <h4 class="text-red new_price">Rp </h4>
                 <div class="row mb-3 col-lg-2">
                     <div class="col-10">
-                        <div class="btn btn-purple w-100 btn-sm btn-buy-course">Buy Course</div>
+                        <div class="btn btn-purple w-100 btn-sm btn-buy-course">Beli Kursus</div>
                     </div>
                     <div class="col-2 p-0 align-self-center">
                         <div class="btn-chart-course"><i class="fa-solid fa-cart-shopping"></i></div>
@@ -43,7 +43,7 @@
                 <img src="/img/skeleton2.gif" class="detail-img2" alt="course">
             </div>
             <div class="col-lg-6">
-                <h4><strong>Penjelasan Course</strong></h4>
+                <h4><strong>Penjelasan Kursus</strong></h4>
                 <div class="description-course"></div>
             </div>
         </div>
