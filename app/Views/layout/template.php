@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $title; ?></title>
-    <link rel="shortcut icon" href="/img/logo-swevel-top2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/logo/favi-logo2.png" type="image/x-icon">
 
     <script src="/asset/custom_vendor/jquery/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="/asset/custom_vendor/bootstrap5/css/bootstrap.min.css">
