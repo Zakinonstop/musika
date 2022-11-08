@@ -31,10 +31,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
                     <li class="nav-item mx-1 ms-lg-5 ps-lg-5">
-                        <a class="nav-link" aria-current="page" href="<?= ($title == 'Swevel') ? '#aboutUs' : '/#aboutUs'; ?>">About Us</a>
+                        <a class="nav-link" aria-current="page" href="<?= ($title == 'Swevel') ? '#aboutUs' : '/#aboutUs'; ?>">Tentang Kami</a>
                     </li>
                     <li class="nav-item mx-1">
-                        <a class="nav-link" href="<?= ($title == 'Swevel') ?  '#service' : '/#service'; ?>">Service</a>
+                        <a class="nav-link" href="<?= ($title == 'Swevel') ?  '#service' : '/#service'; ?>">Layanan</a>
                     </li>
                     <li class="nav-item mx-1">
                         <a class="nav-link" href="<?= ($title == 'Swevel') ?  '#portofolio' : '/#portofolio'; ?>">Portofolio</a>
@@ -46,10 +46,10 @@
                         <a class="nav-link" href="/faq">FAQ</a>
                     </li>
                     <li class=" nav-item mx-1">
-                        <a class="nav-link" href="<?= ($title == 'Swevel') ?  '#contactUs' : '/#contactUs'; ?>">Contact Us</a>
+                        <a class="nav-link" href="<?= ($title == 'Swevel') ?  '#contactUs' : '/#contactUs'; ?>">Kontak</a>
                     </li>
                     <li class="nav-item mx-1">
-                        <a class="nav-link" href="/privacy">Privacy</a>
+                        <a class="nav-link" href="/privacy">Privasi</a>
                     </li>
                 </ul>
                 <!-- <div>

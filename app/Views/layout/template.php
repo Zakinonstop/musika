@@ -31,6 +31,11 @@
 
 
     <script>
+        $(document).ajaxComplete(function() {
+            $(".btn-buy-course, .btn-chart-course").click(function() {
+                $('#modal-login').addClass('active');
+            });
+        })
         $(document).ready(function() {
             // scroll link
             let lastId,

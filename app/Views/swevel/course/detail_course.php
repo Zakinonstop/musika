@@ -1,25 +1,6 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
-<?= $this->include('swevel/navbar'); ?>
-
-<?php
-// untuk membuat lingkaran 4x4
-function circlecourse()
-{
-    $star = 4;
-    for ($a = 0; $a < $star; $a++) {
-        echo '<div class="d-flex">';
-        for ($i = 1; $i <= $a; $i++) {
-            echo '<div class="circlecourse"></div>';
-        }
-        for ($c = $star; $c > $a; $c -= 1) {
-            echo '<div class="circlecourse"></div>';
-        }
-        echo '</div>';
-        echo '<br>';
-    }
-}
-?>
+<?= $this->include('swevel/course/navbar-course'); ?>
 
 <section id="detail-course">
     <input type="hidden" readonly id="id_course" value="<?= $id; ?>">
@@ -29,8 +10,6 @@ function circlecourse()
             <img src="/img/skeleton2.gif" class="detail-img" alt="course">
         </div>
         <div class="h3 title-course text-center d-lg-none my-3 text-purple fw-bold"></div>
-        <div class=" row" id="section1" style="margin:auto;">            
-        </div>
         <div class="col" style="margin: auto;">
 
         </div>
@@ -38,11 +17,18 @@ function circlecourse()
 
     <div class="container">
         <div class="row mb-5 pb-5" id="section2.">
-            <div class="text-lg-end text-md-start mb-lg-0 mb-md-5 mb-sm-5 border-kotak">
+            <div class="text-start mb-lg-0 mb-md-5 mb-sm-5 border-kotak">
                 <h5><s class="old_price">Rp </s></h5>
-                <h4 class="text-red new_price">Rp </h4>                
-                <?= $link; ?>                              
-            </div>           
+                <h4 class="text-red new_price">Rp </h4>
+                <div class="row mb-3 col-lg-2">
+                    <div class="col-10">
+                        <div class="btn btn-purple w-100 btn-sm btn-buy-course">Buy Course</div>
+                    </div>
+                    <div class="col-2 p-0 align-self-center">
+                        <div class="btn-chart-course"><i class="fa-solid fa-cart-shopping"></i></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="mt-5 mb-5 pb-5 text-center">
@@ -59,9 +45,6 @@ function circlecourse()
             <div class="col-lg-6">
                 <h4><strong>Penjelasan Course</strong></h4>
                 <div class="description-course"></div>
-            </div>
-            <div class="circle-5 d-sm-none d-md-none d-lg-block">
-                <?= circlecourse(); ?>
             </div>
         </div>
 
