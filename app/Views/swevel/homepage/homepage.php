@@ -229,10 +229,10 @@ function circle1()
                         </div>
                     <?php endforeach; ?>
                     <div id="loadMore" style="">
-                        <a href="#">Load More</a>
+                        <a href="#" class="btn-primary">Load More</a>
                     </div>
                     <div id="loadLess" style="">
-                        <a href="#">Load Less</a>
+                        <a href="#" class="btn-primary">Load Less</a>
                     </div>
                 </div>
             </div>
