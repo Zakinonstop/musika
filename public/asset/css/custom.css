@@ -84,7 +84,7 @@ footer .icon a {
 }
 footer ul li a:hover,
 footer .icon a:hover {
-  color: #45188b;
+  color: #61AF11;
   text-decoration: none;
 }
 @media (max-width: 576px) {
@@ -123,16 +123,14 @@ footer .bg-white {
 }
 
 /* purple */
-.bg-purple {
+/* .bg-purple {
   background-color: #773cd3 !important;
-}
-.text-purple {
-  color: #773cd3 !important;
-}
-.btn-purple {
+} */
+
+/* .btn-purple {
   background-color: #773cd3 !important;
   border-color: #773cd3 !important;
-}
+} */
 
 .bg-light-purple {
   background-color: #f0e5ff !important;
@@ -155,14 +153,14 @@ footer .bg-white {
   border-color: #9747ff !important;
 }
 .bg-dark-purple {
-  background-color: #45188b !important;
+  background-color: #61AF11 !important;
 }
 .text-dark-purple {
-  color: #45188b !important;
+  color: #61AF11 !important;
 }
 .btn-dark-purple {
-  background-color: #45188b !important;
-  border-color: #45188b !important;
+  background-color: #61AF11 !important;
+  border-color: #61AF11 !important;
 }
 
 .text-justify {
@@ -177,7 +175,7 @@ footer .bg-white {
   color: #000;
 }
 .navbar .nav-item .active {
-  color: #45188b;
+  color: #61AF11;
 }
 /* ------------------------------ */
 /* ---------- CONTACT ----------- */
@@ -231,7 +229,7 @@ footer .bg-white {
 #contact #contactUs form #btnSend:hover {
   box-shadow: #000 0 2px 7px 2px;
   background-color: #fff;
-  color: #45188b;
+  color: #61AF11;
   /* box-shadow: none; */
   /* font-size: 10pt; */
 }
@@ -251,8 +249,8 @@ footer .bg-white {
 }
 #contact #contactUs form .form-check-input:checked[type="radio"] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
-  background-color: #45188b;
-  border: 1px solid #45188b;
+  background-color: #61AF11;
+  border: 1px solid #61AF11;
 }
 @media (min-width: 577px) {
   #contact #contactUs .card {
@@ -313,7 +311,7 @@ footer .bg-white {
   color: #fff;
 }
 .btn-event:hover {
-  box-shadow: #45188b 0 1px 3px 1px;
+  box-shadow: #61AF11 0 1px 3px 1px;
   /* font-size: 10pt; */
   color: #fff;
 }
@@ -323,14 +321,14 @@ footer .bg-white {
   font-size: 1rem;
 }
 .btn-event-lg:hover {
-  box-shadow: #45188b 0 1px 3px 1px;
+  box-shadow: #61AF11 0 1px 3px 1px;
   /* font-size: 0.8rem; */
   color: #fff;
 }
 
 .breadcrumb a,
 .breadcrumb .breadcrumb-item {
-  color: #45188b;
+  color: #61AF11;
   font-weight: bolder;
   text-decoration: none;
 }
@@ -345,8 +343,8 @@ footer .bg-white {
 #event #event1 .focus,
 #faq .inputfaq:hover,
 #faq .focus {
-  border-top: 0.5px solid#45188b;
-  border-bottom: 3px solid#45188b;
+  border-top: 0.5px solid#61AF11;
+  border-bottom: 3px solid#61AF11;
 }
 
 #event #event1 .input1 input,
@@ -602,7 +600,7 @@ footer .bg-white {
 
 #kebijakan-privasi #row #col1::-webkit-scrollbar-thumb:hover,
 #kebijakan-privasi #row #col2::-webkit-scrollbar-thumb:hover {
-  background-color: #45188b;
+  background-color: #61AF11;
 }
 
 #kebijakan-privasi #row #col1 .list-group-item {
@@ -619,7 +617,7 @@ footer .bg-white {
 }
 
 #kebijakan-privasi #row #col1 .aktif a {
-  color: #45188b;
+  color: #61AF11;
   font-weight: bold;
 }
 
@@ -687,36 +685,10 @@ margin-top: 120px;
   /*font-weight: 700;*/
   letter-spacing: 1px;
   font-size: 1em;
-  background-color: #773cd3 !important;
- /* background-image: linear-gradient(
-    90deg,
-    hsl(263deg 71% 32%) 0%,
-    hsl(264deg 56% 37%) 5%,
-    hsl(266deg 45% 41%) 9%,
-    hsl(267deg 37% 45%) 14%,
-    hsl(267deg 30% 49%) 18%,
-    hsl(268deg 27% 53%) 23%,
-    hsl(269deg 25% 57%) 27%,
-    hsl(270deg 22% 61%) 32%,
-    hsl(270deg 19% 65%) 36%,
-    hsl(271deg 14% 70%) 41%,
-    hsl(271deg 8% 74%) 45%,
-    hsl(0deg 0% 78%) 50%,
-    hsl(271deg 8% 74%) 55%,
-    hsl(271deg 14% 70%) 59%,
-    hsl(270deg 19% 65%) 64%,
-    hsl(270deg 22% 61%) 68%,
-    hsl(269deg 25% 57%) 73%,
-    hsl(268deg 27% 53%) 77%,
-    hsl(267deg 30% 49%) 82%,
-    hsl(267deg 37% 45%) 86%,
-    hsl(266deg 45% 41%) 91%,
-    hsl(264deg 56% 37%) 95%,
-    hsl(263deg 71% 32%) 100%
-  );*/
+  background-color: #773cd3 !important; 
 }
 .btn-login:hover {
-  background: #45188b;
+  background: #61AF11;
   color: #fff;
 }
 #auth p {
@@ -762,6 +734,7 @@ margin-top: 120px;
     box-shadow: inner 0 0 5px #888;
   }
 }
+
 @media (min-width: 577px) {
   #kebijakan-privasi #row {
     height: 75vh;
@@ -775,4 +748,5 @@ margin-top: 120px;
   #kebijakan-privasi #col2 .text1 {
     margin-left: 3rem;
   }
+}
 }

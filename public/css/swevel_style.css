@@ -1,3 +1,6 @@
+/* color purple swevel */
+/* color: #61AF11; */
+
 * {
     font-family: "Poppins", sans-serif;
 }
@@ -11,11 +14,11 @@
 }
 
 .text-purple {
-    color: #9660ea;
+    color: #BAED86;
 }
 
 .text-purple-100 {
-    color: #45188b;
+    color: #61AF11;    
 }
 
 .btn-outline-purple {
@@ -53,7 +56,7 @@
 }
 
 .btn-purple-100 {
-    background: #45188b;
+    background: #61AF11;
     color: #fff;
 }
 
@@ -71,7 +74,7 @@
 }
 
 .bg-purple {
-    background-color: #45188b;
+    background-color: #61AF11;
 }
 
 .bg-purple-50 {
@@ -112,7 +115,7 @@
 
 .border-start-purple {
     border: none;
-    border-left: 4px solid #45188b;
+    border-left: 4px solid #61AF11;
 }
 
 .hide {
@@ -128,7 +131,7 @@
 }
 
 .form-control:focus {
-    border-color: #45188b;
+    border-color: #61AF11;
     box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px #9f88c3;
 }
 
@@ -160,7 +163,7 @@
 /* end custom bootstrap */
 
 .navbar .nav-link:hover {
-    color: #45188b;
+    color: #61AF11;
     font-weight: bold;
 }
 
@@ -194,7 +197,7 @@
 }
 
 .circle-3 .circle {
-    background-color: #c4a4f7;
+    background-color: #BAED86;
     width: 27px;
     height: 27px;
     margin: -5px 9px;
@@ -210,13 +213,13 @@
 }
 
 #about-us .image-homepage::before {
-    background-color: #45188b;
+    background-color: #61AF11;
     right: 300px;
     top: 65vh;
 }
 
 #about-us .image-homepage::after {
-    background-color: #a77fe7;
+    background-color: #d9eec4;
     right: 0;
     top: 25vh;
 }
@@ -231,8 +234,8 @@
 /*  */
 
 #service {
-    background: rgb(141, 55, 189);
-    background: radial-gradient( circle, rgba(141, 55, 189, 0.5206254376750701) 0%, rgba(255, 255, 255, 0) 41%);
+    background: rgb(186, 237, 134);
+    background: radial-gradient( circle, rgba(186,236, 134, 0.5206254376750701) 0%, rgba(255, 255, 255, 0) 41%);
 }
 
 .card-service {
@@ -249,7 +252,7 @@
 }
 
 .circle-1 .circle {
-    background-color: #9660ea;
+    background-color: #BAED86;
     width: 30px;
     height: 30px;
     margin: 0px 10px;
@@ -552,7 +555,7 @@ section#team {
 }
 
 .swiper-navBtn {
-    color: #45188b;
+    color: #61AF11;
     transition: color 0.3s ease;
 }
 
@@ -579,7 +582,7 @@ section#team {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #45188b;
+    background-color: #61AF11;
 }
 
 
@@ -749,10 +752,6 @@ section#footer {
     min-height: 250px;
 }
 
-.course-btn-read-more {
-    /* transform: translate(100%, 50%);
-    width: 120px; */
-}
 
 .course-circle-time {
     position: absolute;
@@ -783,7 +782,7 @@ section#footer {
 #detail-course .line-timeline {
     width: 3px;
     margin: 0 auto;
-    background: #45188b;
+    background: #61AF11;
 }
 
 .card-img-circle-50 {
@@ -821,11 +820,11 @@ section#footer {
 }
 
 .border-purple {
-    border: 2px solid #45188b;
+    border: 2px solid #61AF11;
 }
 
 #admin-faq input[type="radio"]:checked+label .card {
-    border: 2px solid #45188b;
+    border: 2px solid #61AF11;
 }
 
 
@@ -1078,7 +1077,7 @@ section#footer {
 }
 
 #status .btn {
-    background-color: #45188b;
+    background-color: #61AF11;
     color: rgb(255, 255, 255);
     border-radius: 30px;
     padding: 10px 20px;

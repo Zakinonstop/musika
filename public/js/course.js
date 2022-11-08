@@ -33,8 +33,7 @@
                                     </div>
                                 </div>                
                                 <div class="card-content ps-4 py-4">
-                                    <h5 class="card-title fw-bold lh-base ">` + data.title + `</h5>                                        
-                                    <div class="small text-purple">` + data.suitable_for + `</div>
+                                    <h5 class="card-title fw-bold lh-base ">` + data.title + `</h5>                                                                            
                                     <div class="row">
                                         <div class="col-sm-8 col-md-6 col-lg-12">
                                             <p class="card-text h6 text-decoration-line-through text-secondary">Rp ` + formatRupiah(data.old_price) + `</p>

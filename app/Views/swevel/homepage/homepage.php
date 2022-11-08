@@ -15,15 +15,15 @@ function circle1()
     #about-us .page-1 {
         padding-bottom: 20px;
         min-height: calc(100vh - 70px);
-        background: rgb(216, 185, 255);
-        background: linear-gradient(340deg, rgba(159, 136, 195, 1) -20%, rgba(255, 255, 255, 1) 62%);
+        background: rgb(186, 237, 134);
+        background: linear-gradient(340deg, rgba(186, 237, 134, 1) -20%, rgba(255, 255, 255, 1) 62%);
     }
 
     #about-us .page-2 {
         margin-top: -5px;
         padding-bottom: 10px;
-        background: rgb(216, 185, 255);
-        background: linear-gradient(590deg, rgba(159, 136, 195, 1) -20%, rgba(255, 255, 255, 1) 70%);
+        background: rgb(186, 237, 134);
+        background: linear-gradient(590deg, rgba(186, 237, 134, 1) -20%, rgba(255, 255, 255, 1) 70%);
     }
 
     .card-profile {
