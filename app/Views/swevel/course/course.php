@@ -19,8 +19,7 @@
             <div class="row.">
                 <div class="splide. popular-course">
                     <div class="splide.__track">
-                        <div class="splide.__list pb-5 row" id="card-popular-course">
-                        </div>
+                        <div class="splide.__list pb-5 row" id="card-list-course"></div>
                     </div>
                 </div>
             </div>

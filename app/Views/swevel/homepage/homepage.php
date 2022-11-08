@@ -159,18 +159,21 @@ function circle1()
 
 
 <div class="container" id="course">
-    <div class="text-center h1 mb-5 text-purple">Course</div>
-    <div id="card-popular-course" class="row"></div>
+    <div class="row">
+        <div class="col-lg-4">            
+            <span class="text-purple h1">
+                <span class="fw-bold">Course</span>                    
+            </span>                            
+        </div>
+        <div class="col-lg-8 d-sm-none d-lg-block">
+            <img src="/img/GroupImg.png" alt="" class="decoration">
+        </div>
+    </div>    
+    <div id="card-list-course" class="row mt-5 pt-5"></div>
     <input type="hidden" name="" id="limit-course" value="3">
-
     <div class="d-flex justify-content-center mt-3">
-<<<<<<< HEAD
-        <a href="/course" class="btn btn-purple px-3">Lihat semua</a>
-=======
-        <a href="/course" class="btn btn-purple px-5">Lihat semua</a>
->>>>>>> a608f24a73c78323a904a0cf8ba454ccf2700e53
+        <a href="/course" class="btn btn-purple px-5 btn-more-course hide">Lihat semua</a>
     </div>
-
 </div>
 
 <section id="portofolio" class="">
@@ -186,107 +189,86 @@ function circle1()
         </div>
         <div class="image-portofolio text-center">
             <div class="row fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolioFilter clearfix">
-                    <a href="#" data-filter="*" class="current">All Categories Project</a>
+                <div class="portfolioFilter clearfix mb-4">
+                    <a href="#all-portofolio" data-filter="*" class="current">All Categories Project</a>
                     <a href="#" data-filter="#perencanaan">Perencanaan</a>
                     <a href="#" data-filter="#pengawasan">Pengawasan</a>
                     <a href="#" data-filter="#konsultasi">Konsultasi Lainnya</a>
+                    <a href="#more" data-filter="#more">More</a> 
                 </div>
             </div>
             <div class="mt-lg-3 mb-3">
                 <div class="row g-4 portfolio-container wow fadeInUp" id="foto" data-wow-delay="0.5s">
-                    <div class="col-lg-4 col-md-6 portfolio-item" id="perencanaan">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
+                    <?php for($i=1; $i<=8; $i++) : ?>
+                        <div class="col-lg-3 col-m col-md-6 portfolio-item moreBox" id="perencanaan">
+                            <div class="portfolio-img rounded overflow-hidden">
+                                <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
+                                <!-- <div class="portfolio-btn">
+                                    <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>                                
+                                </div> -->
+                            </div>                    
                         </div>
-                        <div class="pt-3">
-                            <p class="text-primary mb-0">Solar Panels</p>
-                            <hr class="text-primary w-25 my-2">
-                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
+                    <?php endfor; ?>                 
+                    <?php $img = ['1.jpg','2.jpg','3.jpg','4.jpg']; ?>   
+                    <?php $img2 = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg',]; ?>   
+                    <?php foreach($img as $image) : ?>                            
+                        <div class="col-lg-3 col-m col-md-6 portfolio-item  moreBox" id="pengawasan">
+                            <div class="portfolio-img rounded overflow-hidden">
+                                <img class="img-fluid" src="img/File Musika/<?= $image; ?>" alt="">
+                                <!-- <div class="portfolio-btn">
+                                    <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>                                
+                                </div> -->
+                            </div>                    
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item" id="pengawasan">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
+                    <?php endforeach; ?>       
+                     
+                    <?php foreach($img2 as $image) : ?>                            
+                        <div class="col-lg-3 col-m col-md-6 portfolio-item moreBox" id="more">
+                            <div class="portfolio-img rounded overflow-hidden">
+                                <img class="img-fluid" src="img/File Musika/<?= $image; ?>" alt="">                                
+                            </div>                    
                         </div>
-                        <div class="pt-3">
-                            <p class="text-primary mb-0">Wind Turbines</p>
-                            <hr class="text-primary w-25 my-2">
-                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item" id="konsultasi">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="pt-3">
-                            <p class="text-primary mb-0">Hydropower Plants</p>
-                            <hr class="text-primary w-25 my-2">
-                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item" id="perencanaan">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="pt-3">
-                            <p class="text-primary mb-0">Solar Panels</p>
-                            <hr class="text-primary w-25 my-2">
-                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item" id="perencanaan">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="pt-3">
-                            <p class="text-primary mb-0">Wind Turbines</p>
-                            <hr class="text-primary w-25 my-2">
-                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item" id="pengawasan">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="pt-3">
-                            <p class="text-primary mb-0">Hydropower Plants</p>
-                            <hr class="text-primary w-25 my-2">
-                            <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                        </div>
-                    </div>
+                    <?php endforeach; ?> 
+                    <div id="loadMore" style="">
+         <a href="#">Load More</a>
+      </div>
+      <div id="loadLess" style="">
+         <a href="#">Load Less</a>
+      </div>                             
                 </div>
             </div>
         </div>
 </section>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://isotope.metafizzy.co/v1/jquery.isotope.min.js"></script>
+<script src="/js/isotope/isotope.pkgd.min.js"></script>
+<script src="/js/isotope/isotope.pkgd.js"></script>
 <script>
+    // js loadmore
+    $( document ).ready(function () {      
+
+    $(".moreBox").slice(0, 11).css('display','block');
+    $(".moreBox").slice(12, 23).css('display','none');
+
+    $('#loadMore').css('display','block');
+    $('#loadLess').css('display','none');		
+
+$("#loadMore").on('click', function (e) {
+    e.preventDefault();
+    $(".moreBox").slice(0, 23).css('display','block');
+    $('#loadMore').css('display','none');
+ $('#loadLess').css('display','block');
+});
+
+$("#loadLess").on('click', function (e) {
+ e.preventDefault();
+ $(".moreBox").slice(0, 11).css('display','block');         
+ $(".moreBox").slice(12, 23).css('display','none');               
+ $('#loadLess').css('display','none');
+ $('#loadMore').css('display','block');
+});
+});
+    // js category
     $(window).load(function() {
         var $container = $('#foto');
         $container.isotope({

@@ -181,10 +181,11 @@ a:focus {
     padding: 4px 15px;
     border-radius: 50px;
     display: inline-block;
+    cursor: pointer;
 }
 
 .portfolioFilter a.current {
-    background: #1e1e1e;
+    background: #5423a1;
     border: 1px solid #1e1e1e;
     color: #f9f9f9;
 }
@@ -239,28 +240,12 @@ a:focus {
     }
     .text {
         text-align: center;
-    }
-    .cover-text {
-        /* position: absolute; */
-        /* background-color: antiquewhite; */
-        /* z-index: 8; */
-    }
+    }  
     .button-wrapper {
         display: flex;
         justify-content: center;
         position: absolute;
         z-index: 9;
         transform: translate(150%, 300%);
-    }
-    /* .gambar {
-                position: relative;
-                width: 10px;
-                height: 5px;
-                justify-content: center;
-            }
-            .circle-3 .circle {
-                position: absolute;
-                z-index: 0;
-                background-color: white;
-            } */
+    } 
 }
