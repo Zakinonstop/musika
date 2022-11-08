@@ -161,14 +161,13 @@ function circle1()
 <div class="container" id="course">
     <div class="row">
         <div class="col-lg-4">            
-            <span class="text-purple h1">
-                <span class="fw-bold">Course</span>                    
-            </span>                            
+            <div class="text-purple h1 fw-bold position-absolute">Course</div>                                        
         </div>
         <div class="col-lg-8 d-sm-none d-lg-block">
             <img src="/img/GroupImg.png" alt="" class="decoration">
         </div>
     </div>    
+    <div class="mt-4"></div>
     <div id="card-list-course" class="row mt-5 pt-5"></div>
     <input type="hidden" name="" id="limit-course" value="3">
     <div class="d-flex justify-content-center mt-3">

@@ -23,6 +23,90 @@ var formatRupiah = function(num) {
     return ("" + formatted + ((parts) ? "." + parts[1].substr(0, 2) : ""));
 };
 
+
+// login
+$('#modal-login').append(`
+    <div class="close-modal-login d-flex justify-content-end px-5 pt-5">
+        <div class="my-auto pt-2 me-2">Close</div>
+        <div class="my-auto"><i class="fa-solid fa-xmark small"></i></div>
+    </div>
+    <section id="login" class="pt-lg-5">
+    <div class="row justify-content-center h-100">
+        <div class="col-sm-12 col-md-10 col-lg-5 my-auto px-4 mt-md-5">
+            <div class="card p-3 shadow border-0 br-20">
+                <div class="card-body">
+                    <div class="text-center h4 my-4">
+                        User Login
+                    </div>
+                    <div class="message-register success my-3"></div>
+                    <form action="#" method="POST" autocomplete="off" id="form-login">
+                        <?= csrf_field(); ?>
+                        <div class="mb-3">
+                            <input id="email" type="text" class="form-control" name="email" placeholder="Email" autofocus>
+                            <div class="invalid-feedback email"></div>
+                        </div>
+                        <div class="mb-3">
+                            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                            <div class="invalid-feedback password"></div>                                    
+                        </div>
+                        <div class="mb-3">
+                            <button id="btnLogin" type="button" class="btn btn-login w-100" name="login">LOGIN</button>
+                        </div>                                
+                    </form>                            
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+`);
+$('#btnLogin').click(function() {
+    $(this).html(`<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>`);
+    $('#login #email,#login #password').removeClass("is-invalid");
+    $('.invalid-feedback').html('');
+    $(".message-register.success").removeClass('alert alert-success').html('');
+    let email = $('#login #email').val();
+    let password = $('#login #password').val();
+    if (email == '') {
+        $(this).html('LOGIN');
+        $('#login #email').addClass("is-invalid").focus();
+        $('.invalid-feedback.email').html("Masukan Email");
+    }else if ( password == '') {
+        $(this).html('LOGIN');
+        $('#login #password').addClass("is-invalid").focus();
+        $('.invalid-feedback.password').html("Masukan Password");
+    }else{
+        $.ajax({
+            url: '/verifikasi-login',
+            type: 'post',
+            dataType: 'json',
+            data: $('#form-login').serialize(),
+            success : function(result){
+                $('#btnLogin').html('LOGIN');
+                if(result.message == 'email tidak ditemukan'){
+                    $("#email").addClass('is-invalid').focus();
+                    $('.invalid-feedback.email').html(result.message);
+                }
+                if(result.message == 'password salah'){
+                    $("#password").addClass('is-invalid').focus();
+                    $('.invalid-feedback.password').html(result.message);
+                }
+                if(result.message == 'login success'){
+                    window.location.href = result.redirect;
+                }
+            }
+        })
+    }
+});              
+$('#login #email,#login #password').keypress(function(e){
+    if(e.which == 13){
+        $('#btnLogin').click();
+    }
+})
+$('.close-modal-login').click(function(){
+    $("#modal-login").removeClass('active');
+})
+// end login
+
 // ================== Team =====================
 $(".card-team").hover(function() {
     let heightCardTeam = $(this)[0].scrollHeight;
