@@ -1,7 +1,20 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
 <?= $this->include('swevel/course/navbar-course'); ?>
-<?= $this->include('swevel/training/page_first'); ?>
+<section id="course-top">
+    <div class="wrapper">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-12">
+                    <h2 class="fw-bold text-white">Carilah Daftar Course Sesuai kebutuhanmu.</h2>
+                    <p>
+                        Kami menyediakan berbagai macam course yang dapat kamu ikuti sesuai dengan kebutuhanmu dan kemampuanmu. Yuk, cari course yang kamu inginkan!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section id="course" class="pb-5 mb-5">
     <div class="container mt-5">
         <section id="popular-course">
