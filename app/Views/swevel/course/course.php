@@ -20,17 +20,17 @@
         <section id="popular-course">
             <div class="row my-5 pb-3">
                 <div class="col-lg-7">
-                    <div class="h1 fw-bold"><span class="text-purple-100">Course</span></div>
+                    <div class="h1 fw-bold"><span class="text-purple-100">Kursus</span></div>
                     <div class="list-category-course">
-                        <span class="fw-bold">Category : </span>
-                        <button class="btn btn-light btn-sm mx-2 btn-category-course">All</button>
+                        <span class="fw-bold">Kategori : </span>
+                        <button class="btn btn-light btn-sm mx-2 btn-category-course">Semua</button>
                     </div>
                 </div>
                 <div class="col-lg-5 col-search-course">
                     <div class="search-event">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" name="search" data-kategori="course" id="search-course-training" placeholder="Search">
-                            <button class="btn btn-purple" type="button" id="btn-search-course-training">search</button>
+                            <button class="btn btn-purple" type="button" id="btn-search-course-training">Pencarian</button>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="col-sm-12 col-md-7">
-                            <h1 class="fw-light lh-base">
+                            <h1 class="fw-light lh-base" style="letter-spacing: 0px;">
                                 Masih Ada <span class="fw-bold text-dark-purple">Pertanyaan </span>?</br>
                                 Lihat Disini
                             </h1>

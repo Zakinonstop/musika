@@ -18,9 +18,9 @@
             </div>
             <div class="col-lg-4 text-center">
                 <div class="footer-logo mt-3">
-                    <img src="/img/logo-swevel.png" alt="" style="max-width: 200px;">
+                    <img src="/img/logo/musika-logo1.png" alt="" style="max-width: 250px;">
                 </div>
-                <div class="footer-sosmed mt-5">
+                <div class="footer-sosmed">
                     <?php foreach ($kontak as $x) : ?>
                         <a href="<?= $x['description']; ?>" target="_blank" class="mx-2 text-dark h4"><?= $x['icon']; ?></a>
                     <?php endforeach; ?>
