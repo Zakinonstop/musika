@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/logo-swevel-top2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/logo/favi-logo2.png" type="image/x-icon">
     <script src="asset/custom_vendor/jquery/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="/asset/custom_vendor/bootstrap5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/asset/custom_vendor/fontawesome612/css/all.css">
     <link rel="stylesheet" href="/asset/css/custom.css">
-    <title>Swevel | Login</title>
+    <title>PT Multi Visi Karya | Login</title>
 </head>
 
 <body id="auth">
     <nav class="navbar navbar-expand-lg bg-transparent position-absolute w-100 shadow-none" style="top: 0;">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="/"><img src="/img/logo-swevel.png" alt="" style="max-width: 110px;"></a>
+            <a class="navbar-brand fw-bold" href="/"><img src="/img/logo/musika-logo2.png" alt="" style="max-width: 200px; height:55px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3"></ul>            
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3"></ul>
             </div>
         </div>
     </nav>
@@ -45,13 +45,13 @@
                                 </div>
                                 <div class="mb-3">
                                     <input id="password" type="password" class="form-control" name="password" placeholder="Password">
-                                    <div class="invalid-feedback password"></div>                                    
+                                    <div class="invalid-feedback password"></div>
                                 </div>
                                 <div class="mb-3">
                                     <button id="btnLogin" type="button" class="btn btn-login w-100" name="login">LOGIN</button>
                                 </div>
                                 <input type="hidden" name="payment" id="" value="<?= $payment; ?>">
-                            </form>                            
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -73,14 +73,14 @@
                                     <div class="col-sm-12 col-md-6 mb-3">
                                         <input type="text" class="form-control" id="register-fullname" name="fullname" placeholder="Fullname">
                                         <div class="invalid-feedback fullname"></div>
-                                    </div>                                    
+                                    </div>
                                     <div class="col-sm-12 col-md-6 mb-3">
                                         <input type="text" class="form-control" id="register-email" name="email" placeholder="Email">
                                         <div class="invalid-feedback email"></div>
                                     </div>
                                     <div class="col-sm-12 col-md-6 mb-3">
                                         <input type="password" class="form-control" id="register-password" name="password" placeholder="Password">
-                                        <div class="invalid-feedback password"></div>                                        
+                                        <div class="invalid-feedback password"></div>
                                     </div>
                                     <div class="col-sm-12 col-md-6 mb-3">
                                         <input type="password" class="form-control" id="register-confirm-password" name="confirm-password" placeholder="Confirm Password">
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-            </div>            
+            </div>
         </section>
 
         <div class="wave2"></div>
@@ -131,11 +131,11 @@
                 $('#login').removeClass('d-none');
             });
 
-            $('#show-password-login, #show-password-register').change(function(){
-                if(this.checked){
-                    $('#password,#register-password,#register-confirm-password').attr('type','text');
-                }else{                
-                    $('#password,#register-password,#register-confirm-password').attr('type','password');
+            $('#show-password-login, #show-password-register').change(function() {
+                if (this.checked) {
+                    $('#password,#register-password,#register-confirm-password').attr('type', 'text');
+                } else {
+                    $('#password,#register-password,#register-confirm-password').attr('type', 'password');
                 }
             })
 
@@ -150,40 +150,40 @@
                     $(this).html('LOGIN');
                     $('#login #email').addClass("is-invalid").focus();
                     $('.invalid-feedback.email').html("Masukan Email");
-                }else if ( password == '') {
+                } else if (password == '') {
                     $(this).html('LOGIN');
                     $('#login #password').addClass("is-invalid").focus();
                     $('.invalid-feedback.password').html("Masukan Password");
-                }else{
+                } else {
                     $.ajax({
                         url: '/verifikasi-login',
                         type: 'post',
                         dataType: 'json',
                         data: $('#form-login').serialize(),
-                        success : function(result){
+                        success: function(result) {
                             $('#btnLogin').html('LOGIN');
-                            if(result.message == 'email tidak ditemukan'){
+                            if (result.message == 'email tidak ditemukan') {
                                 $("#email").addClass('is-invalid').focus();
                                 $('.invalid-feedback.email').html(result.message);
                             }
-                            if(result.message == 'password salah'){
+                            if (result.message == 'password salah') {
                                 $("#password").addClass('is-invalid').focus();
                                 $('.invalid-feedback.password').html(result.message);
                             }
-                            if(result.message == 'login success'){
+                            if (result.message == 'login success') {
                                 window.location.href = result.redirect;
                             }
                         }
                     })
                 }
-            });          
-            $('#login #email,#login #password').keypress(function(e){
-                if(e.which == 13){
+            });
+            $('#login #email,#login #password').keypress(function(e) {
+                if (e.which == 13) {
                     $('#btnLogin').click();
                 }
             })
-            $('#register input').keypress(function(e){
-                if(e.which == 13){
+            $('#register input').keypress(function(e) {
+                if (e.which == 13) {
                     $(".btn-register").click();
                 }
             })
@@ -196,52 +196,46 @@
                 let email = $('#register-email').val();
                 let password = $('#register-password').val();
                 let confirmPassword = $('#register-confirm-password').val();
-                 if (fullname == '') {
+                if (fullname == '') {
                     $(this).html('CREATE');
                     $('#register #register-fullname').addClass("is-invalid").focus();
                     $('#register .invalid-feedback.fullname').html("Masukan Nama");
-                }
-                else if (email == '') {
+                } else if (email == '') {
                     $(this).html('CREATE');
                     $('#register #register-email').addClass("is-invalid").focus();
                     $('#register .invalid-feedback.email').html("Masukan Email");
-                }
-                else if ( password == '') {
+                } else if (password == '') {
                     $(this).html('CREATE');
                     $('#register #register-password').addClass("is-invalid").focus();
                     $('#register .invalid-feedback.password').html("Masukan Password");
-                }
-                else if ( confirmPassword == '') {
+                } else if (confirmPassword == '') {
                     $(this).html('CREATE');
                     $('#register-confirm-password').addClass("is-invalid").focus();
                     $('#register .invalid-feedback.confirm-password').html("Masukan Konfirmasi Password");
-                }
-                else if (password != confirmPassword) {
+                } else if (password != confirmPassword) {
                     $(this).html('CREATE');
                     $('#register #register-confirm-password').addClass("is-invalid").focus();
                     $('#register .invalid-feedback.confirm-password').html("Konfirmasi password tidak sesuai");
-                }
-                                        
-                else{
+                } else {
                     $.ajax({
                         url: '/verifikasi-register',
                         type: 'post',
                         dataType: 'json',
                         data: $('#form-register').serialize(),
-                        success : function(result){
-                            if(result.code == '200'){
+                        success: function(result) {
+                            if (result.code == '200') {
                                 $('.btn-register').html("CREATE");
                                 $('.message-register.success').html('Registrasi berhasil. silahkan login').addClass("alert alert-success");
                                 $('#toLogin').click();
-                            }else{
+                            } else {
                                 $('.btn-register').html("CREATE");
                                 $('.message-register.failed').html('Registrasi gagal. silahkan registrasi ulang').addClass('alert alert-danger');
                             }
                         }
                     })
                 }
-            }); 
-            
+            });
+
         });
     </script>
 </body>
