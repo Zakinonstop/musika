@@ -29,12 +29,7 @@ function circlecourse()
             <img src="/img/skeleton2.gif" class="detail-img" alt="course">
         </div>
         <div class="h3 title-course text-center d-lg-none my-3 text-purple fw-bold"></div>
-        <div class=" row" id="section1" style="margin:auto;">
-            <div class="col" style="margin: auto;">
-                <div class="circle-4 d-sm-none d-lg-block">
-                    <?= circlecourse(); ?>
-                </div>
-            </div>
+        <div class=" row" id="section1" style="margin:auto;">            
         </div>
         <div class="col" style="margin: auto;">
 
@@ -47,17 +42,7 @@ function circlecourse()
                 <h5><s class="old_price">Rp </s></h5>
                 <h4 class="text-red new_price">Rp </h4>                
                 <?= $link; ?>                              
-            </div>
-            <div class="text2. mb-5 h2 title-benefits-course col-lg-4">Benefits you get when join our course</div>
-
-            <div class="row">
-                <?php for ($i = 0; $i < 3; $i++) : ?>
-                    <div class="col-lg-4 mb-3">
-                        <div class="text-purple">Fleksible</div>
-                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nulla voluptate vero molestiae quisquam tempora possimus hic eius animi aut.</div>
-                    </div>
-                <?php endfor; ?>
-            </div>
+            </div>           
         </div>
 
         <div class="mt-5 mb-5 pb-5 text-center">

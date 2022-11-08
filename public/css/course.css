@@ -159,17 +159,7 @@
     .detail-img2 {
         max-width: 550px;
         margin-left: 27;
-    }
-
-    .border-kotak::before {
-        position : absolute;
-        left: 0;
-        transform: translate(210%, -70%);                            
-        content : '';
-        height: 155px;
-        width: 155px;
-        border: 6px solid #45188B;                                     
-    }
+    }  
     
     .row #section1 {
         height: 238px;

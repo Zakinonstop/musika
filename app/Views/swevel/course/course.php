@@ -1,6 +1,6 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
-<?= $this->include('swevel/navbar'); ?>
+<?= $this->include('swevel/navbar_course'); ?>
 <?= $this->include('swevel/training/page_first'); ?>
 <section id="course" class="pb-5 mb-5">
     <div class="container mt-5">      
