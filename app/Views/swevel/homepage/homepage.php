@@ -164,11 +164,7 @@ function circle1()
     <input type="hidden" name="" id="limit-course" value="3">
 
     <div class="d-flex justify-content-center mt-3">
-<<<<<<< HEAD
-        <a href="/course" class="btn btn-purple px-3">Lihat semua</a>
-=======
         <a href="/course" class="btn btn-purple px-5">Lihat semua</a>
->>>>>>> a608f24a73c78323a904a0cf8ba454ccf2700e53
     </div>
 
 </div>
