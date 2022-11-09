@@ -26,14 +26,13 @@ var formatRupiah = function(num) {
 
 // login
 $('#modal-login').append(`
-   
     <section id="login" class="pt-lg-5">
     <div class="row justify-content-center h-100">
         <div class="col-sm-12 col-md-10 col-lg-5 my-auto px-4 mt-md-5">
-            <div class="card p-3 shadow border-0 br-20">
+            <div class="card px-3 shadow border-0 br-20">
                 <div class="card-body">
                     <div class="close-modal-login text-dark d-flex justify-content-end">
-                        <div class="my-auto"><i class="fa-solid fa-xmark small"></i></div>
+                        <div class=""><i class="fa-solid fa-xmark small"></i></div>
                     </div>
                     <div class="text-center h4 my-4">
                         User Login
@@ -46,11 +45,11 @@ $('#modal-login').append(`
                             <div class="invalid-feedback email"></div>
                         </div>
                         <div class="mb-3">
-                            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                            <input id="password" type="password" class="form-control" name="password" placeholder="Kata sandi">
                             <div class="invalid-feedback password"></div>                                    
                         </div>
                         <div class="mb-3">
-                            <button id="btnLogin" type="button" class="btn btn-login w-100" name="login">LOGIN</button>
+                            <button id="btnLogin" type="button" class="btn btn-login w-100" name="login">Masuk</button>
                         </div>                                
                     </form>                            
                 </div>

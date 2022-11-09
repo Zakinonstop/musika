@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/logo-swevel-top2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/logo/favi-logo2.png" type="image/x-icon">
     <script src="asset/custom_vendor/jquery/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="/asset/custom_vendor/bootstrap5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/asset/custom_vendor/fontawesome612/css/all.css">
     <link rel="stylesheet" href="/asset/css/custom.css">
-    <title>Swevel | Login</title>
+    <title>PT Multi Visi Karya | Masuk</title>
 </head>
 
 <body id="auth">
     <nav class="navbar navbar-expand-lg bg-transparent position-absolute w-100 shadow-none" style="top: 0;">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="/"><img src="/img/logo-swevel.png" alt="" style="max-width: 110px;"></a>
+            <a class="navbar-brand fw-bold" href="/"><img src="/img/logo/musika-logo2.png" alt="" style="max-width: 150px; height:35px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,11 +44,11 @@
                                     <div class="invalid-feedback email"></div>
                                 </div>
                                 <div class="mb-3">
-                                    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                                    <input id="password" type="password" class="form-control" name="password" placeholder="Kata sandi">
                                     <div class="invalid-feedback password"></div>                                    
                                 </div>
                                 <div class="mb-3">
-                                    <button id="btnLogin" type="button" class="btn btn-login w-100" name="login">LOGIN</button>
+                                    <button id="btnLogin" type="button" class="btn btn-login w-100" name="login">Masuk</button>
                                 </div>
                                 <input type="hidden" name="payment" id="" value="<?= $payment; ?>">
                             </form>                            
@@ -58,7 +58,7 @@
             </div>
         </section>
 
-        <section id="register" class="d-none">
+        <!-- <section id="register" class="d-none">
             <div class="row justify-content-center h-100">
                 <div class="col-sm-12 col-md-9 my-auto px-4">
                     <div class="card p-3">
@@ -102,7 +102,7 @@
                     </div>
                 </div>
             </div>            
-        </section>
+        </section> -->
 
         <div class="wave2"></div>
     </div>
@@ -122,6 +122,9 @@
                     $('#login').removeClass('d-none');
                 }
             });
+
+            $('.navbar-toggler').hide();
+
             $('#toRegister').click(function() {
                 $('#login').addClass('d-none');
                 $('#register').removeClass('d-none');

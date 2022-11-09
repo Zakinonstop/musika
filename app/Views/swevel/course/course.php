@@ -1,13 +1,14 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
 <?= $this->include('swevel/course/navbar-course'); ?>
+
 <section id="course-top">
     <div class="wrapper">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8 col-12">
-                    <h2 class="fw-bold text-white">Carilah Daftar Course Sesuai kebutuhanmu.</h2>
-                    <p>
+                <div class="col-lg-8 col-md-8 col-12">
+                    <div class="fw-bold text-white h1">Carilah Daftar Course Sesuai kebutuhanmu.</div>
+                    <p class="h3">
                         Kami menyediakan berbagai macam course yang dapat kamu ikuti sesuai dengan kebutuhanmu dan kemampuanmu. Yuk, cari course yang kamu inginkan!
                     </p>
                 </div>
@@ -15,6 +16,7 @@
         </div>
     </div>
 </section>
+
 <section id="course" class="pb-5 mb-5">
     <div class="container mt-5">
         <section id="popular-course">
@@ -29,8 +31,8 @@
                 <div class="col-lg-5 col-search-course">
                     <div class="search-event">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="search" data-kategori="course" id="search-course-training" placeholder="Search">
-                            <button class="btn btn-purple" type="button" id="btn-search-course-training">Pencarian</button>
+                            <input type="text" class="form-control" name="search" data-kategori="course" id="search-course-training" placeholder="Cari kursus">
+                            <button class="btn btn-purple" type="button" id="btn-search-course-training">Cari</button>
                         </div>
                     </div>
                 </div>

@@ -124,12 +124,12 @@ footer .bg-white {
 
 /* purple */
 /* .bg-purple {
-  background-color: #773cd3 !important;
+  background-color: #61AF11 !important;
 } */
 
 /* .btn-purple {
-  background-color: #773cd3 !important;
-  border-color: #773cd3 !important;
+  background-color: #61AF11 !important;
+  border-color: #61AF11 !important;
 } */
 
 .bg-light-purple {
@@ -197,7 +197,7 @@ footer .bg-white {
 }
 #customer-review .bg1 .p .fs-6,
 #customer-review .bg2 .p .fs-6 {
-  border-left: 5px solid #773cd3;
+  border-left: 5px solid #61AF11;
   padding-left: 1rem;
 }
 #customer-review .bg1 .p .fs-7,
@@ -245,7 +245,7 @@ footer .bg-white {
 #contact #contactUs form input[type="text"]:focus,
 #contact #contactUs form input[type="email"]:focus,
 #contact #contactUs form textarea:focus {
-  border-bottom: 1px solid #773cd3;
+  border-bottom: 1px solid #61AF11;
 }
 #contact #contactUs form .form-check-input:checked[type="radio"] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
@@ -643,17 +643,22 @@ margin-top: 120px;
 }
 #auth .wave1 {
   height: 30%;
-  background: url("/img/login/wave1.png");
+  background: url("/img/login/wave_bottom.svg");
   background-size: cover;
+  position:absolute;
   top: 0;
-  right: 0;
+  right: 0;   
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);  
 }
 #auth .wave2 {
   height: 30%;
-  background: url("/img/login/wave2.png");
+  background: url("/img/login/wave_bottom.svg");
   background-size: cover;
   bottom: 0;
   left: 0;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);  
 }
 #auth .card {
   /*border-top-left-radius: 0;
@@ -685,7 +690,7 @@ margin-top: 120px;
   /*font-weight: 700;*/
   letter-spacing: 1px;
   font-size: 1em;
-  background-color: #773cd3 !important; 
+  background-color: #61AF11 !important; 
 }
 .btn-login:hover {
   background: #61AF11;
@@ -696,7 +701,7 @@ margin-top: 120px;
 }
 #auth a {
   text-decoration: none;
-  color: #773cd3;
+  color: #61AF11;
   font-size: 12pt;  
   cursor: pointer;
 }

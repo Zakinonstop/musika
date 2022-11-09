@@ -18,7 +18,7 @@
             </div>
             <div class="col-lg-4 text-center">
                 <div class="footer-logo mt-3">
-                    <img src="/img/logo/musika-logo1.png" alt="" style="max-width: 250px;">
+                    <img src="/img/logo/musika-logo1.png" alt="" style="max-width: 220px;">
                 </div>
                 <div class="footer-sosmed">
                     <?php foreach ($kontak as $x) : ?>

@@ -2,7 +2,7 @@
 -------------------------------------------------- */
 
 .ch_color {
-    color: #BAED86;
+    color: #61AF11;
 }
 
 .spasi {
@@ -153,7 +153,7 @@ button.btn12:hover {
 }
 
 .detail-img {
-    max-width: 600px;
+    max-width: 500px;
     position: relative;
     z-index: 3;
 }
@@ -211,7 +211,7 @@ button.btn12:hover {
 /* course */
 
 #course-top {
-    height: 100vh;
+    height: calc(100vh - 70px);
     width: 100%;
     background-image: url("../img/poster.png");
     background-size: cover;

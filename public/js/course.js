@@ -27,7 +27,7 @@
                                 <div class="image-content card-thumbnail-course" data-id="` + data.course_id + `">
                                     <div class="card-image.">
                                         <div class="course-img-polygon">
-                                            <img src="/img/Poster.png" alt="" class="card-img">
+                                            <img src="" alt="" class="card-img">
                                         </div>
                                         <div class="text-center p-2 btn-light-50-hover-0 w-50 position-absolute small br-end-10" style="z-index:5; margin-top: -35px;">Intermediate</div>
                                     </div>
@@ -37,7 +37,7 @@
                                     <div class="row">
                                         <div class="col-sm-8 col-md-6 col-lg-12">
                                             <p class="card-text h6 text-decoration-line-through text-secondary">Rp ` + formatRupiah(data.old_price) + `</p>
-                                            <p class="card-text h5 fw-bold text-red">Rp ` + formatRupiah(data.new_price) + `</p>
+                                            <p class="card-text h5 fw-bold text-orange">Rp ` + formatRupiah(data.new_price) + `</p>
                                         </div>                        
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
 
                  });
                  $("img").bind("error", function() {
-                     $(this).attr("src", "/img/loaderpurple2.gif");
+                     $(this).attr("src", "/img/poster.png");
                  });
              } else {
                  $('.skeleton').addClass('hide')
@@ -150,7 +150,7 @@
                                                  <div class="list-course-bundling-` + bundling.bundling_id + ` small text-white">` + getDetailBundling(bundling.bundling_id) + `</div>  
                                                  <div class="col-sm-8 col-md-6 col-lg-12">
                                                          <p class="card-text h6 text-decoration-line-through text-secondary">Rp ` + formatRupiah(bundling.old_price) + `</p>
-                                                         <p class="card-text h5 fw-bold text-red">Rp ` + formatRupiah(bundling.new_price) + `</p>
+                                                         <p class="card-text h5 fw-bold text-orange">Rp ` + formatRupiah(bundling.new_price) + `</p>
                                                  </div>            
                                                  <div class="col-sm-4 col-md-6 col-lg-12 text-sm-end mt-4 text-lg-start">
                                                          <button class="btn btn-sm btn-purple-100 mt-2 w-100">Join Now</button>

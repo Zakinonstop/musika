@@ -529,7 +529,7 @@ function circle1()
                                         </div>
                                     </div>
                                     <div class="col-12 text-end mt-5 sendMsg">
-                                        <button id="btnSend" type="submit" class="btn btn-dark-purple btn-sm text-white fw-bolder rounded-pill ps-4 pe-4">SEND</button>
+                                        <button id="btnSend" type="submit" class="btn btn-dark-purple btn-sm text-white fw-bolder rounded-pill ps-4 pe-4">Kirim</button>
                                     </div>
                                 </form>
                             </div>

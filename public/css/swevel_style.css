@@ -14,7 +14,7 @@
 }
 
 .text-purple {
-    color: #BAED86;
+    color: #61AF11;
 }
 
 .text-purple-100 {
@@ -23,21 +23,21 @@
 
 .btn-outline-purple {
     background: white;
-    border: 1px solid #773cd3;
+    border: 1px solid #BAED86;
 }
 
 .btn-purple {
-    background: #773cd3;
+    background: #61AF11;
     color: #fff;
 }
 
 .btn-chart-course {
-    color: #773cd3;
+    color: #61AF11;
     transition: all 0.4s;
 }
 
 .btn-chart-course:hover {
-    color: #b38fde;
+    color: #88c946;
 }
 
 .btn-purple-50 {
@@ -62,13 +62,13 @@
 
 .btn-purple:hover,
 .btn-purple-100:hover {
-    background: #a36aff;
+    background: #88c946;
     color: #fff;
     border: none;
 }
 
 .btn-purple:focus {
-    background: #a36aff;
+    background: #9ad75d;
     color: #fff;
     border: none;
 }
@@ -185,7 +185,7 @@
     position: absolute;
     width: 400px;
     right: 0;
-    top: 27vh;
+    top: 20vh;
     z-index: 3;
 }
 
@@ -197,26 +197,25 @@
 }
 
 .circle-3 .circle {
-    background-color: #BAED86;
+    background-color: #61AF11;
     width: 27px;
     height: 27px;
     margin: -5px 9px;
     border-radius: 50px;
 }
 
-#about-us .image-homepage::before,
+/* #about-us .image-homepage::before,
 #about-us .image-homepage::after {
     content: " ";
     height: 100px;
     width: 150px;
     position: absolute;
 }
-
 #about-us .image-homepage::before {
     background-color: #61AF11;
     right: 300px;
     top: 65vh;
-}
+} */
 
 #about-us .image-homepage::after {
     background-color: #d9eec4;
@@ -591,7 +590,7 @@ section#team {
 #client {
     align-items: center;
     justify-content: center;
-    background: #f2e8ff;
+    background: #fafff6;
 }
 
 @keyframes scroll {
@@ -625,8 +624,8 @@ section#team {
 
 /* Footer Homepage*/
 
-section#footer {
-    background: #d9d9d9;
+#footer {
+    background: #fafff6;
     line-height: 30px;
 }
 
@@ -770,8 +769,8 @@ section#footer {
 
 .card-course,
 .card-bundling {
-    background: rgb(159, 136, 195);
-    background: linear-gradient( 16deg, rgba(159, 136, 195, 1) -20%, rgba(255, 255, 255, 1) 26%);
+    background: rgb(186, 237, 134);
+    background: linear-gradient( 16deg, rgba(186, 237, 134,1) -20%, rgba(255, 255, 255, 1) 26%);
 }
 
 .card-bundling:hover {
