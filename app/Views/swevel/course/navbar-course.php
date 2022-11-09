@@ -13,10 +13,10 @@
                     <a class="nav-link" aria-current="page" href="/training">Pelatihan</a>
                 </li>
                 <li class="nav-item mx-1">
-                    <a class="nav-link" aria-current="page" href="#impementasi">Impementasi</a>
+                    <a class="nav-link" aria-current="page" href="/konsultasi">Impementasi</a>
                 </li>
-            </ul>            
-            <a href="/login" class="btn fw-bold text-purple text-decoration-none br-20">Login</a>                
+            </ul>
+            <a href="/login" class="btn fw-bold text-purple text-decoration-none br-20">Login</a>
         </div>
     </div>
 </nav>

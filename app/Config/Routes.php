@@ -37,20 +37,20 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 // percobaan
-$routes->get('coba',function(){
+$routes->get('coba', function () {
     $data = [
         'title' => 'Percobaan',
     ];
-    return view('swevel/course/coba-template-course',$data);
+    return view('swevel/course/coba-template-course', $data);
 });
 
 
 // login 
 $routes->get('/', 'Home::index');
 $routes->get('/login', 'Auth::auth');
-$routes->get('/logout','Auth::logout');
-$routes->post('/verifikasi-login','Auth::verifikasi_login');
-$routes->post('/verifikasi-register','Auth::verifikasi_register');
+$routes->get('/logout', 'Auth::logout');
+$routes->post('/verifikasi-login', 'Auth::verifikasi_login');
+$routes->post('/verifikasi-register', 'Auth::verifikasi_register');
 
 $routes->get("/privacy", 'Home::kebijakanPrivasi');
 
@@ -71,10 +71,10 @@ $routes->get('/detail-artikel/(:any)', 'Home::detailArtikel/$1');
 
 // ================== ADMIN ===================
 $routes->get('/dashboard', 'Admin::index');
-$routes->get('/pembayaran','Admin::pembayaran');
-$routes->post("/save-pembayaran",'Admin::simpan_pembayaran');
-$routes->post("/update-pembayaran",'Admin::update_pembayaran');
-$routes->delete('/delete-pembayaran','Admin::hapus_pembayaran');
+$routes->get('/pembayaran', 'Admin::pembayaran');
+$routes->post("/save-pembayaran", 'Admin::simpan_pembayaran');
+$routes->post("/update-pembayaran", 'Admin::update_pembayaran');
+$routes->delete('/delete-pembayaran', 'Admin::hapus_pembayaran');
 
 // milestone
 $routes->get('/admin-milestone', 'Admin::milestone');
@@ -131,7 +131,7 @@ $routes->get('/course-getApi', 'Course::getApi');
 
 $routes->get('cobaApi', function () {
     $data = ['title' => 'percobaan API'];
-    return view('swevel/course/coba-api',$data);
+    return view('swevel/course/coba-api', $data);
 });
 
 // =============================================
@@ -152,12 +152,13 @@ $routes->get('/admin-event', 'Admin::event');
 $routes->get('/more-event', 'Admin::moreEvent');
 $routes->get('/payment/(:num)', 'Home::payment/$1');
 $routes->get('/payment/detail', 'Home::detail_payment');
-$routes->post('/save-purchase','Home::save_purchase');
+$routes->post('/save-purchase', 'Home::save_purchase');
 
-$routes->get('/notyetapproved','Course::not_yet_approved');
-$routes->get('purchase-done','Home::purchase_message');
+$routes->get('/notyetapproved', 'Course::not_yet_approved');
+$routes->get('purchase-done', 'Home::purchase_message');
 
-
+// konsultasi
+$routes->get('/konsultasi', 'Konsultasi::index');
 
 
 // ===================== User =====================
