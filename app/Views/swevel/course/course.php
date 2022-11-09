@@ -60,7 +60,7 @@
                         <div class="col-sm-12 col-md-4 img">
                             <!-- <div class="card border-0">
                     <div class="card-body p-0"> -->
-                            <img src="asset/image/faq/Question.png" width="100%" alt="">
+                            <img src="/img/File Musika/FAQ.png" width="100%" alt="">
                             <!-- </div>
                 </div> -->
                         </div>

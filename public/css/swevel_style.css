@@ -1,4 +1,6 @@
 /* color purple swevel */
+
+
 /* color: #61AF11; */
 
 * {
@@ -18,7 +20,7 @@
 }
 
 .text-purple-100 {
-    color: #61AF11;    
+    color: #61AF11;
 }
 
 .btn-outline-purple {
@@ -215,6 +217,7 @@
     border-radius: 50px;
 }
 
+
 /* #about-us .image-homepage::before,
 #about-us .image-homepage::after {
     content: " ";
@@ -245,7 +248,7 @@
 
 #service {
     background: rgb(186, 237, 134);
-    background: radial-gradient( circle, rgba(186,236, 134, 0.5206254376750701) 0%, rgba(255, 255, 255, 0) 41%);
+    background: radial-gradient( circle, rgba(186, 236, 134, 0.5206254376750701) 0%, rgba(255, 255, 255, 0) 41%);
 }
 
 .card-service {
@@ -636,7 +639,7 @@ section#team {
 /* Footer Homepage*/
 
 #footer {
-    background: #fafff6;
+    background: #DDF6C3;
     line-height: 30px;
 }
 
@@ -762,7 +765,6 @@ section#team {
     min-height: 250px;
 }
 
-
 .course-circle-time {
     position: absolute;
     width: 100px;
@@ -781,7 +783,7 @@ section#team {
 .card-course,
 .card-bundling {
     background: rgb(186, 237, 134);
-    background: linear-gradient( 16deg, rgba(186, 237, 134,1) -20%, rgba(255, 255, 255, 1) 26%);
+    background: linear-gradient( 16deg, rgba(186, 237, 134, 1) -20%, rgba(255, 255, 255, 1) 26%);
 }
 
 .card-bundling:hover {
