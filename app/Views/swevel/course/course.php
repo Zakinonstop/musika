@@ -23,6 +23,7 @@
             <div class="row my-5 pb-3">
                 <div class="col-lg-7">
                     <div class="h1 fw-bold"><span class="text-purple-100">Kursus</span></div>
+                    <input type="hidden" name="" id="limit-course" value="0">
                     <div class="list-category-course">
                         <span class="fw-bold">Kategori : </span>
                         <button class="btn btn-light btn-sm mx-2 btn-category-course">Semua</button>

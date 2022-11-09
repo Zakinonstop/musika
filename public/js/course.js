@@ -1,4 +1,13 @@
- function refreshCourse() {
+$(document).ajaxComplete(function(){
+    $("img").bind("error", function() {
+        $(this).attr("src", "/img/poster.png");
+    });
+    setTimeout(function(){
+        $('.card-price').removeClass('hide');
+    },1000);
+});
+
+  function refreshCourse() {
      $('.skeleton').removeClass('hide')
      $('#card-list-course').html('');
      let inputSearch = $('#search-course-training').val();
@@ -29,10 +38,10 @@
                                         <div class="course-img-polygon">
                                             <img src="" alt="" class="card-img">
                                         </div>
-                                        <div class="text-center p-2 btn-light-50-hover-0 w-50 position-absolute small br-end-10" style="z-index:5; margin-top: -35px;">Intermediate</div>
+                                        <div class="text-center p-2 btn-light-50-hover-0 w-50 position-absolute small br-end-10 category-course-other category-course-`+data.course_id+`" style="z-index:5; margin-top: -35px;"></div>
                                     </div>
                                 </div>                
-                                <div class="card-content ps-4 py-4">
+                                <div class="card-content card-content-course ps-4 py-4"  data-id="` + data.course_id + `">
                                     <h5 class="card-title fw-bold lh-base ">` + data.title + `</h5>                                                                            
                                     <div class="row">
                                         <div class="col-sm-8 col-md-6 col-lg-12">
@@ -54,22 +63,23 @@
                         `);
                  });
 
-                 $('.btn-more-course').removeClass("hide");
-                 $(".btn-buy-course, .btn-chart-course").click(function() {
-                     $('#modal-login').addClass('active');
-                 });
+                 $('.btn-more-course').removeClass("hide");                 
+
                  let limit = $('#limit-course').val();
                  if (limit > 0) {
                      $('.col-course').slice(limit, countData).remove();
                  }
-                 $.each(result, function(i, data) {
+
+                //  get category course
+                 $.each(result, function(i, data) {                    
                      if (data.category.length <= 0) {
-                         $('.category-other').html('other');
+                         $('.category-course-other').html('-');
                      } else {
                          $.each(data.category, function(i, categ) {
                              $('.list-category-course').append(`
-                                        <button class="btn btn-light btn-sm mx-2 btn-category-course">` + categ.name + `</button>
-                                    `);
+                                    <button class="btn btn-light btn-sm mx-2 btn-category-course">` + categ.name + `</button>
+                            `);
+
                              $('.category-course-' + categ.course_id).html(categ.name);
                              // remove duplicate
                              var seen = {};
@@ -86,8 +96,8 @@
 
                      $.each(data.tag, function(i, dataa) {
                          $('.menu-tag').append(`                                                    
-                                    <button type="button" class="btn btn-light mx-3 tag-name">` + dataa.name + `</button>
-                                `);
+                            <button type="button" class="btn btn-light mx-3 tag-name">` + dataa.name + `</button>
+                        `);
 
                          // remove duplicate
                          var seen = {};
@@ -101,20 +111,19 @@
                          // end remove
                      });
 
-                 });
-                 $("img").bind("error", function() {
-                     $(this).attr("src", "/img/poster.png");
-                 });
+                 });                
              } else {
                  $('.skeleton').addClass('hide')
                  $('#card-list-course').append(`
-                    <div class="alert alert-warning w-100 text-center" role="alert">
-                    Maaf, keyword yang anda cari tidak ditemukan.
-                    </div>
+                    <div class="d-flex justify-content-center">   
+                        <div class="alert alert-warning w-75 text-center br-20" role="alert">
+                            Maaf, keyword yang anda cari tidak ditemukan.
+                        </div>
+                    </div> 
                 `)
              }
 
-             $('.card-thumbnail-course').click(function() {
+             $('.card-thumbnail-course, .card-content-course').click(function() {
                  let id = $(this).data('id');
                  window.location.href = '/course/detail/' + id;
              })
@@ -122,10 +131,12 @@
          error: function(result, ajaxOptions, thrownError) {
              $('.skeleton').addClass('hide')
              $('#card-list-course').append(`
-                    <div class="alert alert-danger w-100 text-center" role="alert">
-                    Maaf, course tidak tersedia.
+                <div class="d-flex justify-content-center">   
+                    <div class="alert alert-warning w-75 text-center br-20" role="alert">
+                        Maaf, course tidak tersedia.
                     </div>
-                `)
+                </div> 
+            `);
          }
      })
  }

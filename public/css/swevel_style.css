@@ -34,6 +34,7 @@
 .btn-chart-course {
     color: #61AF11;
     transition: all 0.4s;
+    cursor:pointer;
 }
 
 .btn-chart-course:hover {
@@ -135,6 +136,16 @@
     box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px #9f88c3;
 }
 
+.btn-login, .btn-register {  
+    color: #fff;  
+    letter-spacing: 1px;
+    font-size: 1em;
+    background-color: #61AF11 !important; 
+  }
+  .btn-login:hover {
+    background: #61AF11;
+    color: #fff;
+  }
 #modal-login.active {
     display: block;
     background: rgba(0, 0, 0, .6);
@@ -864,12 +875,12 @@ section#team {
 }
 
 #user-sidebar-materi .accordion-button-primary.active {
-    background: #ded2f1;
+    background: #edffd9;
     color: black;
 }
 
 .hover-purple.active {
-    background: #e5d9f8;
+    background: #edffd9;
     display: block;
     border-radius: 5px;
     padding: 5px;

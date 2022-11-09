@@ -16,7 +16,7 @@
                     <a class="nav-link" aria-current="page" href="#impementasi">Impementasi</a>
                 </li>
             </ul>            
-            <a href="/login" class="btn fw-bold text-purple text-decoration-none br-20">Login</a>                
+            <a href="/login" class="btn fw-bold text-purple text-decoration-none">Login</a>                
         </div>
     </div>
 </nav>

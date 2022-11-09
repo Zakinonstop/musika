@@ -553,4 +553,5 @@ function circle1()
 <script src="/js/course.js"></script>
 
 <?= $this->include('swevel/homepage/footer'); ?>
+<?= $this->include('swevel/training/footer'); ?>
 <?= $this->endSection(); ?>

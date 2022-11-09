@@ -10,21 +10,13 @@
     <link rel="stylesheet" href="/asset/custom_vendor/bootstrap5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/asset/custom_vendor/fontawesome612/css/all.css">
     <link rel="stylesheet" href="/asset/css/custom.css">
-<<<<<<< HEAD
     <title>PT Multi Visi Karya | Masuk</title>
-=======
-    <title>PT Multi Visi Karya | Login</title>
->>>>>>> 545f4f7a74d0920986b26a5c65c8d9f9906925ac
 </head>
 
 <body id="auth">
     <nav class="navbar navbar-expand-lg bg-transparent position-absolute w-100 shadow-none" style="top: 0;">
         <div class="container">
-<<<<<<< HEAD
             <a class="navbar-brand fw-bold" href="/"><img src="/img/logo/musika-logo2.png" alt="" style="max-width: 150px; height:35px;"></a>
-=======
-            <a class="navbar-brand fw-bold" href="/"><img src="/img/logo/musika-logo2.png" alt="" style="max-width: 200px; height:55px;"></a>
->>>>>>> 545f4f7a74d0920986b26a5c65c8d9f9906925ac
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -109,13 +101,8 @@
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
             </div>            
         </section> -->
-=======
-            </div>
-        </section>
->>>>>>> 545f4f7a74d0920986b26a5c65c8d9f9906925ac
 
         <div class="wave2"></div>
     </div>

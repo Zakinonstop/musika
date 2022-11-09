@@ -28,15 +28,17 @@ $(document).ready(function() {
                         </h2>
                         <div id="flush-collapse` + data.order + `" class="accordion-collapse collapse" aria-labelledby="flush-materi" data-bs-parent="#menu-materi">
                             <div class="accordion-body">
-                                <ul class="list-sub-menu-materi">                                    
-                                    <li class="mb-3"><a href="#" class="text-decoration-none cursor pointer text-dark hover-purple btn-materi" data-video="` + data.video_id + `" data-menu="materi">` + data.title + `</a></li>
-                                    <li class="mb-3 btn-kuis hide"><a href="/materi/kuis?v=` + data.video_id + `&c=` + course + `" class="text-decoration-none cursor-pointer text-dark hover-purple btn-kuis`+data.video_id+`" data-video="` + data.video_id + `" data-menu="kuis">Kuis</a></li>                                    
+                                <ul class="list-sub-menu-materi">                                                                        
+                                    <li class="mb-3 hover-purple cursor-pointer btn-materi-kuis-resume">Materi</li>
+                                    <li class="mb-3 hover-purple cursor-pointer btn-materi-kuis-resume">Kuis</li>
+                                    <li class="mb-3 hover-purple cursor-pointer btn-materi-kuis-resume">Resume</li>                                    
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    `);
-                });              
+                 `);
+            });              
+
             // sorting ascending list menu sidebar materi
             var $parentMenu = $("#menu-materi"),
             $listMenu = $parentMenu.children("div.accordion-item");
@@ -82,16 +84,16 @@ $(document).ready(function() {
                         $(".link-video").html(linkVideo);
                         $(".video1").attr("src", linkVideo);
 
-                        // cek kuis apakah ada atau tidak 
-                        if(!result.quiz){
-                            btnKuis.addClass('hide');
-                        }else{
-                            if(result.quiz == ''){
-                                btnKuis.addClass('hide');
-                            }else{
-                                btnKuis.removeClass('hide');
-                            }
-                        }                                            
+                        // // cek kuis apakah ada atau tidak 
+                        // if(!result.quiz){
+                        //     btnKuis.addClass('hide');
+                        // }else{
+                        //     if(result.quiz == ''){
+                        //         btnKuis.addClass('hide');
+                        //     }else{
+                        //         btnKuis.removeClass('hide');
+                        //     }
+                        // }                                            
                     },
                     error: function(result, ajaxOptions, thrownError) {
                         $('.penjelasan-materi').html('')
@@ -106,13 +108,10 @@ $(document).ready(function() {
                 });
             });
 
-            
             $('.mulai-belajar').click(function(){                  
                 $('.btn-list-materi.order-1').click();
             })
            
-        
-
             // cek kondisi apakah ada di halaman matari atau halaman kuis untuk membuat tombol menjadi anchor
             let category = $("#category").val();
             if (category == "kuis") {
@@ -138,7 +137,6 @@ $(document).ready(function() {
             $("img").bind("error", function() {
                 $(this).attr("src", "/img/skeleton2.gif");
             });
-
             $(".accordion-button-primary").click(function() {
                 $(".accordion-button-primary").removeClass(
                     "bg-purple text-white active"

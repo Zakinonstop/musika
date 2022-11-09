@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/logo-swevel-top2.png" type="image/x-icon">
     <script src="/asset/custom_vendor/jquery/jquery-3.6.1.min.js"></script>    
-
     <link rel="stylesheet" href="/asset/custom_vendor/bootstrap5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/asset/custom_vendor/fontawesome612/css/all.css">    
+    
     <link rel="stylesheet" href="/css/swevel_style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -38,17 +38,8 @@
 </head>
 
 <body>   
-    <nav class="navbar bg-white shadow">
-        <div class="container">            
-                <div class="btn-sidebar-materi cursor-pointer"><i class="fa-solid fa-bars"></i></div>
-                <div class="btn-show-sidebar-materi cursor-pointer"><i class="fa-solid fa-close"></i></div>
-                <div><a class="navbar-brand fw-bold" href="/dashboard"><img src="/img/logo-swevel.png" alt="" style="max-width: 110px;"></a></div>            
-            <!-- <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Cari modul" id="nav-search-modul">
-            </form> -->
-        </div>
-    </nav>
-
+    <?= $this->include('swevel/course/navbar-course'); ?>
+    <div id="modal-login" class="hide"></div>  
 
     <div class="d-flex">
         <div id="user-sidebar-materi">
@@ -63,6 +54,7 @@
 
     <script src="/asset/custom_vendor/bootstrap5/js/bootstrap.bundle.min.js"></script>    
     <script src="/js/swevel.js"></script>
+    
     <script>
         $(document).ready(function(){
 
