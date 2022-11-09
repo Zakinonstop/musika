@@ -77,7 +77,7 @@ function circle1()
             <div class="col-lg-8 col-md-12 col-12 mb-5">
                 <div class="text pt-5">
                     <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Teknologi Informasi</span> yang Terbaik dan Berkualitas</h1>
-                    <p class="cover-text my-5">PT. Swevel Universal Media is one of Information Technology Service Industry that gives service excellence quality. Point of product of PT. Swevel Universal Media prioritize System End User and gives creative solution IT. PT. Swevel
+                    <p class="cover-text my-5">PT. Multi Visi Karya is one of Information Technology Service Industry that gives service excellence quality. Point of product of PT. Multi Visi Karya prioritize System End User and gives creative solution IT. PT. Swevel
                         Universal Media focus in WEB Developer and Mobile Smart Phone Application.</p>
                 </div>
             </div>
@@ -103,7 +103,7 @@ function circle1()
                         <div class="card-body">
                             <div class="row btn-card-profile">
                                 <div class="col-lg-9">Lorem ipsum dolor, sit amet.</div>
-                                <div class="text-muted mt-2">PT. Swevel Universal Media</div>
+                                <div class="text-muted mt-2">PT. Multi Visi Karya</div>
                             </div>
                             <div class="deskripsi-profile mt-5">
                                 <div>
@@ -171,7 +171,7 @@ function circle1()
     <div id="card-list-course" class="row mt-5 pt-5"></div>
     <input type="hidden" name="" id="limit-course" value="3">
     <div class="d-flex justify-content-center mt-3">
-        <a href="/course" class="btn btn-purple px-5 btn-more-course hide">Lihat semua</a>
+        <a href="/course" class="btn btn-green px-5 btn-more-course hide text-light">Lihat semua</a>
     </div>
 </div>
 
@@ -229,10 +229,10 @@ function circle1()
                         </div>
                     <?php endforeach; ?>
                     <div id="loadMore" style="">
-                        <a href="#" class="btn btn-primary">Lihat Lagi</a>
+                        <a href="#" class="btn btn-green text-light">Lihat Lagi</a>
                     </div>
                     <div id="loadLess" style="">
-                        <a href="#" class="btn btn-primary">Kembali</a>
+                        <a href="#" class="btn btn-green text-light">Kembali</a>
                     </div>
                 </div>
             </div>
