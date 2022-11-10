@@ -1,15 +1,24 @@
 $(document).ajaxComplete(function(){
-    $("img").bind("error", function() {
-        $(this).attr("src", "/img/poster.png");
-    });
     setTimeout(function(){
         $('.card-price').removeClass('hide');
-    },1000);
+    },1000);        
+
+    $('.btn-category-course').click(function(){
+        let getCateg = $(this).data('categ');
+        $('.btn-category-course').removeClass('btn-purple').addClass('btn-light');
+        $(this).removeClass('btn-light').addClass('btn-purple');
+        $('.skeleton').removeClass('hide');
+        $('#card-list-course').html('');
+        
+        $('#input-categ').val(getCateg);
+        getCourse('https://lms.lazy2.codes/api/course');                    
+     })
 });
 
-  function refreshCourse() {
+function refreshCourse() {
      $('.skeleton').removeClass('hide')
      $('#card-list-course').html('');
+
      let inputSearch = $('#search-course-training').val();
      if (inputSearch == '') {
          getCourse('https://lms.lazy2.codes/api/course');
@@ -18,7 +27,7 @@ $(document).ajaxComplete(function(){
      }
  }
 
- function getCourse(url, searchCourse) {
+ function getCourse(url) {
      let getUrl = url;
      $.ajax({
          url: getUrl,
@@ -29,7 +38,7 @@ $(document).ajaxComplete(function(){
              if (countData >= 1) {
                  $('.skeleton').addClass('hide')
                  $('#card-list-course').html('');
-                 $.each(result, function(i, data) {
+                 $.each(result, function(i, data) {                    
                      $('#card-list-course').append(`
                         <div class="col-md-6 col-lg-4 col-sm-12 col-course mb-5">
                             <div class="card card-course border-0 cursor-pointer shadow br-15" data-id="` + data.course_id + `">                
@@ -38,7 +47,7 @@ $(document).ajaxComplete(function(){
                                         <div class="course-img-polygon">
                                             <img src="" alt="" class="card-img">
                                         </div>
-                                        <div class="text-center p-2 btn-light-50-hover-0 w-50 position-absolute small br-end-10 category-course-other category-course-`+data.course_id+`" style="z-index:5; margin-top: -35px;"></div>
+                                        <div class="text-center p-2 btn-light-50-hover-0 w-50 position-absolute small br-end-10 category-course-other category-course-`+data.course_id+`" style="z-index:5; margin-top: -35px;"></div>                                                                                
                                     </div>
                                 </div>                
                                 <div class="card-content card-content-course ps-4 py-4"  data-id="` + data.course_id + `">
@@ -61,7 +70,7 @@ $(document).ajaxComplete(function(){
                             </div>
                          </div>
                         `);
-                 });
+                 });                 
 
                  $('.btn-more-course').removeClass("hide");                 
 
@@ -70,48 +79,69 @@ $(document).ajaxComplete(function(){
                      $('.col-course').slice(limit, countData).remove();
                  }
 
-                //  get category course
-                 $.each(result, function(i, data) {                    
-                     if (data.category.length <= 0) {
-                         $('.category-course-other').html('-');
-                     } else {
-                         $.each(data.category, function(i, categ) {
-                             $('.list-category-course').append(`
-                                    <button class="btn btn-light btn-sm mx-2 btn-category-course">` + categ.name + `</button>
-                            `);
+                //  get category course                
+                 $.each(result, function(i, data) {    
+                    if(data.category){
+                        if (data.category.length <= 0) {
+                            $('.category-course-other').html('-');                            
+                        } else {
+                            $.each(data.category, function(i, categ) {
+                                $('.list-category-course').append(`
+                                    <button class="btn btn-light btn-sm mx-2 btn-category-course" data-categ="`+categ.name+`">` + categ.name + `</button>
+                                `);                            
 
-                             $('.category-course-' + categ.course_id).html(categ.name);
-                             // remove duplicate
-                             var seen = {};
-                             $('.btn-category-course').each(function() {
-                                 var txt = $(this).text();
-                                 if (seen[txt])
-                                     $(this).remove();
-                                 else
-                                     seen[txt] = true;
-                             });
-                             // end remove
-                         })
-                     }
+                                $('.category-course-' + categ.course_id).html(categ.name);                                                              
+                                $('.category-course-' + categ.course_id).removeClass('category-course-other');                                                              
+                                let categHtml = $('.category-course-' + categ.course_id).html();                                
+                                let categId = $('.category-course-' + categ.course_id);
+                                let getCategVal = $('#input-categ').val();  
+                                                            
+                                if(getCategVal == 'semua')  {
+                                    $(categId).parent().parent().parent().show();
+                                    $('.category-course-other').parent().parent().parent().parent().show();
+                                }else{                                                                
+                                    if (getCategVal == categHtml) {          
+                                        $('.category-course-other').parent().parent().parent().parent().hide();                          
+                                        $(categId).parent().parent().parent().parent().show();                                    
+                                    } else {
+                                        $(categId).parent().parent().parent().parent().hide();                                    
+                                    }   
+                                }                                
+                                // remove duplicate btn category course
+                                var seen = {};
+                                $('.btn-category-course').each(function() {
+                                    var txt = $(this).text();
+                                    if (seen[txt])
+                                        $(this).remove();
+                                    else
+                                        seen[txt] = true;
+                                });
+                                // end remove
+                            })
+                        }
 
-                     $.each(data.tag, function(i, dataa) {
-                         $('.menu-tag').append(`                                                    
+                        $.each(data.tag, function(i, dataa) {
+                            $('.menu-tag').append(`                                                    
                             <button type="button" class="btn btn-light mx-3 tag-name">` + dataa.name + `</button>
                         `);
 
-                         // remove duplicate
-                         var seen = {};
-                         $('.tag-name').each(function() {
-                             var txt = $(this).text();
-                             if (seen[txt])
-                                 $(this).remove();
-                             else
-                                 seen[txt] = true;
-                         });
-                         // end remove
-                     });
+                            // remove duplicate
+                            var seen = {};
+                            $('.tag-name').each(function() {
+                                var txt = $(this).text();
+                                if (seen[txt])
+                                    $(this).remove();
+                                else
+                                    seen[txt] = true;
+                            });
+                            // end remove
+                        });
+                    }else{
+                        $('.category-course-other').html('-');                        
+                    }
 
-                 });                
+                 });       
+                          
              } else {
                  $('.skeleton').addClass('hide')
                  $('#card-list-course').append(`
@@ -140,6 +170,39 @@ $(document).ajaxComplete(function(){
          }
      })
  }
+ 
+
+function selectKategori() {
+    let kategori = $("#card-kategori .list a");
+    kategori.click(function () {
+      kategori.removeClass("active");
+      $(this).addClass("active");
+      var kategoriTxt = $(this).html();
+      let inputSearch = $("#inputSearchCourse");
+
+      if (kategoriTxt == "All") {
+        showCourse();
+        inputSearch.val("");
+      } else {
+        let cardCourseLevel = $(".card-course .card-body #level");
+
+        if (inputSearch.val() != "") {
+          showCourse();
+          inputSearch.val("");
+        } else {
+          cardCourseLevel.each(function () {
+            if ($(this).html() == kategoriTxt) {
+              $(this).parent().parent().parent().show();
+            } else {
+              $(this).parent().parent().parent().hide();
+            }
+          });
+        }
+        
+      }
+    });
+};
+
 
  function getBundling() {
      $.ajax({

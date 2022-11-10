@@ -1,6 +1,6 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
-<?= $this->include('swevel/navbar'); ?>
+
 <style>
     .logo-bank button {
         width: 80px;
@@ -15,8 +15,19 @@
         width: 50px;
     }
 </style>
+ <nav class="navbar navbar-expand-lg bg-transparent position-absolute w-100 shadow border mb-5" style="top: 0;">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/"><img src="/img/logo/musika-logo2.png" alt="" style="max-width: 150px; height:35px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3"></ul>
+        </div>
+    </div>
+</nav>
 <main>
-    <div class="container p-2 m-auto mt-5">
+    <div class="container p-2 m-auto mt-5 pt-5">
         <input type="hidden" readonly id="id_course" value="<?= $id; ?>">
         <div class="row" id="section1">
             <div class="col-lg-8">
@@ -130,21 +141,21 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row text-end mt-3">
+                                           <!--  <div class="row text-end mt-3">
                                                 <div class="fw-bold">Pay Within</div>
                                                 <div id="time-part" class="text-purple mt-3"></div>
-                                            </div>
+                                            </div> -->
                                             <div class="row mt-3">
                                                 <!-- <p style="font-size: 10px;">Order ID #0deaa41e-b467-49f6-8b2b-1f7fd7c2a72e</p>
                                                 <p style="font-size: 10px;">Complete payment from BRI to the virtual account number below.</p>
                                                 <br> -->
-                                                <h6>Virtual account number</h6>
+                                               <!--  <h6>Virtual account number</h6>
                                                 <div class="col-8">
                                                     <div class="fw-bold" id="virtual_kode">-</div>
-                                                </div>
-                                                <div class="col-4">
+                                                </div> -->
+                                            <!--     <div class="col-4">
                                                     <h6 class="text-end" style="color: #6F32BE; cursor:pointer" onclick="copyToClipboard('#virtual_kode')">COPY</h6>
-                                                </div>
+                                                </div> -->
                                             </div>
 
                                         </div>
@@ -157,7 +168,7 @@
                             <?php if(session()->get('swevel_email')) : ?>
                                 <button type="button" class="btn btn-purple-100 d-block p-2 w-100 show-detail-pembayaran selanjutnya">Selanjutnya</button>
                             <?php else : ?>
-                                <a href="/login?payment=<?= $id; ?>" class="btn btn-purple-100 d-block p-2 w-100 show-detail-pembayaran">Login untuk pembelian</a>
+                                <div class="btn btn-purple-100 d-block p-2 w-100 show-detail-pembayaran">Lanjut pembayaran</div>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -182,41 +193,41 @@
 <script>
     $(document).ready(function() {
 
-        $('.show-detail-pembayaran').click(function(){
-            let checkNorek = $('#virtual_kode').html();            
-            if(checkNorek == '-'){
-                $(".show-detail-pembayaran.selanjutnya").removeClass('btn-purple').addClass('btn-danger').html('Pilih Metode Pembayaran');
-                setTimeout(() => {
-                    $(".show-detail-pembayaran.selanjutnya").addClass('btn-purple').removeClass('btn-danger').html('Selanjutnya');                
-                }, 3000);
-            }else{
-                $(".show-detail-pembayaran.selanjutnya").html(`<div class="spinner-border text-light" role="status"><span class="visually-hidden">Loading...</span></div>`);                
-                let norek = $('#virtual_kode').html();
-                let harga = $('#harga-bayar').val();
-                $.ajax({
-                    url : '/save-purchase',
-                    type : 'post',
-                    dataType : 'json',
-                    data : {
-                        course : '<?= $id; ?>',
-                        bank : norek,
-                        harga : harga,
-                    },
-                    success: function(result){
-                        if(result.code == '200'){
-                            $(".show-detail-pembayaran.selanjutnya").addClass('btn-purple').removeClass('btn-danger').html('Done');                
-                        }
-                        if(result.code == '500' && result.message == 'sudah-beli'){
-                            $(".show-detail-pembayaran.selanjutnya").addClass('btn-purple').removeClass('btn-danger').html('anda sudah membeli course ini.\n anda bisa melanjutkan ke halaman materi');                
-                            $('.card-selanjutnya').append(`
-                                <a href="/`+result.redirect+`" class="btn btn-primary mt-3 w-100 text-decoration-none">kembali ke materi</a>
-                            `);
+        // $('.show-detail-pembayaran').click(function(){
+        //     let checkNorek = $('#virtual_kode').html();            
+        //     if(checkNorek == '-'){
+        //         $(".show-detail-pembayaran.selanjutnya").removeClass('btn-purple').addClass('btn-danger').html('Pilih Metode Pembayaran');
+        //         setTimeout(() => {
+        //             $(".show-detail-pembayaran.selanjutnya").addClass('btn-purple').removeClass('btn-danger').html('Selanjutnya');                
+        //         }, 3000);
+        //     }else{
+        //         $(".show-detail-pembayaran.selanjutnya").html(`<div class="spinner-border text-light" role="status"><span class="visually-hidden">Loading...</span></div>`);                
+        //         let norek = $('#virtual_kode').html();
+        //         let harga = $('#harga-bayar').val();
+        //         $.ajax({
+        //             url : '/save-purchase',
+        //             type : 'post',
+        //             dataType : 'json',
+        //             data : {
+        //                 course : '<?= $id; ?>',
+        //                 bank : norek,
+        //                 harga : harga,
+        //             },
+        //             success: function(result){
+        //                 if(result.code == '200'){
+        //                     $(".show-detail-pembayaran.selanjutnya").addClass('btn-purple').removeClass('btn-danger').html('Done');                
+        //                 }
+        //                 if(result.code == '500' && result.message == 'sudah-beli'){
+        //                     $(".show-detail-pembayaran.selanjutnya").addClass('btn-purple').removeClass('btn-danger').html('anda sudah membeli course ini.\n anda bisa melanjutkan ke halaman materi');                
+        //                     $('.card-selanjutnya').append(`
+        //                         <a href="/`+result.redirect+`" class="btn btn-primary mt-3 w-100 text-decoration-none">kembali ke materi</a>
+        //                     `);
                             
-                        }                        
-                    }
-                })
-            }
-        })
+        //                 }                        
+        //             }
+        //         })
+        //     }
+        // })
         
         $('.bank').click(function() {
             let norek = $(this).data('norek');

@@ -6,7 +6,7 @@
     <div class="wrapper">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-8 col-12">
+                <div class="col-lg-8 col-md-12 col-12">
                     <div class="fw-bold text-white h1">Carilah Daftar Course Sesuai kebutuhanmu.</div>
                     <p class="h3">
                         Kami menyediakan berbagai macam course yang dapat kamu ikuti sesuai dengan kebutuhanmu dan kemampuanmu. Yuk, cari course yang kamu inginkan!
@@ -26,7 +26,8 @@
                     <input type="hidden" name="" id="limit-course" value="0">
                     <div class="list-category-course">
                         <span class="fw-bold">Kategori : </span>
-                        <button class="btn btn-light btn-sm mx-2 btn-category-course">Semua</button>
+                        <input type="hidden" id="input-categ" value="semua" readonly>
+                        <button class="btn btn-light btn-sm mx-2 btn-category-course" data-categ="semua">Semua</button>
                     </div>
                 </div>
                 <div class="col-lg-5 col-search-course">
@@ -240,8 +241,7 @@
 
         searchHover = function() {
             let input = $('#faq .inputfaq input');
-            let i = $('#faq .inputfaq i');
-            console.log(input);
+            let i = $('#faq .inputfaq i');            
             input.on('focus', function() {
                 $(this).parent().addClass('focus');
                 i.addClass('text-dark-purple');
@@ -284,6 +284,7 @@
         $("img").bind("error", function() {
             $(this).attr("src", "/img/imagenotavailable.jpg");
         });
+
         $('#btn-search-course-training').click(function() {
             refreshCourse();
         })

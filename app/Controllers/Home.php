@@ -83,20 +83,20 @@ class Home extends BaseController
     public function payment($id)
     {
 
-        $email = session()->get('swevel_email');
-        $user = $this->UsersModel->where('email',$email)->first();
-        $purchase = $this->PurchaseModel->where('id_user', $user['id'])->where('id_course',$id)->first();
-        if($purchase){
-            if($purchase['status'] == 'approved') {
-                session()->setFlashdata('message','<div class="text-center"><div class="mb-3"><i class="fa-solid fa-check text-purple fw-bold"></i></div><div class="fw-bold h3 text-purple">Anda telah membeli course ini</div>. <br> <a href="/course/materi/'.$id.'" class="btn btn-purple mt-3 br-20">Kembali ke materi</a></div>');
-                return redirect('purchase-done');
-            }
-        }
+        // $email = session()->get('swevel_email');
+        // $user = $this->UsersModel->where('email',$email)->first();
+        // $purchase = $this->PurchaseModel->where('id_user', $user['id'])->where('id_course',$id)->first();
+        // if($purchase){
+        //     if($purchase['status'] == 'approved') {
+        //         session()->setFlashdata('message','<div class="text-center"><div class="mb-3"><i class="fa-solid fa-check text-purple fw-bold"></i></div><div class="fw-bold h3 text-purple">Anda telah membeli course ini</div>. <br> <a href="/course/materi/'.$id.'" class="btn btn-purple mt-3 br-20">Kembali ke materi</a></div>');
+        //         return redirect('purchase-done');
+        //     }
+        // }
 
         $data = [
             'title' => 'Pembayaran',
             'id' => $id,
-            'bank_limit' => $this->PembayaranModel->findAll(3),
+            'bank_limit' => $this->PembayaranModel->findAll(4),
             'bank' => $this->PembayaranModel->findAll(),
         ];
         return view('swevel/payment/payment', $data);

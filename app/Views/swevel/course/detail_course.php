@@ -53,17 +53,20 @@
 
 <script>
     $(document).ajaxComplete(function(){
-        $(".line-before, .line-after").css({'background':'#61AF11','width':'2px','margin':'0 auto'})
-        // mengatur tinggi line
-        // hitung dulu colom pertama
-        let heightCol1 = $('.col-line')[0].scrollHeight;
-        // hitung tinggi step number
-        let heightStepNumber = $('.step-number')[0].scrollHeight;
-        // mengatur line pertama
-        $('.line-before').css('height', (heightCol1 / 2) - heightStepNumber);        
-        $('.line-after').css('height', (heightCol1 / 2) + heightStepNumber);
-
         $('.btn-lihat-kurikulum').removeClass('hide');
+        
+        setTimeout(() => {
+            $(".line-before, .line-after").css({'background':'#61AF11','width':'2px','margin':'0 auto'})
+            // mengatur tinggi line
+            // hitung dulu colom pertama
+            let heightCol1 = $('.col-line')[0].scrollHeight;
+            // hitung tinggi step number
+            let heightStepNumber = $('.step-number')[0].scrollHeight;
+            // mengatur line pertama
+            $('.line-before').css('height', (heightCol1 / 2) - heightStepNumber);        
+            $('.line-after').css('height', (heightCol1 / 2) + heightStepNumber);
+        }, 1000);
+        
     })
     $(document).ready(function() {
         let id_course = $('#id_course').val();
@@ -136,9 +139,6 @@
 
 
         });    
-
-
-
 
 
         getCourse('https://lms.lazy2.codes/api/course');

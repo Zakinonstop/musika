@@ -1,11 +1,11 @@
 $(document).ajaxComplete(function() {
-    $(".btn-buy-course, .btn-chart-course, .btn-materi-kuis-resume").click(function() {        
+    $(".btn-buy-course, .btn-chart-course, .btn-materi-kuis-resume, .show-detail-pembayaran").click(function() {        
         $('#modal-login').addClass('active');
     });
-    
+        
     $("img").bind("error", function() {
         $(this).attr("src", "/img/poster.png");
-    });
+    });    
 })
 // Format Rupiah
 var formatRupiah = function(num) {

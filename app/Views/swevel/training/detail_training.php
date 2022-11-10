@@ -22,7 +22,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-sm-9 d-block text-sm-end">
                                 <div class="card-text text-decoration-line-through text-secondary"><small>Rp 500.000</small></div>
-                                <div class="card-text h5 fw-bold text-danger">Rp 325.000</div>
+                                <div class="card-text h5 fw-bold text-orange">Rp 325.000</div>
                             </div>
                             <div class="col-lg-6 col-sm-3 text-sm-start">
                                 <button class="btn btn-sm btn-purple-100">Gabung Sekarang</button>
@@ -43,11 +43,7 @@
                 </p>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut.
-                </p>
-                <div class="h5 fw-bold mb-3">Penjelasan Course</div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut.
-                </p>
+                </p>               
             </div>
         </div>
 
@@ -102,44 +98,34 @@
                     <?php endif; ?>
                 <?php endfor; ?>
             </div>
-        </div>
-
-        <div class="text-center mb-5">
-            <button class="btn btn-purple-100">Gabung Sekarang</button>
-        </div>
+        </div>        
 
         <div class="similiar-event mb-5">
-            <div class="h3 fw-bold mb-4">Similiar Event</div>
+            <div class="h3 fw-bold mb-4 text-purple">Pelatihan lainnya</div>
             <section id="similiar-event" class="mb-5 pb-5">
-                <div class="row ">
-                    <div class="splide splide-detail-training">
-                        <div class="splide__track">
-                            <div class="splide__list">
-                                <?php for ($i = 0; $i < 5; $i++) : ?>
-                                    <div class="col-md-4 splide__slide m-2">
-                                        <div class="card border-0">
-                                            <div class="text-center">
-                                                <img src="/img/Frame 58.png" class="card-img-top" alt="..." style="width: 200px;">
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title text-purple">Training Softskill</h5>
-                                                <p class="card-text small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <div class="small text-decoration-line-through">Rp 500.000</div>
-                                                        <div class="text-danger fw-bold">Rp 325.000</div>
-                                                    </div>
-                                                    <div class="col-6 text-center">
-                                                        <button class="btn btn-sm btn-purple">Gabung Sekarang</button>
-                                                    </div>
-                                                </div>
-                                            </div>
+                <div class="row ">                    
+                    <?php for ($i = 0; $i < 5; $i++) : ?>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card border-0 mb-5 shadow br-15">
+                                <div class="card-body">
+                                    <div class="text-center py-3">
+                                        <img src="/img/Frame 57.png" class="card-img-top" alt="..." style="width: 200px;">
+                                    </div>
+                                    <h5 class="card-title text-purple">Training Softskill</h5>
+                                    <p class="card-text small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="small text-decoration-line-through">Rp 500.000</div>
+                                            <div class="text-orange fw-bold">Rp 325.000</div>
+                                        </div>
+                                        <div class="col-6 text-center">
+                                            <button class="btn btn-sm btn-purple">Gabung Sekarang</button>
                                         </div>
                                     </div>
-                                <?php endfor; ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php endfor; ?>                        
                 </div>
 
             </section>
