@@ -77,7 +77,7 @@ function circle1()
             <div class="col-lg-8 col-md-12 col-12 mb-5">
                 <div class="text pt-5">
                     <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Teknologi Informasi</span> yang Terbaik dan Berkualitas</h1>
-                    <p class="cover-text my-5">PT. Multi Visi Karya memiliki lebih dari 40 pengalaman pekerjaan dan telah dipercaya oleh banyak pengguna jasa terkemuka mulai dari jasa perencanaan, pengawasan, dan konsultansi teknik sipil lainnya. Memiliki tenaga ahli dengan Sertifikat Keahlian yang diterbitkan oleh Lembaga Pengembangan Jasa Konstruksi</p>
+                    <p class="cover-text my-5">PT. Multi Visi Karya memiliki lebih dari 40 pengalaman pekerjaan dan telah dipercaya oleh banyak pengguna jasa terkemuka mulai dari jasa perencanaan, pengawasan, dan konsultansi teknik sipil lainnya. Memiliki tenaga ahli dengan Sertifikat Keahlian yang diterbitkan oleh Lembaga Pengembangan Jasa Konstruksi.</p>
                 </div>
             </div>
             <div class="col-lg-4">

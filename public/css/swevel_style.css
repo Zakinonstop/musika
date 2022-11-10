@@ -36,7 +36,7 @@
 .btn-chart-course {
     color: #61AF11;
     transition: all 0.4s;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .btn-chart-course:hover {
@@ -138,16 +138,19 @@
     box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px #9f88c3;
 }
 
-.btn-login, .btn-register {  
-    color: #fff;  
+.btn-login,
+.btn-register {
+    color: #fff;
     letter-spacing: 1px;
     font-size: 1em;
-    background-color: #61AF11 !important; 
-  }
-  .btn-login:hover {
+    background-color: #61AF11 !important;
+}
+
+.btn-login:hover {
     background: #61AF11;
     color: #fff;
-  }
+}
+
 #modal-login.active {
     display: block;
     background: rgba(0, 0, 0, .6);
@@ -641,6 +644,22 @@ section#team {
 #footer {
     background: #DDF6C3;
     line-height: 30px;
+}
+
+#service a {
+    color: #0c0c0c;
+}
+
+#service a:hover {
+    color: #61AF11;
+}
+
+#link li a {
+    color: #0c0c0c;
+}
+
+#link li a:hover {
+    color: #61AF11;
 }
 
 
