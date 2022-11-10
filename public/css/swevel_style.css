@@ -8,7 +8,7 @@
 }
 
 .cursor-pointer {
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 .bg-dark-blue {
@@ -185,6 +185,19 @@
 
 
 /* About Us */
+
+.card-about ul li {
+    list-style: none;
+    padding: 0;
+}
+
+.card-about ul li::before {
+    content: "\f058";
+    font-family: FontAwesome;
+    position: relative;
+    color: #61AF11;
+    margin-left: -30px;
+}
 
 #about-us .box {
     height: calc(100vh - 60px);

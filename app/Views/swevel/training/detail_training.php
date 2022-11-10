@@ -30,26 +30,26 @@
                         </div>
                     </div>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut.
-                </p>
                 <div class="h5 fw-bold mb-3">Penjelasan Course</div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut.
                 </p>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut.
-                </p>               
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut.
+                </p>
             </div>
         </div>
 
         <div class="row mt-lg-5 pt-lg-5 mb-lg-5 pb-5">
             <div class="col-6 border-end">
-                <div class="text-center fw-bold h5 mb-5">Timeline Course</div>
+                <div class="text-center fw-bold h5 mb-5">Jadwal Pelatihan</div>
                 <div class="text-purple fw-bold mb-3">23 September 2022 - 26 September 2022</div>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati ex eaque, veniam omnis sapiente autem saepe in inventore iusto odio exercitationem quasi assumenda. Vero hic ipsa earum dolor, voluptas pariatur. Nesciunt dolorem ad, doloribus excepturi enim veniam maiores id hic quaerat dignissimos aliquam, ea ipsam labore unde a obcaecati et.</p>
                 <div class="text-purple fw-bold mb-3">23 September 2022 - 26 September 2022</div>
@@ -58,21 +58,21 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati ex eaque, veniam omnis sapiente autem saepe in inventore iusto odio exercitationem quasi assumenda. Vero hic ipsa earum dolor, voluptas pariatur. Nesciunt dolorem ad, doloribus excepturi enim veniam maiores id hic quaerat dignissimos aliquam, ea ipsam labore unde a obcaecati et.</p>
             </div>
             <div class="col-6 border-start">
-                <div class="text-center fw-bold h5 mb-5">Our Speakers</div>
+                <div class="text-center fw-bold h5 mb-5">Hal yang akan kita dapat dari pelatihan</div>
                 <!-- LOGIKA : buat angka dahulu. jika angka ganjil maka gambar berada di kiri, tetapi jika angkanya genap maka gambar berada di kanan.-->
-                <?php for ($i = 1; $i <= 3; $i++) : ?>
+                <?php for ($i = 1; $i <= 2; $i++) : ?>
                     <!-- jika angka ganjil maka gambar di kiri -->
                     <?php if ($i % 2 == 1) :  ?>
                         <div class="card mb-3 border-0 mb-5" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
                                     <div class="card-img-circle">
-                                        <img src="https://img.okezone.com/content/2022/05/04/33/2589370/manager-rizky-billar-sebut-rico-valentino-babak-belur-dipukuli-10-orang-TjvvVtjDZO.jpg" class=" img-circle" alt="...">
+                                        <img src="/img/File Musika/brain.jpg" class=" img-circle" alt="...">
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title text-purple fw-bold">Mr Albert Douge</h5>
+                                        <h5 class="card-title text-purple">Wawasan dan Pengalaman <i>Hardskill & Softskill</i></h5>
                                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     </div>
                                 </div>
@@ -84,13 +84,13 @@
                             <div class="row g-0">
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title text-purple fw-bold">Mr Albert Douge</h5>
+                                        <h5 class="card-title text-purple">Menambah Relasi</h5>
                                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card-img-circle">
-                                        <img src="https://img.okezone.com/content/2022/05/04/33/2589370/manager-rizky-billar-sebut-rico-valentino-babak-belur-dipukuli-10-orang-TjvvVtjDZO.jpg" class=" img-circle" alt="...">
+                                        <img src="/img/File Musika/relasi1.jpg" class=" img-circle" alt="...">
                                     </div>
                                 </div>
                             </div>
@@ -98,12 +98,12 @@
                     <?php endif; ?>
                 <?php endfor; ?>
             </div>
-        </div>        
+        </div>
 
         <div class="similiar-event mb-5">
             <div class="h3 fw-bold mb-4 text-purple">Pelatihan lainnya</div>
             <section id="similiar-event" class="mb-5 pb-5">
-                <div class="row ">                    
+                <div class="row ">
                     <?php for ($i = 0; $i < 5; $i++) : ?>
                         <div class="col-md-6 col-lg-4">
                             <div class="card border-0 mb-5 shadow br-15">
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                         </div>
-                    <?php endfor; ?>                        
+                    <?php endfor; ?>
                 </div>
 
             </section>
