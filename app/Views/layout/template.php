@@ -27,7 +27,7 @@
     <?= $this->renderSection('content'); ?>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-primary back-to-top"><i class="bi bi-arrow-up"></i></a> -->
     <a href="https://wa.me/6282215631539" target="_blank" class="btn btn-purple hubungi-kami pb-2">
         <span class="d-flex">
             <div class="me-2 my-auto"><i class="fa fa-brands fa-whatsapp"></i></div>

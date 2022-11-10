@@ -158,9 +158,7 @@ function circle1()
                 </a>
             </div>
         </div>
-    </div>
-    <!-- <div class="circle-1 d-sm-none d-md-none d-lg-block"><?= circle1(); ?></div>
-    <div class="circle-2 d-sm-none d-md-none d-lg-block"><?= circle1(); ?></div> -->
+    </div>    
 </section>
 
 
@@ -182,7 +180,7 @@ function circle1()
     </div>
 </div>
 
-<!-- <section id="portofolio" class="">
+<section id="portofolio" class="">
     <div class="container py-5 my-5">
         <div class="row">
             <div class="col-lg-6 d-sm-none d-lg-block d-md-none">
@@ -196,52 +194,25 @@ function circle1()
         <div class="image-portofolio text-center">
             <div class="row fadeInUp" data-wow-delay="0.5s">
                 <div class="portfolioFilter clearfix mb-4">
-                    <a href="#all-portofolio" data-filter="*" class="current">Semua</a>
-                    <a href="#" data-filter="#perencanaan">Perencanaan</a>
-                    <a href="#" data-filter="#pengawasan">Pengawasan</a>
-                    <a href="#" data-filter="#konsultasi">Konsultasi Lainnya</a>
-                    <a href="#more" data-filter="#more">More</a>
+                    <button class="mx-2 cursor-pointer mb-3 active" data-kategori="semua">semua</button>
+                    <?php foreach($group_portofolio as $x) : ?>
+                        <button class="mx-2 cursor-pointer mb-3" data-kategori="<?= $x['kategori']; ?>"><?= $x['kategori']; ?></button>
+                    <?php endforeach; ?>
                 </div>
             </div>
-            <div class="mt-lg-3 mb-3">
-                <div class="row g-4 portfolio-container wow fadeInUp" id="foto" data-wow-delay="0.5s">
-                    <?php for ($i = 1; $i <= 8; $i++) : ?>
-                        <div class="col-lg-3 col-m col-md-6 portfolio-item moreBox" id="perencanaan">
-                            <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
-                                <div class="portfolio-btn">
-                                    <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>                                
-                                </div>
-                            </div>
-                        </div>
-                    <?php endfor; ?>
-                    <?php $img = ['1.jpg', '2.jpg', '3.jpg', '4.jpg']; ?>
-                    <?php $img2 = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg',]; ?>
-                    <?php foreach ($img as $image) : ?>
-                        <div class="col-lg-3 col-m col-md-6 portfolio-item  moreBox" id="pengawasan">
-                            <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid" src="img/File Musika/<?= $image; ?>" alt="">                              
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-
-                    <?php foreach ($img2 as $image) : ?>
-                        <div class="col-lg-3 col-m col-md-6 portfolio-item moreBox" id="more">
-                            <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid" src="img/File Musika/<?= $image; ?>" alt="">
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                    <div id="loadMore" style="">
-                        <a href="#" class="btn btn-green text-light">Lihat Lagi</a>
-                    </div>
-                    <div id="loadLess" style="">
-                        <a href="#" class="btn btn-green text-light">Kembali</a>
-                    </div>
-                </div>
+            <div class="d-flex justify-content-center">
+                <img src="/img/loaderpurple1.gif" style="width:150px" class="loader-portofolio mt-3 hide">
             </div>
+            <div class="row list-portofolio">                
+                <?php foreach($portofolio as $x) : ?>
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <img src="/img/portofolio/<?= $x['gambar']; ?>">
+                    </div>
+                <?php endforeach; ?>
+            </div>
+           
         </div>
-</section> -->
+</section>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="/js/isotope/isotope.pkgd.min.js"></script>
@@ -269,7 +240,34 @@ function circle1()
             $(".moreBox").slice(12, 23).css('display', 'none');
             $('#loadLess').css('display', 'none');
             $('#loadMore').css('display', 'block');
-        });
+        });    
+
+        $('.portfolioFilter button').click(function(){
+            $('.loader-portofolio').removeClass('hide');
+            $('.list-portofolio').html('');
+            $(".portfolioFilter button").removeClass('active');
+            $(this).addClass('active');            
+            let kategori = $('.portfolioFilter button.active').data('kategori');
+            $.ajax({
+                url : '/getPortofolio/'+kategori,
+                type: 'get',
+                dataType : 'json',
+                success: function(result){
+                    $('.loader-portofolio').addClass('hide');
+                    if(result.code == '200'){
+                        $.each(result.portofolio, function(index, data){
+                            $('.list-portofolio').append(`
+                                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                    <img src="/img/portofolio/`+data.gambar+`">
+                                </div>
+                            `);
+                        })
+                    }else{                        
+                        $('.list-portofolio').html(`<div class="alert alert-warning">Data tidak ditemukan</div>`)
+                    }
+                }
+            })
+        })
     });
     // js category
     $(window).load(function() {
@@ -281,23 +279,7 @@ function circle1()
                 easing: 'linear',
                 queue: false
             }
-        });
-
-        $('.portfolioFilter a').click(function() {
-            $('.portfolioFilter .current').removeClass('current');
-            $(this).addClass('current');
-
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
-        });
+        });      
     });
 </script>
 
@@ -330,40 +312,6 @@ function circle1()
     </div>
 </section>
 
-
-<script src="/js/splide.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        sliderClient();
-    })
-
-    let sliderClient = () => {
-        let mediaSm = window.matchMedia("(max-width: 576px)");
-        let mediaMd = window.matchMedia("(max-width: 768px)");
-        let mediaLg = window.matchMedia("(max-width: 100px)");
-        if (mediaSm.matches) {
-            var perPage = 1;
-        } else if (mediaMd.matches) {
-            var perPage = 2;
-        } else if (mediaLg.matches) {
-            var perPage = 4;
-        } else {
-            var perPage = 4;
-        }
-        var splide = new Splide('.splide.splide-client', {
-            // type: 'loop',
-            perPage: perPage,
-            rewind: true,
-            arrows: false,
-            // autoplay: true,
-            // speed: 2000,
-            // width: '100%',
-            // padding: '10px',
-        });
-        splide.mount();
-    }
-</script>
 <main id="contact">
     <section id="customer-review" class="pt-5 pb-5">
         <div class="container mt-3">
@@ -431,7 +379,6 @@ function circle1()
                 </div>
             </div>
         </div>
-
     </section>
 
     <section id="contactUs" class="pb-5" style="background-color: #FAF6FF">
@@ -546,6 +493,40 @@ function circle1()
     </section>
 </main>
 
+
+<script src="/js/splide.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        sliderClient();
+    })
+
+    let sliderClient = () => {
+        let mediaSm = window.matchMedia("(max-width: 576px)");
+        let mediaMd = window.matchMedia("(max-width: 768px)");
+        let mediaLg = window.matchMedia("(max-width: 100px)");
+        if (mediaSm.matches) {
+            var perPage = 1;
+        } else if (mediaMd.matches) {
+            var perPage = 2;
+        } else if (mediaLg.matches) {
+            var perPage = 4;
+        } else {
+            var perPage = 4;
+        }
+        var splide = new Splide('.splide.splide-client', {
+            // type: 'loop',
+            perPage: perPage,
+            rewind: true,
+            arrows: false,
+            // autoplay: true,
+            // speed: 2000,
+            // width: '100%',
+            // padding: '10px',
+        });
+        splide.mount();
+    }
+</script>
 
 <script>
     $(document).ready(function() {

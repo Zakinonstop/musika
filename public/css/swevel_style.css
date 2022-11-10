@@ -8,7 +8,7 @@
 }
 
 .cursor-pointer {
-    cursor: not-allowed;
+    cursor: pointer;
 }
 
 .bg-dark-blue {
@@ -845,7 +845,7 @@ section#team {
 }
 
 .card-course,
-.card-bundling {
+.card-bundling {    
     background: rgb(186, 237, 134);
     background: linear-gradient( 16deg, rgba(186, 237, 134, 1) -20%, rgba(255, 255, 255, 1) 26%);
 }

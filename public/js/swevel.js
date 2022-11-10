@@ -67,6 +67,7 @@ $('#modal-login').append(`
     </div>
     </section>
 `);
+
 $('#btnLogin').click(function() {
     $(this).html(`<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>`);
     $('#login #email,#login #password').removeClass("is-invalid");

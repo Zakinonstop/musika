@@ -31,7 +31,7 @@
                                     <p class="card-text h5 fw-bold text-orange">Rp 325.000</p>
                                 </div>
                                 <div class="col-sm-4 col-md-6 col-lg-12 text-sm-end  text-lg-start">
-                                    <a href="/detail-training" class="btn btn-sm btn-purple-100 mt-2">Gabung Sekarang</a>
+                                    <a href="/detail-training" class="btn btn-sm btn-purple-100 mt-2">Lihat detail</a>
                                 </div>
                             </div>
                         </div>
@@ -45,6 +45,6 @@
 
 <script>
    $('.card-training').click(function(){
-        window.location.href="detail-training";
+        window.location.href = "detail-training";
    })
 </script>
