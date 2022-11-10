@@ -25,6 +25,10 @@
 
     <?= $this->renderSection('content'); ?>
 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="https://wa.me/6282215631539" target="_blank" class="btn btn-primary hubungi-kami"><i class="fa fa-brands fa-whatsapp me-2"></i>Hubungi Kami</a>
+
     <div id="modal-login" class="hide"></div>
 
     <script src="/asset/custom_vendor/bootstrap5/js/bootstrap.bundle.min.js"></script>

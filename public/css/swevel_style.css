@@ -184,6 +184,38 @@
 }
 
 
+/* homepage */
+
+.hubungi-kami {
+    position: fixed;
+    right: 60px;
+    bottom: 20px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    color: #fff !important;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.hubungi-kami {
+    font-size: 11pt;
+}
+
+.hubungi-kami i {
+    margin-top: 2px;
+}
+
+.back-to-top:hover,
+.hubungi-kami:hover {
+    opacity: 0.9;
+}
+
+.fa-whatsapp {
+    font-size: 14pt;
+}
+
+
 /* About Us */
 
 .card-about ul li {
