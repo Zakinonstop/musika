@@ -150,8 +150,8 @@ $routes->delete('/delete-portofolio', 'Admin::deletePortofolio');
 $routes->get('/admin-event', 'Admin::event');
 
 $routes->get('/more-event', 'Admin::moreEvent');
-$routes->get('/payment/(:num)', 'Home::payment/$1');
-$routes->get('/payment/detail', 'Home::detail_payment');
+$routes->get('/pembayaran/(:num)', 'Home::payment/$1');
+$routes->get('/pembayaran/detail', 'Home::detail_payment');
 $routes->post('/save-purchase', 'Home::save_purchase');
 
 $routes->get('/notyetapproved', 'Course::not_yet_approved');

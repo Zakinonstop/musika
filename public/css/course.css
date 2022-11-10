@@ -255,14 +255,8 @@ button.btn12:hover {
 -------------------------------------------------- */
 
 @media only screen and (max-width: 992px) {
-    .title-benefits-course::before {
-        display: none;
-    }
-    .title-benefits-course {
-        margin-left: 0;
-    }
-    .border-kotak::before {
-        display: none;
+    #course-top{
+        height: 35vh;
     }
 }
 
