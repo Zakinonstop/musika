@@ -1,10 +1,9 @@
 /* color purple swevel */
 
-
 /* color: #61AF11; */
 
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cursor-pointer {
@@ -16,27 +15,27 @@
 }
 
 .text-purple {
-    color: #61AF11;
+    color: #61af11;
 }
 
 .text-purple-100 {
-    color: #61AF11;
+    color: #61af11;
 }
 
 .btn-outline-purple {
     background: white;
-    border: 1px solid #BAED86;
+    border: 1px solid #baed86;
 }
 
 .btn-purple {
-    background: #61AF11;
+    background: #61af11;
     color: #fff;
 }
 
 .btn-chart-course {
-    color: #61AF11;
+    color: #61af11;
     transition: all 0.4s;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .btn-chart-course:hover {
@@ -59,7 +58,7 @@
 }
 
 .btn-purple-100 {
-    background: #61AF11;
+    background: #61af11;
     color: #fff;
 }
 
@@ -77,7 +76,7 @@
 }
 
 .bg-purple {
-    background-color: #61AF11;
+    background-color: #61af11;
 }
 
 .bg-purple-50 {
@@ -118,7 +117,7 @@
 
 .border-start-purple {
     border: none;
-    border-left: 4px solid #61AF11;
+    border-left: 4px solid #61af11;
 }
 
 .hide {
@@ -134,23 +133,24 @@
 }
 
 .form-control:focus {
-    border-color: #61AF11;
+    border-color: #61af11;
     box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px #9f88c3;
 }
 
-.btn-login, .btn-register {  
-    color: #fff;  
+.btn-login,
+.btn-register {
+    color: #fff;
     letter-spacing: 1px;
     font-size: 1em;
-    background-color: #61AF11 !important; 
-  }
-  .btn-login:hover {
-    background: #61AF11;
+    background-color: #61af11 !important;
+}
+.btn-login:hover {
+    background: #61af11;
     color: #fff;
-  }
+}
 #modal-login.active {
     display: block;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, 0.6);
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -164,7 +164,6 @@
     cursor: pointer;
 }
 
-
 /* custom bootstrap */
 
 .accordion-button:focus {
@@ -172,21 +171,23 @@
     border-color: rgba(0, 0, 0, 0.125);
 }
 
-
 /* end custom bootstrap */
 
 .navbar .nav-link:hover {
-    color: #61AF11;
+    color: #61af11;
     font-weight: bold;
 }
-
 
 /* About Us */
 
 #about-us .box {
     height: calc(100vh - 60px);
     background: rgb(216, 185, 255);
-    background: linear-gradient( 340deg, rgba(159, 136, 195, 1) -20%, rgba(255, 255, 255, 1) 62%);
+    background: linear-gradient(
+        340deg,
+        rgba(159, 136, 195, 1) -20%,
+        rgba(255, 255, 255, 1) 62%
+    );
 }
 
 .img-weight {
@@ -210,13 +211,12 @@
 }
 
 .circle-3 .circle {
-    background-color: #61AF11;
+    background-color: #61af11;
     width: 27px;
     height: 27px;
     margin: -5px 9px;
     border-radius: 50px;
 }
-
 
 /* #about-us .image-homepage::before,
 #about-us .image-homepage::after {
@@ -237,18 +237,19 @@
     top: 25vh;
 }
 
-
 /*  */
 
-
 /* Service / Produk Layanan */
-
 
 /*  */
 
 #service {
     background: rgb(186, 237, 134);
-    background: radial-gradient( circle, rgba(186, 236, 134, 0.5206254376750701) 0%, rgba(255, 255, 255, 0) 41%);
+    background: radial-gradient(
+        circle,
+        rgba(186, 236, 134, 0.5206254376750701) 0%,
+        rgba(255, 255, 255, 0) 41%
+    );
 }
 
 .card-service {
@@ -265,7 +266,7 @@
 }
 
 .circle-1 .circle {
-    background-color: #BAED86;
+    background-color: #baed86;
     width: 30px;
     height: 30px;
     margin: 0px 10px;
@@ -292,7 +293,6 @@
     z-index: -10;
     transform: translate(66%, -180%);
 }
-
 
 /* Portofolio */
 
@@ -366,7 +366,6 @@
     transform: translateX(-20%);
 }
 
-
 /* Milestone */
 
 .container-milestone {
@@ -413,14 +412,12 @@
     border-radius: 10px;
 }
 
-
 /* Artikel Homepage */
 
 .card-article:hover {
     background-color: rgb(231, 229, 231);
     transition: all 0.3s;
 }
-
 
 /* Team */
 
@@ -462,7 +459,11 @@ section#team {
 
 .card-team .card-body {
     background: rgb(255, 255, 255);
-    background: linear-gradient( 58deg, rgba(255, 255, 255, 1) 19%, rgba(59, 29, 29, 0.29653580182072825) 72%);
+    background: linear-gradient(
+        58deg,
+        rgba(255, 255, 255, 1) 19%,
+        rgba(59, 29, 29, 0.29653580182072825) 72%
+    );
 }
 
 .card-team img {
@@ -568,7 +569,7 @@ section#team {
 }
 
 .swiper-navBtn {
-    color: #61AF11;
+    color: #61af11;
     transition: color 0.3s ease;
 }
 
@@ -595,9 +596,8 @@ section#team {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #61AF11;
+    background-color: #61af11;
 }
-
 
 /* Client */
 
@@ -635,21 +635,18 @@ section#team {
     width: 250px;
 }
 
-
 /* Footer Homepage*/
 
 #footer {
-    background: #DDF6C3;
+    background: #ddf6c3;
     line-height: 30px;
 }
-
 
 /* TRAINING */
 
 #training .most-popular img {
     max-width: 250px;
 }
-
 
 /* Detail Training */
 
@@ -669,14 +666,17 @@ section#team {
     border-radius: 50%;
 }
 
-
 /* page first course training*/
 
 #page-first {
     min-height: 100vh;
     overflow-x: hidden;
     background: rgb(141, 55, 189);
-    background: radial-gradient( circle, rgba(141, 55, 189, 0.5206254376750701) 0%, rgba(255, 255, 255, 0) 41%);
+    background: radial-gradient(
+        circle,
+        rgba(141, 55, 189, 0.5206254376750701) 0%,
+        rgba(255, 255, 255, 0) 41%
+    );
 }
 
 .training-shadow {
@@ -714,7 +714,7 @@ section#team {
 
 .first-title::before {
     position: absolute;
-    content: "";
+    content: '';
     width: 400px;
     height: 200px;
     opacity: 0.2;
@@ -745,7 +745,6 @@ section#team {
 .list-first .box-list:last-child {
     border-bottom-right-radius: 50px;
 }
-
 
 /* Course */
 
@@ -783,7 +782,11 @@ section#team {
 .card-course,
 .card-bundling {
     background: rgb(186, 237, 134);
-    background: linear-gradient( 16deg, rgba(186, 237, 134, 1) -20%, rgba(255, 255, 255, 1) 26%);
+    background: linear-gradient(
+        16deg,
+        rgba(186, 237, 134, 1) -20%,
+        rgba(255, 255, 255, 1) 26%
+    );
 }
 
 .card-bundling:hover {
@@ -794,7 +797,7 @@ section#team {
 #detail-course .line-timeline {
     width: 3px;
     margin: 0 auto;
-    background: #61AF11;
+    background: #61af11;
 }
 
 .card-img-circle-50 {
@@ -810,15 +813,11 @@ section#team {
     border-radius: 50%;
 }
 
-
 /* ======================== */
-
 
 /* ADMIN */
 
-
 /* ======================== */
-
 
 /* FAQ */
 
@@ -832,13 +831,12 @@ section#team {
 }
 
 .border-purple {
-    border: 2px solid #61AF11;
+    border: 2px solid #61af11;
 }
 
-#admin-faq input[type="radio"]:checked+label .card {
-    border: 2px solid #61AF11;
+#admin-faq input[type='radio']:checked + label .card {
+    border: 2px solid #61af11;
 }
-
 
 /* CKEDITOR */
 
@@ -855,9 +853,7 @@ section#team {
     font-size: 15px;
 }
 
-
 /* USER */
-
 
 /* Materi */
 
@@ -889,11 +885,10 @@ section#team {
     transition: ease-in 0.2s;
 }
 
-
 /* kurikulum */
 
 #detail-kurikulum .title-banefits::before {
-    content: " ";
+    content: ' ';
     background: black;
     width: 100px;
     height: 5px;
@@ -1014,7 +1009,6 @@ section#team {
     }
 }
 
-
 /* Status */
 
 #status * {
@@ -1089,7 +1083,7 @@ section#team {
 }
 
 #status .btn {
-    background-color: #61AF11;
+    background-color: #61af11;
     color: rgb(255, 255, 255);
     border-radius: 30px;
     padding: 10px 20px;
@@ -1107,7 +1101,6 @@ section#team {
     position: absolute;
     right: 50px;
 }
-
 
 /* kuis */
 
@@ -1141,4 +1134,12 @@ section#team {
     background-color: #6f3bc4;
     color: #fff;
     border: none;
+}
+
+.click-yt {
+    position: absolute;
+    /* background-color: aqua; */
+    background-color: transparent;
+    width: 640px;
+    height: 360px;
 }

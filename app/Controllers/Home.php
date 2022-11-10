@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use CodeIgniter\I18n\Time;
 use App\Models\ProfileModel;
 use App\Models\MilestoneModel;
@@ -23,8 +24,8 @@ class Home extends BaseController
         $this->PortofolioModel = new PortofolioModel();
         $this->ArtikelModel = new ArtikelModel();
         $this->PembayaranModel = new PembayaranModel();
-        $this->UsersModel = new UsersModel();        
-        $this->PurchaseModel = new PurchaseModel();        
+        $this->UsersModel = new UsersModel();
+        $this->PurchaseModel = new PurchaseModel();
     }
     public function index()
     {
@@ -62,7 +63,7 @@ class Home extends BaseController
         ];
         return view('swevel/artikel/detail_artikel', $data);
     }
-   
+
     public function faq()
     {
         $data = [
@@ -100,42 +101,44 @@ class Home extends BaseController
             'bank' => $this->PembayaranModel->findAll(),
         ];
         return view('swevel/payment/payment', $data);
-    }  
-    
+    }
+
     public function detail_payment()
-    {        
+    {
         $email = session()->get('swevel_email');
-        $user = $this->UsersModel->where('email',$email)->first();
+        $user = $this->UsersModel->where('email', $email)->first();
         $course = $this->request->getVar('course');
         $data = [
-            'title' => 'Detail Pembayaran',            
-            'purchase' => $this->PurchaseModel->where('id_user', $user['id'])->where('id_course',$course)->first(),
+            'title' => 'Detail Pembayaran',
+            'purchase' => $this->PurchaseModel->where('id_user', $user['id'])->where('id_course', $course)->first(),
             'id' => $course,
         ];
         return view('swevel/payment/detail_payment', $data);
-    }  
+    }
 
-    public function purchase_message(){
+    public function purchase_message()
+    {
         $course = $this->request->getVar('course');
         $data = [
             'title' => 'Pesan Pembayaran',
         ];
-        return view('swevel/payment/purchase_message',$data);
+        return view('swevel/payment/purchase_message', $data);
     }
 
-    public function save_purchase(){
+    public function save_purchase()
+    {
         $email = session()->get('swevel_email');
-        $user = $this->UsersModel->where('email',$email)->first();
+        $user = $this->UsersModel->where('email', $email)->first();
         $norek = $this->request->getVar('bank');
-        $bank = $this->PembayaranModel->where('no_rekening',$norek)->first();
-        $course = $this->request->getVar('course');        
+        $bank = $this->PembayaranModel->where('no_rekening', $norek)->first();
+        $course = $this->request->getVar('course');
 
-        $check_purchase = $this->PurchaseModel->where('id_user',$user['id'])->where('id_course',$course)->where('status','approved')->first();
-        if($check_purchase){
-            return json_encode([            
+        $check_purchase = $this->PurchaseModel->where('id_user', $user['id'])->where('id_course', $course)->where('status', 'approved')->first();
+        if ($check_purchase) {
+            return json_encode([
                 'code' => '500',
-                'message' => 'sudah-beli',                
-                'redirect' => 'course/materi/'.$course,
+                'message' => 'sudah-beli',
+                'redirect' => 'course/materi/' . $course,
             ]);
         }
 
@@ -144,21 +147,20 @@ class Home extends BaseController
             'id_bank' => $bank['id'],
             'id_course' => htmlspecialchars($course),
             'harga_bayar' => htmlspecialchars($this->request->getVar('harga')),
-            'status' => 'approved',                        
+            'status' => 'approved',
         ];
         $save = $this->PurchaseModel->insert($data);
-        if($save){
+        if ($save) {
             return json_encode([
                 'code' => '200',
                 'message' => 'success',
-                'redirect' => '/payment/detail?course='.$course,
+                'redirect' => '/payment/detail?course=' . $course,
             ]);
-        }else{
+        } else {
             return json_encode([
                 'code' => '500',
                 'message' => 'failed',
             ]);
-
         }
     }
 }

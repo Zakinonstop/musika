@@ -12,3 +12,4 @@ class ProfileModel extends Model
     // Dates
     protected $useTimestamps = false;
 }
+

@@ -241,7 +241,7 @@
 
         searchHover = function() {
             let input = $('#faq .inputfaq input');
-            let i = $('#faq .inputfaq i');            
+            let i = $('#faq .inputfaq i');
             input.on('focus', function() {
                 $(this).parent().addClass('focus');
                 i.addClass('text-dark-purple');
