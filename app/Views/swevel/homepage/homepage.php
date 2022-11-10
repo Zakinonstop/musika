@@ -77,8 +77,7 @@ function circle1()
             <div class="col-lg-8 col-md-12 col-12 mb-5">
                 <div class="text pt-5">
                     <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Teknologi Informasi</span> yang Terbaik dan Berkualitas</h1>
-                    <p class="cover-text my-5">PT. Multi Visi Karya is one of Information Technology Service Industry that gives service excellence quality. Point of product of PT. Multi Visi Karya prioritize System End User and gives creative solution IT. PT. Swevel
-                        Universal Media focus in WEB Developer and Mobile Smart Phone Application.</p>
+                    <p class="cover-text my-5">PT. Multi Visi Karya memiliki lebih dari 40 pengalaman pekerjaan dan telah dipercaya oleh banyak pengguna jasa terkemuka mulai dari jasa perencanaan, pengawasan, dan konsultansi teknik sipil lainnya. Memiliki tenaga ahli dengan Sertifikat Keahlian yang diterbitkan oleh Lembaga Pengembangan Jasa Konstruksi</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -102,13 +101,18 @@ function circle1()
                     <div class="card card-profile mb-4 border-0 shadow cursor-pointer">
                         <div class="card-body">
                             <div class="row btn-card-profile">
-                                <div class="col-lg-9">Lorem ipsum dolor, sit amet.</div>
-                                <div class="text-muted mt-2">PT. Multi Visi Karya</div>
+                                <div class="col-lg-9">PT. Multi Visi Karya</div>
+                                <div class="text-muted mt-2">PT. Multi Visi Karya adalah sebuah Biro Jasa Konsultasi yang bergerak dalam bidang Jasa Konstruksi yang terdiri dari bidang Arsitektur, Sipil, Jasa Inspeksi Teknis, Tata Lingkungan dan Survey, bahkan Jasa Non Konstruksi.</div>
                             </div>
                             <div class="deskripsi-profile mt-5">
                                 <div>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing, elit. Inventore delectus cumque repudiandae, possimus, nobis iste sed doloremque eum cupiditate placeat!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing, elit. Inventore delectus cumque repudiandae, possimus, nobis iste sed doloremque eum cupiditate placeat!
+                                    PT. MULTI VISI KARYA dapat mengerjakan proyek-proyek dengan sub klasifikasi:
+                                    <ul>
+                                        <li>Perencanaan Arsitektur (AR)</li>
+                                        <li>Perencanaan Penataan Ruang (PR)</li>
+                                        <li>Pengawasan Teknik (RE)</li>
+                                        <li>Konsultasi Lainnya (KL)</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -124,8 +128,8 @@ function circle1()
         <div class="text-center mb-5 pb-5 ">
             <h1 class="fw-bold" style="letter-spacing: 0px;"><span class=" text-purple">Pelayanan</span> Kami</h1>
             <div class="">
-                <span class="d-block">Swevel Universal Media focus in Software Development</span>
-                <span class="d-block">and Learning Management</span>
+                <span class="d-block">Kami juga menyediakan berbagai pelatihan dan jasa konsultasi</span>
+                <span class="d-block">dan juga kursus untuk para pelanggan yang ingin berlanggangan</span>
             </div>
         </div>
         <div class="row">
