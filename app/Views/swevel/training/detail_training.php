@@ -37,7 +37,7 @@
                         <div class="card-text h4 fw-bold text-orange">Rp 325.000</div>
                     </div>
                     <div class="col-lg-6 col-sm-3 text-sm-start">
-                        <button class="btn btn-purple-100 w-100">Gabung Sekarang</button>
+                        <button type="button" class="btn btn-purple-100 w-100 modal-login">Gabung Sekarang</button>
                     </div>
                 </div>            
             </div>
@@ -49,7 +49,7 @@
                 <div class="row ">                    
                     <?php for ($i = 0; $i < 3; $i++) : ?>
                         <div class="col-md-6 col-lg-4">
-                            <div class="card border-0 mb-5 shadow br-15">
+                            <div class="card border-0 card-training cursor-pointer mb-5 shadow br-15">
                                 <div class="card-body">
                                     <div class="text-center py-3">
                                         <img src="/img/Frame 57.png" class="card-img-top" alt="..." style="width: 200px;">
@@ -62,7 +62,7 @@
                                             <div class="text-orange fw-bold">Rp 325.000</div>
                                         </div>
                                         <div class="col-6 text-center">
-                                            <button class="btn btn-sm btn-purple">Gabung Sekarang</button>
+                                            <button class="btn btn-sm btn-purple">Lihat detail</button>
                                         </div>
                                     </div>
                                 </div>
@@ -71,6 +71,9 @@
                     <?php endfor; ?>
                 </div>
 
+                <div class="d-flex justify-content-center mt-3">
+                    <a href="/training" class="btn btn-purple px-5 btn-more-course">Lihat semua</a>
+                </div>
             </section>
         </div>
     </div>
@@ -79,9 +82,13 @@
 
 
 <script>
-   
+   $('.card-training').click(function(){
+        window.location.href = "/training";
+   })
+   $('.modal-login').click(function(){
+        $('#modal-login').addClass('active');
+   })
 </script>
 
-<?= $this->include('swevel/homepage/footer'); ?>
-<?= $this->include('swevel/training/footer'); ?>
+<?= $this->include('swevel/course/footer-course'); ?>
 <?= $this->endSection(); ?>

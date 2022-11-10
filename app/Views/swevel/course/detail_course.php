@@ -158,6 +158,5 @@
 </script>
 
 <script src="/js/course.js"></script>
-<?= $this->include('swevel/homepage/footer'); ?>
-<?= $this->include('swevel/training/footer'); ?>
+<?= $this->include('swevel/course/footer-course'); ?>
 <?= $this->endSection(); ?>

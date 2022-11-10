@@ -148,6 +148,9 @@ a:focus {
 
 .portfolioFilter {
   padding: 15px 0;
+  overflow: auto;
+  width: 100%;
+  margin-top: -50px;
 }
 .portfolioFilter button{  
   border:  none;

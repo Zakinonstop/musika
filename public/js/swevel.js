@@ -1,5 +1,5 @@
 $(document).ajaxComplete(function() {
-    $(".btn-buy-course, .btn-chart-course, .btn-materi-kuis-resume, .show-detail-pembayaran").click(function() {        
+    $(".btn-buy-course, .btn-chart-course, .btn-materi-kuis-resume, .show-detail-pembayaran, .img-thumbnail-video, .fa-play").click(function() {        
         $('#modal-login').addClass('active');
     });
         
@@ -44,7 +44,7 @@ $('#modal-login').append(`
                         <div class=""><i class="fa-solid fa-xmark small"></i></div>
                     </div>
                     <div class="text-center h4 my-4">
-                        User Login
+                        Masuk akun
                     </div>
                     <div class="message-register success my-3"></div>
                     <form action="#" method="POST" autocomplete="off" id="form-login">

@@ -76,7 +76,7 @@ function circle1()
         <div class="container">
             <div class="col-lg-8 col-md-12 col-12 mb-5" >
                 <div class="text pt-5" data-aos="fade-right">
-                    <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Teknologi Informasi</span> yang Terbaik dan Berkualitas</h1>
+                    <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Jasa Konsultasi di Bidang Konstruksi</span> dan Non Konstruksi</h1>
                     <p class="cover-text my-5">PT. Multi Visi Karya memiliki lebih dari 40 pengalaman pekerjaan dan telah dipercaya oleh banyak pengguna jasa terkemuka mulai dari jasa perencanaan, pengawasan, dan konsultansi teknik sipil lainnya. Memiliki tenaga ahli dengan Sertifikat Keahlian yang diterbitkan oleh Lembaga Pengembangan Jasa Konstruksi.</p>
                 </div>
             </div>
@@ -194,9 +194,9 @@ function circle1()
         <div class="image-portofolio text-center">
             <div class="row fadeInUp" data-wow-delay="0.5s">
                 <div class="portfolioFilter clearfix mb-4">
-                    <button class="mx-2 cursor-pointer mb-3 active" data-kategori="semua">semua</button>
+                    <button class="mx-2 p-2 cursor-pointer mb-3 active" data-kategori="semua">semua</button>
                     <?php foreach($group_portofolio as $x) : ?>
-                        <button class="mx-2 cursor-pointer mb-3" data-kategori="<?= $x['kategori']; ?>"><?= $x['kategori']; ?></button>
+                        <button class="mx-2 p-2 cursor-pointer mb-3" data-kategori="<?= $x['kategori']; ?>"><?= $x['kategori']; ?></button>
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -435,7 +435,7 @@ function circle1()
                                                 <i class="fa-solid fa-location-dot fs-5"></i>
                                             </div>
                                             <div class="col-10">
-                                                <span>Jl. H.R. Rasuna Said, Kav 3, South Jakarta, 12950 - Indonesia</span>
+                                                <span>Jl Sutrisno No.032,Candran Rt/Rw 10/05 Sidoarum,Godean kabupaten Kab. Sleman.</span>
                                             </div>
                                         </div>
                                     </div>

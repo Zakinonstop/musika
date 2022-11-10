@@ -40,7 +40,7 @@ function refreshCourse() {
                  $('#card-list-course').html('');
                  $.each(result, function(i, data) {                    
                      $('#card-list-course').append(`
-                        <div class="col-md-6 col-lg-4 col-sm-12 col-course mb-5">
+                        <div class="col-md-6 col-lg-4 col-sm-12 col-course mb-5" data-id="` + data.course_id + `">
                             <div class="card card-course border-0 cursor-pointer shadow br-15" data-id="` + data.course_id + `">                
                                 <div class="image-content card-thumbnail-course cursor-pointer" data-id="` + data.course_id + `">
                                     <div class="card-image.">
@@ -70,7 +70,24 @@ function refreshCourse() {
                             </div>
                          </div>
                         `);
-                 });                 
+                 });       
+
+                   // sorting ascending list menu sidebar materi
+            var $parentMenu = $("#card-list-course"),
+            $listMenu = $parentMenu.children("div");
+            $listMenu.sort(function(a, b) {
+                var an = a.getAttribute("data-id"),
+                    bn = b.getAttribute("data-id");
+                if (parseInt(an) > parseInt(bn)) {
+                    return 1;
+                }
+                if (parseInt(an) < parseInt(bn)) {
+                    return -1;
+                }
+                return 0;
+            });
+            $listMenu.detach().appendTo($parentMenu);     
+            // end sorting          
 
                  $('.btn-more-course').removeClass("hide");                 
 

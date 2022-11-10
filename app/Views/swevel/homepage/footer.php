@@ -8,12 +8,12 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-2">
                 <ul class="list-unstyled" id="link">
-                    <li><a class="text-decoration-none" href="<?= ($title == 'Swevel') ? '#about-us' : '/#about-us'; ?>">Tentang Kami</a></li>
-                    <li><a class="text-decoration-none" href="<?= ($title == 'Swevel') ? '#service' : '/#service'; ?>">Pelayanan</a></li>
-                    <li><a class="text-decoration-none" href="<?= ($title == 'Swevel') ? '#portofolio' : '/#portofolio'; ?>">Portofolio</a></li>
-                    <li><a class="text-decoration-none" href="<?= ($title == 'Swevel') ? '#customer-review' : '/#customer-review'; ?>">Testimoni</a></li>
-                    <li><a class="text-decoration-none" href="/faq">FAQ</a></li>
-                    <li><a class="text-decoration-none" href="<?= ($title == 'Swevel') ? '#contactUs' : '/#contactUs'; ?>">Kontak Kami</a></li>
+                    <li><a class="text-decoration-none" href="#about-us">Tentang Kami</a></li>
+                    <li><a class="text-decoration-none" href="#service">Pelayanan</a></li>
+                    <li><a class="text-decoration-none" href="#course">Kursus</a></li>
+                    <li><a class="text-decoration-none" href="#portofolio">Portofolio</a></li>
+                    <li><a class="text-decoration-none" href="#customer-review">Testimoni</a></li>                    
+                    <li><a class="text-decoration-none" href="#contactUs">Kontak Kami</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 text-center">
@@ -33,7 +33,7 @@
 <section id="footer-training">
     <div class="container">
         <div class="text-center p-4 text-purple-100 fw-bold">
-            Musika | <?= date('Y') ?>
+            PT Multi Visi Karya | <?= date('Y') ?>
         </div>
     </div>
 </section>

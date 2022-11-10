@@ -154,7 +154,7 @@ $routes->get('/notyetapproved', 'Course::not_yet_approved');
 $routes->get('purchase-done', 'Home::purchase_message');
 
 // konsultasi
-$routes->get('/konsultasi', 'Konsultasi::index');
+$routes->get('/implementasi', 'Konsultasi::index');
 
 
 // ===================== User =====================
