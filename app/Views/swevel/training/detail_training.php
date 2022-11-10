@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                         </div>
-                    <?php endfor; ?>                        
+                    <?php endfor; ?>
                 </div>
 
             </section>

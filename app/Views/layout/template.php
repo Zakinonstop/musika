@@ -13,6 +13,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- custom -->
     <link rel="stylesheet" href="/css/swevel_style.css">
@@ -24,6 +25,10 @@
 <body>
 
     <?= $this->renderSection('content'); ?>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="https://wa.me/6282215631539" target="_blank" class="btn btn-primary hubungi-kami"><i class="fa fa-brands fa-whatsapp me-2"></i>Hubungi Kami</a>
 
     <div id="modal-login" class="hide"></div>
 
@@ -46,7 +51,7 @@
                     }
                 });
 
-                menuItems.click(function(e) {
+            menuItems.click(function(e) {
                 let href = $(this).attr('href'),
                     offsetTopo = hreff === "#" ? 0 :
                     $(href).offset().top - topMneuHeight + 1;

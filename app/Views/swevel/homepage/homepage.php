@@ -77,7 +77,7 @@ function circle1()
             <div class="col-lg-8 col-md-12 col-12 mb-5" >
                 <div class="text pt-5" data-aos="fade-right">
                     <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Teknologi Informasi</span> yang Terbaik dan Berkualitas</h1>
-                    <p class="cover-text my-5">PT. Multi Visi Karya memiliki lebih dari 40 pengalaman pekerjaan dan telah dipercaya oleh banyak pengguna jasa terkemuka mulai dari jasa perencanaan, pengawasan, dan konsultansi teknik sipil lainnya. Memiliki tenaga ahli dengan Sertifikat Keahlian yang diterbitkan oleh Lembaga Pengembangan Jasa Konstruksi</p>
+                    <p class="cover-text my-5">PT. Multi Visi Karya memiliki lebih dari 40 pengalaman pekerjaan dan telah dipercaya oleh banyak pengguna jasa terkemuka mulai dari jasa perencanaan, pengawasan, dan konsultansi teknik sipil lainnya. Memiliki tenaga ahli dengan Sertifikat Keahlian yang diterbitkan oleh Lembaga Pengembangan Jasa Konstruksi.</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -101,17 +101,19 @@ function circle1()
                     <div class="card card-profile mb-4 border-0 shadow cursor-pointer" data-aos="fade-left">
                         <div class="card-body">
                             <div class="row btn-card-profile">
-                                <div class="col-lg-9">PT. Multi Visi Karya</div>
-                                <div class="text-muted mt-2">PT. Multi Visi Karya adalah sebuah Biro Jasa Konsultasi yang bergerak dalam bidang Jasa Konstruksi yang terdiri dari bidang Arsitektur, Sipil, Jasa Inspeksi Teknis, Tata Lingkungan dan Survey, bahkan Jasa Non Konstruksi.</div>
+                                <div class="col-lg-9 fw-bold">
+                                    <h3>PT. Multi Visi Karya</h3>
+                                </div>
+                                <div class="text-dark mt-2">Sebuah Biro Jasa Konsultasi yang bergerak dalam bidang asa Perencana dan Pengawas Konstruksi yang terdiri dari bidang Arsitektur, Sipil, Jasa Inspeksi Teknis, Tata Lingkungan dan Survey, bahkan Jasa Non Konstruksi (Pendidikan, Perindustrian, Perdagangan, dan lainya).</div>
                             </div>
-                            <div class="deskripsi-profile mt-5">
-                                <div>
-                                    PT. MULTI VISI KARYA dapat mengerjakan proyek-proyek dengan sub klasifikasi:
-                                    <ul>
-                                        <li>Perencanaan Arsitektur (AR)</li>
-                                        <li>Perencanaan Penataan Ruang (PR)</li>
-                                        <li>Pengawasan Teknik (RE)</li>
-                                        <li>Konsultasi Lainnya (KL)</li>
+                            <div class="deskripsi-profile mt-3">
+                                <div class="card-about">
+                                    Berikut sub-klasifikasi proyek-proyek yang disediakan :
+                                    <ul class="mt-2">
+                                        <li>&ensp;Perencanaan Arsitektur (AR)</li>
+                                        <li>&ensp;Perencanaan Penataan Ruang (PR)</li>
+                                        <li>&ensp;Pengawasan Teknik (RE)</li>
+                                        <li>&ensp;Konsultasi Lainnya (KL)</li>
                                     </ul>
                                 </div>
                             </div>

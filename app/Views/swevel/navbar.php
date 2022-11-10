@@ -13,7 +13,7 @@
                     <a class="nav-link" href="#service">Layanan</a>
                 </li>
                 <li class="nav-item mx-1">
-                    <a class="nav-link" href="#course">Course</a>
+                    <a class="nav-link" href="#course">Kursus</a>
                 </li>
                 <li class="nav-item mx-1">
                     <a class="nav-link" href="#portofolio">Portofolio</a>
