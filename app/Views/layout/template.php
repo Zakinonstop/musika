@@ -28,7 +28,12 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary back-to-top"><i class="bi bi-arrow-up"></i></a>
-    <a href="https://wa.me/6282215631539" target="_blank" class="btn btn-primary hubungi-kami"><i class="fa fa-brands fa-whatsapp me-2"></i>Hubungi Kami</a>
+    <a href="https://wa.me/6282215631539" target="_blank" class="btn btn-purple hubungi-kami pb-2">
+        <span class="d-flex">
+            <div class="me-2 my-auto"><i class="fa fa-brands fa-whatsapp"></i></div>
+            <div class="my-auto ms-2 " style="margin-top: 15px;"> Hubungi kami</div>
+        </span>
+    </a>
 
     <div id="modal-login" class="hide"></div>
 
