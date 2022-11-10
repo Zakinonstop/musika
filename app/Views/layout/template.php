@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/asset/custom_vendor/fontawesome612/css/all.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- custom -->
     <link rel="stylesheet" href="/css/swevel_style.css">
@@ -28,6 +29,7 @@
 
     <script src="/asset/custom_vendor/bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="/asset/custom_vendor/fontawesome612/js/all.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
     <script>

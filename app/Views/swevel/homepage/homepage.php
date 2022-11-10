@@ -74,8 +74,8 @@ function circle1()
 <div id="about-us">
     <div class="page-1 pt-5">
         <div class="container">
-            <div class="col-lg-8 col-md-12 col-12 mb-5">
-                <div class="text pt-5">
+            <div class="col-lg-8 col-md-12 col-12 mb-5" >
+                <div class="text pt-5" data-aos="fade-right">
                     <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Teknologi Informasi</span> yang Terbaik dan Berkualitas</h1>
                     <p class="cover-text my-5">PT. Multi Visi Karya memiliki lebih dari 40 pengalaman pekerjaan dan telah dipercaya oleh banyak pengguna jasa terkemuka mulai dari jasa perencanaan, pengawasan, dan konsultansi teknik sipil lainnya. Memiliki tenaga ahli dengan Sertifikat Keahlian yang diterbitkan oleh Lembaga Pengembangan Jasa Konstruksi</p>
                 </div>
@@ -98,7 +98,7 @@ function circle1()
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card card-profile mb-4 border-0 shadow cursor-pointer">
+                    <div class="card card-profile mb-4 border-0 shadow cursor-pointer" data-aos="fade-left">
                         <div class="card-body">
                             <div class="row btn-card-profile">
                                 <div class="col-lg-9">PT. Multi Visi Karya</div>
@@ -134,7 +134,7 @@ function circle1()
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 mb-4 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-center d-flex justify-content-center">
-                <a href="/course" class="text-decoration-none text-dark">
+                <a href="/course" class="text-decoration-none text-dark" data-aos="zoom-in-up">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <div class="card-body">
                             <h3 class="card-title">Pelatihan Teknik</h3>
@@ -145,7 +145,7 @@ function circle1()
                 </a>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mb-4 d-flex justify-content-lg-start justify-content-md-center justify-content-sm-center d-flex justify-content-center">
-                <a href="/course" class="text-decoration-none text-dark">
+                <a href="/course" class="text-decoration-none text-dark" data-aos="zoom-in-up">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <img src="https://img.business.com/w/700/aHR0cHM6Ly9pbWFnZXMuYnVzaW5lc3NuZXdzZGFpbHkuY29tL2FwcC91cGxvYWRzLzIwMjIvMDQvMDQwNzQ1NTMvMTU1NDI0NDAxMC5qcGVn" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -172,7 +172,7 @@ function circle1()
         </div>
     </div>
     <div class="mt-4"></div>
-    <div id="card-list-course" class="row mt-5 pt-5"></div>
+    <div id="card-list-course" class="row mt-5 pt-5" data-aos="zoom-out"></div>
     <input type="hidden" name="" id="limit-course" value="3">
     <input type="hidden" id="input-categ" value="semua" readonly>
     <div class="d-flex justify-content-center mt-3">
@@ -180,7 +180,7 @@ function circle1()
     </div>
 </div>
 
-<section id="portofolio" class="">
+<!-- <section id="portofolio" class="">
     <div class="container py-5 my-5">
         <div class="row">
             <div class="col-lg-6 d-sm-none d-lg-block d-md-none">
@@ -207,9 +207,9 @@ function circle1()
                         <div class="col-lg-3 col-m col-md-6 portfolio-item moreBox" id="perencanaan">
                             <div class="portfolio-img rounded overflow-hidden">
                                 <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
-                                <!-- <div class="portfolio-btn">
+                                <div class="portfolio-btn">
                                     <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>                                
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     <?php endfor; ?>
@@ -218,10 +218,7 @@ function circle1()
                     <?php foreach ($img as $image) : ?>
                         <div class="col-lg-3 col-m col-md-6 portfolio-item  moreBox" id="pengawasan">
                             <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid" src="img/File Musika/<?= $image; ?>" alt="">
-                                <!-- <div class="portfolio-btn">
-                                    <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>                                
-                                </div> -->
+                                <img class="img-fluid" src="img/File Musika/<?= $image; ?>" alt="">                              
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -242,7 +239,7 @@ function circle1()
                 </div>
             </div>
         </div>
-</section>
+</section> -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="/js/isotope/isotope.pkgd.min.js"></script>
@@ -370,7 +367,7 @@ function circle1()
         <div class="container mt-3">
             <h1 style="letter-spacing: 0px;"><strong><span class=" text-dark-purple">Ulasan</span><span> Pelanggan</span></strong></h1>
         </div>
-        <div class="bg1 mt-5">
+        <div class="bg1 mt-5" data-aos="zoom-in-right">
             <div class="container bg-transparent p-3">
                 <div class="row flex-row-reverse">
                     <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
@@ -391,7 +388,7 @@ function circle1()
             </div>
         </div>
 
-        <div class="bg2 mt-5">
+        <div class="bg2 mt-5" data-aos="zoom-in-left">
             <div class="container bg-transparent p-3">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
@@ -412,7 +409,7 @@ function circle1()
             </div>
         </div>
 
-        <div class="bg1 mt-5">
+        <div class="bg1 mt-5" data-aos="zoom-in-right">
             <div class="container bg-transparent p-3">
                 <div class="row flex-row-reverse">
                     <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
@@ -550,6 +547,7 @@ function circle1()
 
 <script>
     $(document).ready(function() {
+        AOS.init();
         $('body').css('overflow-x', 'hidden');
         getCourse('https://lms.lazy2.codes/api/course', '');
 

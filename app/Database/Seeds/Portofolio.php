@@ -11,37 +11,44 @@ class Portofolio extends Seeder
     {
         $data = [
             [
-                'image' => 'Frame 57.png',
+                'kategori' => 'perpustakaan',
+                'gambar' => 'Frame 57.png',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now(),
             ],
             [
-                'image' => 'Frame 58.png',
+                'kategori' => 'perpustakaan',
+                'gambar' => 'Frame 58.png',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now(),
             ],
             [
-                'image' => 'Frame 69.png',
+                'kategori' => 'perpustakaan',
+                'gambar' => 'Frame 69.png',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now(),
             ],
             [
-                'image' => 'image 9.png',
+                'kategori' => 'perpustakaan',
+                'gambar' => 'image 9.png',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now(),
             ],
             [
-                'image' => 'Gambar.png',
+                'kategori' => 'perpustakaan',
+                'gambar' => 'Gambar.png',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now(),
             ],
             [
-                'image' => 'poster.png',
+                'kategori' => 'perpustakaan',
+                'gambar' => 'poster.png',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now(),
             ],
             [
-                'image' => 'poster2.png',
+                'kategori' => 'perpustakaan',
+                'gambar' => 'poster2.png',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now(),
             ],
