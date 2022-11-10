@@ -2,18 +2,18 @@
     <div class="container pt-5 pb-5">
         <div class="row">
             <div class="col-lg-5">
-                <h2 class="lh-lg">Make it different</h2>
-                <p class="text-justify">Sevel Universal Media prioritize System End User and gives creative solution IT. PT. Swevel Universal Media focus in WEB Developer and Mobile Smartphone Application</p>
+                <h2 class="lh-lg">PT Multi Visi Karya</h2>
+                <p class="text-justify">Memberikan pelayanan pendidikan yang terbaik dan dapat diakses oleh pelanggan secara gratis dan berbayar. <br>Layanan pendidikan: <a href="/course" style="text-decoration: none;">Kursus</a>, <a href="/training" style="text-decoration: none;">Pelatihan</a> dan <a href="/konsultasi" style="text-decoration: none;">Konsultasi</a>.</p>
             </div>
             <div class="col-lg-1"></div>
             <div class="col-lg-2">
                 <ul class="list-unstyled">
-                    <li><a class="text-decoration-none text-dark" href="<?= ($title == 'Swevel') ? '#about-us' : '/#about-us'; ?>">About Us</a></li>
-                    <li><a class="text-decoration-none text-dark" href="<?= ($title == 'Swevel') ? '#service' : '/#service'; ?>">Service</a></li>
+                    <li><a class="text-decoration-none text-dark" href="<?= ($title == 'Swevel') ? '#about-us' : '/#about-us'; ?>">Tentang Kami</a></li>
+                    <li><a class="text-decoration-none text-dark" href="<?= ($title == 'Swevel') ? '#service' : '/#service'; ?>">Pelayanan</a></li>
                     <li><a class="text-decoration-none text-dark" href="<?= ($title == 'Swevel') ? '#portofolio' : '/#portofolio'; ?>">Portofolio</a></li>
                     <li><a class="text-decoration-none text-dark" href="<?= ($title == 'Swevel') ? '#customer-review' : '/#customer-review'; ?>">Testimoni</a></li>
                     <li><a class="text-decoration-none text-dark" href="/faq">FAQ</a></li>
-                    <li><a class="text-decoration-none text-dark" href="<?= ($title == 'Swevel') ? '#contactUs' : '/#contactUs'; ?>">Contact Us</a></li>
+                    <li><a class="text-decoration-none text-dark" href="<?= ($title == 'Swevel') ? '#contactUs' : '/#contactUs'; ?>">Kontak Kami</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 text-center">
@@ -33,7 +33,7 @@
 <section id="footer-training">
     <div class="container">
         <div class="text-center p-4 text-purple-100 fw-bold">
-            Swevel | <?= date('Y') ?>
+            Musika | <?= date('Y') ?>
         </div>
     </div>
 </section>
