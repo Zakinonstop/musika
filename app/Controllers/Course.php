@@ -29,7 +29,7 @@ class Course extends BaseController
         $data = [
             'title' => 'Course',
             'category' => $category,
-            'kontak' => $this->KontakModel->findAll(),            
+            'kontak' => $this->KontakModel->findAll(),
         ];
         return view('swevel/course/course', $data);
     }
@@ -37,24 +37,24 @@ class Course extends BaseController
     public function detailCourse($id)
     {
 
-        if(session()->get('swevel_email')){
-            $cek_purchase = $this->PurchaseModel->where('id_course', $id)->first();        
-            if($cek_purchase){
-                if($cek_purchase['status'] == 'approved'){
-                    $link = '<a href="/course/materi/'. $id .'" class="btn btn-sm btn-purple-100">Start Class</a>';
-                }else{
+        if (session()->get('swevel_email')) {
+            $cek_purchase = $this->PurchaseModel->where('id_course', $id)->first();
+            if ($cek_purchase) {
+                if ($cek_purchase['status'] == 'approved') {
+                    $link = '<a href="/course/materi/' . $id . '" class="btn btn-sm btn-purple-100">Start Class</a>';
+                } else {
                     $link = '<div class="btn btn-sm btn-purple-100">Menunggu approval</div>';
                 }
-            }else{
-                $link = '<a href="/payment/'. $id .'" class="btn btn-sm btn-purple-100">Join Now</a>';
+            } else {
+                $link = '<a href="/payment/' . $id . '" class="btn btn-sm btn-purple-100">Join Now</a>';
             }
-        }else{
-            $link = '<a href="/payment/'. $id .'" class="btn btn-sm btn-purple-100">Join Now</a>';
+        } else {
+            $link = '<a href="/payment/' . $id . '" class="btn btn-sm btn-purple-100">Join Now</a>';
         }
         $data = [
             'title' => 'Detail Course',
             'kontak' => $this->KontakModel->findAll(),
-            'id' => $id,                        
+            'id' => $id,
             'link' => $link,
         ];
         return view('swevel/course/detail_course', $data);
@@ -111,6 +111,7 @@ class Course extends BaseController
         echo $output;
         curl_close($ch);
     }
+
     public function getVideo()
     {
         $id = $this->request->getVar('id');
@@ -123,10 +124,11 @@ class Course extends BaseController
     }
 
 
-    public function not_yet_approved(){
+    public function not_yet_approved()
+    {
         $data = [
-            'title' => 'Not yet Approved',            
+            'title' => 'Not yet Approved',
         ];
-        return view('swevel/course/not-yet-approved',$data);
+        return view('swevel/course/not-yet-approved', $data);
     }
 }
