@@ -48,7 +48,7 @@
                                     <div class="invalid-feedback password"></div>                                    
                                 </div>
                                 <div class="mb-3">
-                                    <button id="btnLogin" type="button" class="btn btn-login w-100" name="login">Masuk</button>
+                                    <button id="btnLogin" type="button" class="btn btn-login w-100 text-white" style="background:#61af11;" name="login">Masuk</button>
                                 </div>
                                 <input type="hidden" name="payment" id="" value="<?= $payment; ?>">
                             </form>

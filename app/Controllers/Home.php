@@ -165,6 +165,16 @@ class Home extends BaseController
 
     public function getPortofolio($kategori){
 
+
+        if($kategori == 'semua'){
+            $portofolio = $this->PortofolioModel->findAll(8);            
+            return json_encode([
+                'code' => '200',
+                'message' => 'success',
+                'portofolio' => $portofolio,
+            ]);            
+        }
+
         $portofolio = $this->PortofolioModel->where('kategori',$kategori)->findAll();
         if($portofolio){
             return json_encode([

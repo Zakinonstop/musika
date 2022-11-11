@@ -136,7 +136,7 @@ function circle1()
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 mb-4 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-center d-flex justify-content-center">
-                <a href="/course" class="text-decoration-none text-dark" data-aos="zoom-in-up">
+                <a href="/training" class="text-decoration-none text-dark" data-aos="zoom-in-up">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <div class="card-body">
                             <h3 class="card-title">Pelatihan Teknik</h3>
@@ -147,7 +147,7 @@ function circle1()
                 </a>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mb-4 d-flex justify-content-lg-start justify-content-md-center justify-content-sm-center d-flex justify-content-center">
-                <a href="/course" class="text-decoration-none text-dark" data-aos="zoom-in-up">
+                <a href="/implementasi" class="text-decoration-none text-dark" data-aos="zoom-in-up">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <img src="https://img.business.com/w/700/aHR0cHM6Ly9pbWFnZXMuYnVzaW5lc3NuZXdzZGFpbHkuY29tL2FwcC91cGxvYWRzLzIwMjIvMDQvMDQwNzQ1NTMvMTU1NDI0NDAxMC5qcGVn" class="card-img-top" alt="...">
                         <div class="card-body">
