@@ -14,7 +14,7 @@ class Konsultasi extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Konsultasi',
+            'title' => 'Implementasi',
             'kontak' => $this->KontakModel->findAll(),
         ];
         return view('swevel/Implementasi/konsultasi', $data);

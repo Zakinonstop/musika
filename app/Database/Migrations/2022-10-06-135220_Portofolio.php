@@ -14,7 +14,11 @@ class Portofolio extends Migration
                 'constraint' => 5,
                 'auto_increment' => true
             ],
-            'image' => [
+            'kategori' => [
+                'type' => 'varchar',
+                'constraint' => 100,
+            ], 
+            'gambar' => [
                 'type' => 'varchar',
                 'constraint' => 100,
             ],

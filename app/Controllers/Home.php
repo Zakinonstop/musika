@@ -35,9 +35,10 @@ class Home extends BaseController
             'milestoneLimit' => $this->MilestoneModel->orderBy('year', 'asc')->findAll(2),
             'milestone' => $this->MilestoneModel->orderBy('year', 'asc')->findAll(),
             'kontak' => $this->KontakModel->findAll(),
-            'team' => $this->TeamModel->findAll(),
-            'portofolio' => $this->PortofolioModel->findAll(),
+            'team' => $this->TeamModel->findAll(),            
             'artikel' => $this->ArtikelModel->limit(3)->findAll(),
+            'group_portofolio' => $this->PortofolioModel->groupBy('kategori')->orderBy('kategori','asc')->findAll(),
+            'portofolio' => $this->PortofolioModel->findAll(4),
         ];
         return view('swevel/homepage/homepage', $data);
     }
@@ -162,5 +163,23 @@ class Home extends BaseController
                 'message' => 'failed',
             ]);
         }
+    }    
+
+    public function getPortofolio($kategori){
+
+        $portofolio = $this->PortofolioModel->where('kategori',$kategori)->findAll();
+        if($portofolio){
+            return json_encode([
+                'code' => '200',
+                'message' => 'success',
+                'portofolio' => $portofolio,
+            ]);            
+        }else{
+            return json_encode([
+                'code' => '404',
+                'message' => 'error',                
+            ]);            
+        }
+
     }
 }

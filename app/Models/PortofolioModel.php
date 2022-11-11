@@ -10,7 +10,7 @@ class PortofolioModel extends Model
     protected $table            = 'portofolio';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['image'];
+    protected $allowedFields    = ['kategori','image'];
 
     // Dates
     protected $useTimestamps = false;

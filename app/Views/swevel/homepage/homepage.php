@@ -74,10 +74,10 @@ function circle1()
 <div id="about-us">
     <div class="page-1 pt-5">
         <div class="container">
-            <div class="col-lg-8 col-md-12 col-12 mb-5">
-                <div class="text pt-5">
-                    <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Teknologi Informasi</span> yang Terbaik dan Berkualitas</h1>
-                    <p class="cover-text my-5">PT. Multi Visi Karya memiliki lebih dari 40 pengalaman pekerjaan dan telah dipercaya oleh banyak pengguna jasa terkemuka mulai dari jasa perencanaan, pengawasan, dan konsultansi teknik sipil lainnya. Memiliki tenaga ahli dengan Sertifikat Keahlian yang diterbitkan oleh Lembaga Pengembangan Jasa Konstruksi</p>
+            <div class="col-lg-8 col-md-12 col-12 mb-5" >
+                <div class="text pt-5" data-aos="fade-right">
+                    <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Jasa Konsultasi di Bidang Konstruksi</span> dan Non Konstruksi</h1>
+                    <p class="cover-text my-5">PT. Multi Visi Karya memiliki lebih dari 40 pengalaman pekerjaan dan telah dipercaya oleh banyak pengguna jasa terkemuka mulai dari jasa perencanaan, pengawasan, dan konsultansi teknik sipil lainnya. Memiliki tenaga ahli dengan Sertifikat Keahlian yang diterbitkan oleh Lembaga Pengembangan Jasa Konstruksi.</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -98,20 +98,22 @@ function circle1()
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card card-profile mb-4 border-0 shadow cursor-pointer">
+                    <div class="card card-profile mb-4 border-0 shadow cursor-pointer" data-aos="fade-left">
                         <div class="card-body">
                             <div class="row btn-card-profile">
-                                <div class="col-lg-9">PT. Multi Visi Karya</div>
-                                <div class="text-muted mt-2">PT. Multi Visi Karya adalah sebuah Biro Jasa Konsultasi yang bergerak dalam bidang Jasa Konstruksi yang terdiri dari bidang Arsitektur, Sipil, Jasa Inspeksi Teknis, Tata Lingkungan dan Survey, bahkan Jasa Non Konstruksi.</div>
+                                <div class="col-lg-9 fw-bold">
+                                    <h3>PT. Multi Visi Karya</h3>
+                                </div>
+                                <div class="text-dark mt-2">Sebuah Biro Jasa Konsultasi yang bergerak dalam bidang asa Perencana dan Pengawas Konstruksi yang terdiri dari bidang Arsitektur, Sipil, Jasa Inspeksi Teknis, Tata Lingkungan dan Survey, bahkan Jasa Non Konstruksi (Pendidikan, Perindustrian, Perdagangan, dan lainya).</div>
                             </div>
-                            <div class="deskripsi-profile mt-5">
-                                <div>
-                                    PT. MULTI VISI KARYA dapat mengerjakan proyek-proyek dengan sub klasifikasi:
-                                    <ul>
-                                        <li>Perencanaan Arsitektur (AR)</li>
-                                        <li>Perencanaan Penataan Ruang (PR)</li>
-                                        <li>Pengawasan Teknik (RE)</li>
-                                        <li>Konsultasi Lainnya (KL)</li>
+                            <div class="deskripsi-profile mt-3">
+                                <div class="card-about">
+                                    Berikut sub-klasifikasi proyek-proyek yang disediakan :
+                                    <ul class="mt-2">
+                                        <li>&ensp;Perencanaan Arsitektur (AR)</li>
+                                        <li>&ensp;Perencanaan Penataan Ruang (PR)</li>
+                                        <li>&ensp;Pengawasan Teknik (RE)</li>
+                                        <li>&ensp;Konsultasi Lainnya (KL)</li>
                                     </ul>
                                 </div>
                             </div>
@@ -134,7 +136,7 @@ function circle1()
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 mb-4 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-center d-flex justify-content-center">
-                <a href="/course" class="text-decoration-none text-dark">
+                <a href="/course" class="text-decoration-none text-dark" data-aos="zoom-in-up">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <div class="card-body">
                             <h3 class="card-title">Pelatihan Teknik</h3>
@@ -145,7 +147,7 @@ function circle1()
                 </a>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mb-4 d-flex justify-content-lg-start justify-content-md-center justify-content-sm-center d-flex justify-content-center">
-                <a href="/course" class="text-decoration-none text-dark">
+                <a href="/course" class="text-decoration-none text-dark" data-aos="zoom-in-up">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <img src="https://img.business.com/w/700/aHR0cHM6Ly9pbWFnZXMuYnVzaW5lc3NuZXdzZGFpbHkuY29tL2FwcC91cGxvYWRzLzIwMjIvMDQvMDQwNzQ1NTMvMTU1NDI0NDAxMC5qcGVn" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -156,9 +158,7 @@ function circle1()
                 </a>
             </div>
         </div>
-    </div>
-    <!-- <div class="circle-1 d-sm-none d-md-none d-lg-block"><?= circle1(); ?></div>
-    <div class="circle-2 d-sm-none d-md-none d-lg-block"><?= circle1(); ?></div> -->
+    </div>    
 </section>
 
 
@@ -172,7 +172,7 @@ function circle1()
         </div>
     </div>
     <div class="mt-4"></div>
-    <div id="card-list-course" class="row mt-5 pt-5"></div>
+    <div id="card-list-course" class="row mt-5 pt-5" data-aos="zoom-out"></div>
     <input type="hidden" name="" id="limit-course" value="3">
     <input type="hidden" id="input-categ" value="semua" readonly>
     <div class="d-flex justify-content-center mt-3">
@@ -194,53 +194,23 @@ function circle1()
         <div class="image-portofolio text-center">
             <div class="row fadeInUp" data-wow-delay="0.5s">
                 <div class="portfolioFilter clearfix mb-4">
-                    <a href="#all-portofolio" data-filter="*" class="current">Semua</a>
-                    <a href="#" data-filter="#perencanaan">Perencanaan</a>
-                    <a href="#" data-filter="#pengawasan">Pengawasan</a>
-                    <a href="#" data-filter="#konsultasi">Konsultasi Lainnya</a>
-                    <a href="#more" data-filter="#more">More</a>
+                    <button class="mx-2 p-2 cursor-pointer mb-3 active" data-kategori="semua">semua</button>
+                    <?php foreach($group_portofolio as $x) : ?>
+                        <button class="mx-2 p-2 cursor-pointer mb-3" data-kategori="<?= $x['kategori']; ?>"><?= $x['kategori']; ?></button>
+                    <?php endforeach; ?>
                 </div>
             </div>
-            <div class="mt-lg-3 mb-3">
-                <div class="row g-4 portfolio-container wow fadeInUp" id="foto" data-wow-delay="0.5s">
-                    <?php for ($i = 1; $i <= 8; $i++) : ?>
-                        <div class="col-lg-3 col-m col-md-6 portfolio-item moreBox" id="perencanaan">
-                            <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid" src="img/File Musika/1.jpg" alt="">
-                                <!-- <div class="portfolio-btn">
-                                    <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>                                
-                                </div> -->
-                            </div>
-                        </div>
-                    <?php endfor; ?>
-                    <?php $img = ['1.jpg', '2.jpg', '3.jpg', '4.jpg']; ?>
-                    <?php $img2 = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg',]; ?>
-                    <?php foreach ($img as $image) : ?>
-                        <div class="col-lg-3 col-m col-md-6 portfolio-item  moreBox" id="pengawasan">
-                            <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid" src="img/File Musika/<?= $image; ?>" alt="">
-                                <!-- <div class="portfolio-btn">
-                                    <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><i class="fa fa-eye"></i></a>                                
-                                </div> -->
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-
-                    <?php foreach ($img2 as $image) : ?>
-                        <div class="col-lg-3 col-m col-md-6 portfolio-item moreBox" id="more">
-                            <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid" src="img/File Musika/<?= $image; ?>" alt="">
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                    <div id="loadMore" style="">
-                        <a href="#" class="btn btn-green text-light">Lihat Lagi</a>
-                    </div>
-                    <div id="loadLess" style="">
-                        <a href="#" class="btn btn-green text-light">Kembali</a>
-                    </div>
-                </div>
+            <div class="d-flex justify-content-center">
+                <img src="/img/loaderpurple1.gif" style="width:150px" class="loader-portofolio mt-3 hide">
             </div>
+            <div class="row list-portofolio">                
+                <?php foreach($portofolio as $x) : ?>
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <img src="/img/portofolio/<?= $x['gambar']; ?>">
+                    </div>
+                <?php endforeach; ?>
+            </div>
+           
         </div>
 </section>
 
@@ -270,7 +240,34 @@ function circle1()
             $(".moreBox").slice(12, 23).css('display', 'none');
             $('#loadLess').css('display', 'none');
             $('#loadMore').css('display', 'block');
-        });
+        });    
+
+        $('.portfolioFilter button').click(function(){
+            $('.loader-portofolio').removeClass('hide');
+            $('.list-portofolio').html('');
+            $(".portfolioFilter button").removeClass('active');
+            $(this).addClass('active');            
+            let kategori = $('.portfolioFilter button.active').data('kategori');
+            $.ajax({
+                url : '/getPortofolio/'+kategori,
+                type: 'get',
+                dataType : 'json',
+                success: function(result){
+                    $('.loader-portofolio').addClass('hide');
+                    if(result.code == '200'){
+                        $.each(result.portofolio, function(index, data){
+                            $('.list-portofolio').append(`
+                                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                    <img src="/img/portofolio/`+data.gambar+`">
+                                </div>
+                            `);
+                        })
+                    }else{                        
+                        $('.list-portofolio').html(`<div class="alert alert-warning">Data tidak ditemukan</div>`)
+                    }
+                }
+            })
+        })
     });
     // js category
     $(window).load(function() {
@@ -282,23 +279,7 @@ function circle1()
                 easing: 'linear',
                 queue: false
             }
-        });
-
-        $('.portfolioFilter a').click(function() {
-            $('.portfolioFilter .current').removeClass('current');
-            $(this).addClass('current');
-
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
-        });
+        });      
     });
 </script>
 
@@ -331,46 +312,12 @@ function circle1()
     </div>
 </section>
 
-
-<script src="/js/splide.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        sliderClient();
-    })
-
-    let sliderClient = () => {
-        let mediaSm = window.matchMedia("(max-width: 576px)");
-        let mediaMd = window.matchMedia("(max-width: 768px)");
-        let mediaLg = window.matchMedia("(max-width: 100px)");
-        if (mediaSm.matches) {
-            var perPage = 1;
-        } else if (mediaMd.matches) {
-            var perPage = 2;
-        } else if (mediaLg.matches) {
-            var perPage = 4;
-        } else {
-            var perPage = 4;
-        }
-        var splide = new Splide('.splide.splide-client', {
-            // type: 'loop',
-            perPage: perPage,
-            rewind: true,
-            arrows: false,
-            // autoplay: true,
-            // speed: 2000,
-            // width: '100%',
-            // padding: '10px',
-        });
-        splide.mount();
-    }
-</script>
 <main id="contact">
     <section id="customer-review" class="pt-5 pb-5">
         <div class="container mt-3">
             <h1 style="letter-spacing: 0px;"><strong><span class=" text-dark-purple">Ulasan</span><span> Pelanggan</span></strong></h1>
         </div>
-        <div class="bg1 mt-5">
+        <div class="bg1 mt-5" data-aos="zoom-in-right">
             <div class="container bg-transparent p-3">
                 <div class="row flex-row-reverse">
                     <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
@@ -391,7 +338,7 @@ function circle1()
             </div>
         </div>
 
-        <div class="bg2 mt-5">
+        <div class="bg2 mt-5" data-aos="zoom-in-left">
             <div class="container bg-transparent p-3">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
@@ -412,7 +359,7 @@ function circle1()
             </div>
         </div>
 
-        <div class="bg1 mt-5">
+        <div class="bg1 mt-5" data-aos="zoom-in-right">
             <div class="container bg-transparent p-3">
                 <div class="row flex-row-reverse">
                     <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
@@ -432,7 +379,6 @@ function circle1()
                 </div>
             </div>
         </div>
-
     </section>
 
     <section id="contactUs" class="pb-5" style="background-color: #FAF6FF">
@@ -489,7 +435,7 @@ function circle1()
                                                 <i class="fa-solid fa-location-dot fs-5"></i>
                                             </div>
                                             <div class="col-10">
-                                                <span>Jl. H.R. Rasuna Said, Kav 3, South Jakarta, 12950 - Indonesia</span>
+                                                <span>Jl Sutrisno No.032,Candran Rt/Rw 10/05 Sidoarum,Godean kabupaten Kab. Sleman.</span>
                                             </div>
                                         </div>
                                     </div>
@@ -548,8 +494,43 @@ function circle1()
 </main>
 
 
+<script src="/js/splide.min.js"></script>
+
 <script>
     $(document).ready(function() {
+        sliderClient();
+    })
+
+    let sliderClient = () => {
+        let mediaSm = window.matchMedia("(max-width: 576px)");
+        let mediaMd = window.matchMedia("(max-width: 768px)");
+        let mediaLg = window.matchMedia("(max-width: 100px)");
+        if (mediaSm.matches) {
+            var perPage = 1;
+        } else if (mediaMd.matches) {
+            var perPage = 2;
+        } else if (mediaLg.matches) {
+            var perPage = 4;
+        } else {
+            var perPage = 4;
+        }
+        var splide = new Splide('.splide.splide-client', {
+            // type: 'loop',
+            perPage: perPage,
+            rewind: true,
+            arrows: false,
+            // autoplay: true,
+            // speed: 2000,
+            // width: '100%',
+            // padding: '10px',
+        });
+        splide.mount();
+    }
+</script>
+
+<script>
+    $(document).ready(function() {
+        AOS.init();
         $('body').css('overflow-x', 'hidden');
         getCourse('https://lms.lazy2.codes/api/course', '');
 

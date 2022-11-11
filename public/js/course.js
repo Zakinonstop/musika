@@ -40,9 +40,9 @@ function refreshCourse() {
                  $('#card-list-course').html('');
                  $.each(result, function(i, data) {                    
                      $('#card-list-course').append(`
-                        <div class="col-md-6 col-lg-4 col-sm-12 col-course mb-5">
+                        <div class="col-md-6 col-lg-4 col-sm-12 col-course mb-5" data-id="` + data.course_id + `">
                             <div class="card card-course border-0 cursor-pointer shadow br-15" data-id="` + data.course_id + `">                
-                                <div class="image-content card-thumbnail-course" data-id="` + data.course_id + `">
+                                <div class="image-content card-thumbnail-course cursor-pointer" data-id="` + data.course_id + `">
                                     <div class="card-image.">
                                         <div class="course-img-polygon">
                                             <img src="" alt="" class="card-img">
@@ -50,7 +50,7 @@ function refreshCourse() {
                                         <div class="text-center p-2 btn-light-50-hover-0 w-50 position-absolute small br-end-10 category-course-other category-course-`+data.course_id+`" style="z-index:5; margin-top: -35px;"></div>                                                                                
                                     </div>
                                 </div>                
-                                <div class="card-content card-content-course ps-4 py-4"  data-id="` + data.course_id + `">
+                                <div class="card-content card-content-course cursor-pointer ps-4 py-4"  data-id="` + data.course_id + `">
                                     <h5 class="card-title fw-bold lh-base ">` + data.title + `</h5>                                                                            
                                     <div class="row">
                                         <div class="col-sm-8 col-md-6 col-lg-12">
@@ -70,7 +70,24 @@ function refreshCourse() {
                             </div>
                          </div>
                         `);
-                 });                 
+                 });       
+
+                   // sorting ascending list menu sidebar materi
+            var $parentMenu = $("#card-list-course"),
+            $listMenu = $parentMenu.children("div");
+            $listMenu.sort(function(a, b) {
+                var an = a.getAttribute("data-id"),
+                    bn = b.getAttribute("data-id");
+                if (parseInt(an) > parseInt(bn)) {
+                    return 1;
+                }
+                if (parseInt(an) < parseInt(bn)) {
+                    return -1;
+                }
+                return 0;
+            });
+            $listMenu.detach().appendTo($parentMenu);     
+            // end sorting          
 
                  $('.btn-more-course').removeClass("hide");                 
 

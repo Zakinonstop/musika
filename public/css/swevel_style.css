@@ -142,12 +142,14 @@
     color: #fff;
     letter-spacing: 1px;
     font-size: 1em;
-    background-color: #61af11 !important;
+    background-color: #61AF11 !important;
 }
+
 .btn-login:hover {
-    background: #61af11;
+    background: #61AF11;
     color: #fff;
 }
+
 #modal-login.active {
     display: block;
     background: rgba(0, 0, 0, 0.6);
@@ -178,7 +180,51 @@
     font-weight: bold;
 }
 
+/* homepage */
+
+.hubungi-kami {
+    position: fixed;
+    right: 60px;
+    bottom: 20px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    color: #fff !important;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.hubungi-kami {
+    font-size: 11pt;
+}
+
+.hubungi-kami i {
+    margin-top: 2px;
+}
+
+.back-to-top:hover,
+.hubungi-kami:hover {
+    opacity: 0.9;
+}
+
+.fa-whatsapp {
+    font-size: 14pt;
+}
+
 /* About Us */
+
+.card-about ul li {
+    list-style: none;
+    padding: 0;
+}
+
+.card-about ul li::before {
+    content: "\f058";
+    font-family: FontAwesome;
+    position: relative;
+    color: #61AF11;
+    margin-left: -30px;
+}
 
 #about-us .box {
     height: calc(100vh - 60px);
@@ -642,6 +688,22 @@ section#team {
     line-height: 30px;
 }
 
+#service a {
+    color: #0c0c0c;
+}
+
+#service a:hover {
+    color: #61AF11;
+}
+
+#link li a {
+    color: #0c0c0c;
+}
+
+#link li a:hover {
+    color: #61AF11;
+}
+
 /* TRAINING */
 
 #training .most-popular img {
@@ -780,7 +842,7 @@ section#team {
 }
 
 .card-course,
-.card-bundling {
+.card-bundling {    
     background: rgb(186, 237, 134);
     background: linear-gradient(
         16deg,

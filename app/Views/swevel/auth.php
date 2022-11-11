@@ -34,7 +34,7 @@
                     <div class="card p-3 shadow">
                         <div class="card-body">
                             <div class="text-center h4 my-4">
-                                User Login
+                                Masuk akun
                             </div>
                             <div class="message-register success my-3"></div>
                             <form action="#" method="POST" autocomplete="off" id="form-login">

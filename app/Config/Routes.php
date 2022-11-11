@@ -37,12 +37,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 // percobaan
-$routes->get('coba', function () {
-    $data = [
-        'title' => 'Percobaan',
-    ];
-    return view('swevel/course/coba-template-course', $data);
-});
+$routes->get('coba', 'Home::coba');
 
 
 // login 
@@ -146,6 +141,7 @@ $routes->delete('/delete-team', "Admin::deleteTeam");
 $routes->get('/admin-portofolio', 'Admin::portofolio');
 $routes->post('/add-portofolio', 'Admin::addPortofolio');
 $routes->delete('/delete-portofolio', 'Admin::deletePortofolio');
+$routes->get('/getPortofolio/(:any)','Home::getPortofolio/$1');
 
 $routes->get('/admin-event', 'Admin::event');
 
@@ -158,7 +154,7 @@ $routes->get('/notyetapproved', 'Course::not_yet_approved');
 $routes->get('purchase-done', 'Home::purchase_message');
 
 // konsultasi
-$routes->get('/konsultasi', 'Konsultasi::index');
+$routes->get('/implementasi', 'Konsultasi::index');
 
 
 // ===================== User =====================
@@ -173,6 +169,7 @@ $routes->get("/kuis", "User::kuis");
 $routes->get("/getKuis", "Course::getApiKuis");
 $routes->get("/course-saved", "User::savedCourse");
 $routes->get('/submission', 'User::submission');
+
 
 
 

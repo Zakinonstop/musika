@@ -27,7 +27,7 @@
                     <div class="list-category-course">
                         <span class="fw-bold">Kategori : </span>
                         <input type="hidden" id="input-categ" value="semua" readonly>
-                        <button class="btn btn-light btn-sm mx-2 btn-category-course" data-categ="semua">Semua</button>
+                        <button class="btn btn-purple btn-sm mx-2 btn-category-course" data-categ="semua">Semua</button>
                     </div>
                 </div>
                 <div class="col-lg-5 col-search-course">
@@ -296,6 +296,5 @@
     })
 </script>
 <script src="/js/course.js"></script>
-<?= $this->include('swevel/homepage/footer'); ?>
-<?= $this->include('swevel/training/footer'); ?>
+<?= $this->include('swevel/course/footer-course'); ?>
 <?= $this->endSection(); ?>

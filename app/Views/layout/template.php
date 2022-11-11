@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/asset/custom_vendor/fontawesome612/css/all.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- custom -->
     <link rel="stylesheet" href="/css/swevel_style.css">
@@ -24,10 +26,20 @@
 
     <?= $this->renderSection('content'); ?>
 
+    <!-- Back to Top -->
+    <!-- <a href="#" class="btn btn-primary back-to-top"><i class="bi bi-arrow-up"></i></a> -->
+    <a href="https://wa.me/6282215631539" target="_blank" class="btn btn-purple hubungi-kami pb-2">
+        <span class="d-flex">
+            <div class="me-2 my-auto"><i class="fa fa-brands fa-whatsapp"></i></div>
+            <div class="my-auto ms-2 " style="margin-top: 15px;"> Hubungi kami</div>
+        </span>
+    </a>
+
     <div id="modal-login" class="hide"></div>
 
     <script src="/asset/custom_vendor/bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="/asset/custom_vendor/fontawesome612/js/all.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
     <script>
@@ -44,7 +56,7 @@
                     }
                 });
 
-                menuItems.click(function(e) {
+            menuItems.click(function(e) {
                 let href = $(this).attr('href'),
                     offsetTopo = hreff === "#" ? 0 :
                     $(href).offset().top - topMneuHeight + 1;
