@@ -58,12 +58,8 @@
                 <div class="container">
                     <div class="row justify-content-between flex-row-reverse mt-5">
 
-                        <div class="col-sm-12 col-md-4 img">
-                            <!-- <div class="card border-0">
-                    <div class="card-body p-0"> -->
-                            <img src="/img/File Musika/FAQ.png" width="100%" alt="">
-                            <!-- </div>
-                </div> -->
+                        <div class="col-sm-12 col-md-4 img">                            
+                            <img src="/img/File Musika/FAQ.png" width="100%" alt="">                            
                         </div>
 
                         <div class="col-sm-12 col-md-7">
@@ -91,18 +87,18 @@
                     <div class="row mt-5">
                         <div class="col-sm-12 col-md-5 justify-content-center d-flex">
                             <ul class="nav flex-column nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-                                <button class="nav-link active fw-normal" data-bs-toggle="pill" data-bs-target="#general" type="button" role="tab" aria-selected="true">Umum</button>
+                                <button class="nav-link active fw-normal" data-bs-toggle="pill" data-bs-target="#pertanyaan" type="button" role="tab" aria-selected="true">Umum</button>
                                 <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#services" type="button" role="tab" aria-selected="false">Layanan</button>
-                                <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#aboutUs" type="button" role="tab" aria-selected="false">Tentang Kita</button>
+                                <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#aboutUs" type="button" role="tab" aria-selected="false">Tentang kami</button>
                                 <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#event" type="button" role="tab" aria-selected="false">Kursus</button>
                                 <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#course" type="button" role="tab" aria-selected="false">Pelatihan</button>
-                                <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#training" type="button" role="tab" aria-selected="false">Implementasi</button>
+                                <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#training" type="button" role="tab" aria-selected="false">Konsultasi</button>
                             </ul>
                         </div>
                         <div class="col-sm-12 col-md-7">
                             <div class="tab-content" id="pills-tabContent">
 
-                                <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab" tabindex="0">
+                                <div class="tab-pane fade show active" id="pertanyaan" role="tabpanel" aria-labelledby="pertanyaan-tab" tabindex="0">
                                     <div class="accordion accordion-flush" id="accordionFlushExample">
 
                                         <div class="accordion-item">
@@ -202,12 +198,12 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#aboutus1" aria-expanded="false">
-                                                    About Us #1
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#aboutus1" aria-expanded="false">
+                                                    bagaimana cara menghubungi perusahaan  ?
                                                 </button>
                                             </h2>
                                             <div id="aboutus1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body">pada halaman homepage atau halaman depan, klik tombol kontak kami, kemudian akan di arahkan pada halaman kontak. pada halaman tersebut tersedia nomor dan email perusahaan.</div>
                                             </div>
                                         </div>
 
@@ -219,12 +215,12 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#event1" aria-expanded="false">
-                                                    Event #1
+                                                <button class="accordion-button collapsed fw-normal fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#event1" aria-expanded="false">
+                                                    bagaimana cara membeli kursus ? 
                                                 </button>
                                             </h2>
                                             <div id="event1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body">Course dapat dibeli dengan mengklik tombol beli kursus pada halaman course</div>
                                             </div>
                                         </div>
 
@@ -236,12 +232,12 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#course1" aria-expanded="false">
-                                                    Course #1
+                                                <button class="accordion-button collapsed fw-normal fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#course1" aria-expanded="false">
+                                                    bagaimana cara membeli kursus ? 
                                                 </button>
                                             </h2>
                                             <div id="course1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body">Course dapat dibeli dengan mengklik tombol beli kursus pada halaman course</div>
                                             </div>
                                         </div>
 
@@ -253,12 +249,11 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#training1" aria-expanded="false">
-                                                    Training #1
+                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#training1" aria-expanded="false">                                               
                                                 </button>
                                             </h2>
                                             <div id="training1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body"></div>
                                             </div>
                                         </div>
 

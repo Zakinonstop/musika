@@ -9,7 +9,7 @@
 </style>
 <section id="detail-training">
     <div class="container">
-        <div class="title text-center mt-5 mb-lg-5 pb-4 fw-bold h3">Pelatihan Softskill</div>
+        <div class="title text-center mt-5 mb-lg-5 pb-4 fw-bold h3">Autodesk Certified Professional: Revit for Architectural Design Exam Prep</div>
         <div class="row mb-5">
             <div class="col-lg-6 overflow-hidden">
                 <img src="/img/pos.jpg" alt="" class="detail-img">

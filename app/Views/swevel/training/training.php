@@ -15,16 +15,16 @@
 <section id="training">
     <div class="training-list mx-lg-5 px-4 mt-5 pt-5">
         <h2 class="fw-bold mb-5 text-center text-purple">Daftar Pelatihan</h2>
-        <?php for ($i = 0; $i < 5; $i++) : ?>
+        <?php for ($i = 1; $i <= 5; $i++) : ?>
             <div class="card mb-3 border-0 shadow mb-5 py-4 br-15 cursor-pointer card-training">
                 <div class="row g-0">
                     <div class="col-md-3 text-sm-center">
-                        <img src="/img/Frame 57.png" class="img-fluid rounded-start" alt="..." style="max-width: 200px;">
+                        <img src="/img/pos.jpg" class="img-fluid rounded-start" alt="..." style="max-width: 200px;">
                     </div>
                     <div class="col-md-7">
                         <div class="card-body">
-                            <h5 class="card-title text-purple-100 fw-bold">Pelatihan Softskill dan Hardskill</h5>
-                            <p class="card-text">Pelatihan Autocad yang akan dipandu oleh mentor Bapak Arif. Sebelum dimulai training akan disediakan modul pelatihan yang akan dipelajari dan tugas yang perlu diselesaikan. Penilaian dari tugas projek akhir akan dinilai dan dapat dijadikan sebagai pengalaman dan bukti karya ynag telah dbuat.</p>
+                            <h5 class="card-title text-purple-100 fw-bold">Autodesk Certified Professional: Revit for Architectural Design Exam Prep (part <?= $i; ?>)</h5>
+                            <p class="card-text">Buktikan kepada calon pemberi kerja bahwa Anda siap dengan tugas tersebut dengan menjadi Autodesk Certified Professional</p>
                             <div class="row">
                                 <div class="col-sm-8 col-md-6 col-lg-12">
                                     <p class="card-text h6 text-decoration-line-through text-secondary">Rp 500.000</p>
