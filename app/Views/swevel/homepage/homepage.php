@@ -188,11 +188,10 @@ function circle1()
             </div>
             <div class="col-lg-6 text-lg-end text-md-center text-sm-center">
                 <h2 class="text-purple fw-bold">Portofolio</h2>
-<<<<<<< HEAD
-                <p>Berikut ini merupakan dokumentasi projek yang pernah dilakukan oleh PT Multi Visi Karya</p>
-=======
-                <p>Beberapa proyek yang kami kerjakan</p>
->>>>>>> a83ec728ce8007ada2cfdda06e033c740666173e
+                <<<<<<< HEAD <p>Berikut ini merupakan dokumentasi projek yang pernah dilakukan oleh PT Multi Visi Karya</p>
+                    =======
+                    <p>Beberapa proyek yang kami kerjakan</p>
+                    >>>>>>> a83ec728ce8007ada2cfdda06e033c740666173e
             </div>
         </div>
         <div class="image-portofolio text-center">
@@ -325,7 +324,7 @@ function circle1()
             <div class="container bg-transparent p-3">
                 <div class="row flex-row-reverse">
                     <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
-                        <img src="asset/image/contactUs/img.png" alt="" width="150px">
+                        <img src="asset/image/contactUs/boyy.png" alt="" width="200px">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <p class="fs-4">
@@ -346,7 +345,7 @@ function circle1()
             <div class="container bg-transparent p-3">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
-                        <img src="asset/image/contactUs/img.png" alt="" width="150px">
+                        <img src="asset/image/contactUs/boyy.png" alt="" width="200px">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <p class="fs-4">
@@ -367,7 +366,7 @@ function circle1()
             <div class="container bg-transparent p-3">
                 <div class="row flex-row-reverse">
                     <div class="col-sm-12 col-md-12 col-lg-6 text-center my-auto image-customer-review">
-                        <img src="asset/image/contactUs/img.png" alt="" width="150px">
+                        <img src="asset/image/contactUs/boyy.png" alt="" width="200px">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <p class="fs-4">
@@ -388,7 +387,7 @@ function circle1()
     <section id="contactUs" class="pb-5" style="background-color: #FAF6FF">
         <div class="container">
             <div class="row">
-                <h1 class="mt-5 fw-bold text-center" style="letter-spacing: 0px;"><span class=" text-dark-purple">Kontak</span> Kami</h1>                
+                <h1 class="mt-5 fw-bold text-center" style="letter-spacing: 0px;"><span class=" text-dark-purple">Kontak</span> Kami</h1>
             </div>
             <div class="card mt-5 border-0 shadow">
                 <div class="card-body p-0">
@@ -442,7 +441,7 @@ function circle1()
                                     <div class="col-sm-12 col-md-12">
                                         <label class="form-input-label">Nama</label>
                                         <input type="text" class="form-control" placeholder="">
-                                    </div>                                    
+                                    </div>
                                     <div class="col-sm-12 col-md-5">
                                         <label class="form-input-label">Email</label>
                                         <input type="email" class="form-control" placeholder="">
@@ -491,9 +490,9 @@ function circle1()
     $(document).ready(function() {
         sliderClient();
 
-        setTimeout(function(){
+        setTimeout(function() {
             $("#portofolio").removeClass('hide');
-        },1000);
+        }, 1000);
     })
 
     let sliderClient = () => {
@@ -509,10 +508,10 @@ function circle1()
         } else {
             var perPage = 4;
         }
-        var splide = new Splide('.splide.splide-client', {            
+        var splide = new Splide('.splide.splide-client', {
             perPage: perPage,
             rewind: true,
-            arrows: false,          
+            arrows: false,
         });
         splide.mount();
     }
