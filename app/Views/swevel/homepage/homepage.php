@@ -141,7 +141,7 @@ function circle1()
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
                         <div class="card-body">
                             <h3 class="card-title">Pelatihan Teknik</h3>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Kami menyediakan berbagai macam pelatihan teknik dengan mentor yang akan membimbing dan membina kalian</p>
                         </div>
                         <img src="/img/kostruksi.webp" class="card-img-bottom" alt="...">
                     </div>
@@ -153,7 +153,7 @@ function circle1()
                         <img src="/img/konsultasi.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h3 class="card-title">Konsultasi Projek</h3>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Kami juga menyediakan jasa konsultasi projek untuk membantu menyelesaikan permasalahan yang dihadapi disegala bidang projek</p>
                         </div>
                     </div>
                 </a>

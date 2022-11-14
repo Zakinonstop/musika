@@ -58,8 +58,8 @@
                 <div class="container">
                     <div class="row justify-content-between flex-row-reverse mt-5">
 
-                        <div class="col-sm-12 col-md-4 img">                            
-                            <img src="/img/File Musika/FAQ.png" width="100%" alt="">                            
+                        <div class="col-sm-12 col-md-4 img">
+                            <img src="/img/File Musika/FAQ.png" width="100%" alt="">
                         </div>
 
                         <div class="col-sm-12 col-md-7">
@@ -103,7 +103,7 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#general1" aria-expanded="false">
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#general1" aria-expanded="false">
                                                     1. Apa itu Multi Visi Karya ?
                                                 </button>
                                             </h2>
@@ -114,7 +114,7 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingTwo">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#general2" aria-expanded="false">
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#general2" aria-expanded="false">
                                                     2. Dimanakah saya bisa menghubungi admin website ?
                                                 </button>
                                             </h2>
@@ -125,7 +125,7 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingThree">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#general3" aria-expanded="false">
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#general3" aria-expanded="false">
                                                     3. Apakah kita perlu membuat sebuah akun untuk mengakses website ini ?
                                                 </button>
                                             </h2>
@@ -142,7 +142,7 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#services1" aria-expanded="false">
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#services1" aria-expanded="false">
                                                     1. Bagaimana cara mengakses kursus dalam website ini?
                                                 </button>
                                             </h2>
@@ -159,8 +159,8 @@
                                         </div>
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#services1" aria-expanded="false">
-                                                    1. Bagaimana cara mengakses pelatihan dalam website ini?
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#services1" aria-expanded="false">
+                                                    2. Bagaimana cara mengakses pelatihan dalam website ini?
                                                 </button>
                                             </h2>
                                             <div id="services1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -175,8 +175,8 @@
                                         </div>
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#services1" aria-expanded="false">
-                                                    1. Bagaimana cara melaukan konsutasi prjek dalam website ini?
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#services1" aria-expanded="false">
+                                                    3. Bagaimana cara melaukan konsutasi projek dalam website ini?
                                                 </button>
                                             </h2>
                                             <div id="services1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -199,7 +199,7 @@
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
                                                 <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#aboutus1" aria-expanded="false">
-                                                    bagaimana cara menghubungi perusahaan  ?
+                                                    bagaimana cara menghubungi perusahaan ?
                                                 </button>
                                             </h2>
                                             <div id="aboutus1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -215,8 +215,8 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#event1" aria-expanded="false">
-                                                    bagaimana cara membeli kursus ? 
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#event1" aria-expanded="false">
+                                                    bagaimana cara membeli kursus ?
                                                 </button>
                                             </h2>
                                             <div id="event1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -233,7 +233,7 @@
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
                                                 <button class="accordion-button collapsed fw-normal fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#course1" aria-expanded="false">
-                                                    bagaimana cara membeli kursus ? 
+                                                    bagaimana cara membeli kursus ?
                                                 </button>
                                             </h2>
                                             <div id="course1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -249,7 +249,7 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#training1" aria-expanded="false">                                               
+                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#training1" aria-expanded="false">
                                                 </button>
                                             </h2>
                                             <div id="training1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
