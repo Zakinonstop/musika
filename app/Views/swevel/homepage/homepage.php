@@ -74,7 +74,7 @@ function circle1()
 <div id="about-us">
     <div class="page-1 pt-5">
         <div class="container">
-            <div class="col-lg-8 col-md-12 col-12 mb-5" >
+            <div class="col-lg-8 col-md-12 col-12 mb-5">
                 <div class="text pt-5" data-aos="fade-right">
                     <h1 class="fw-bold" style="letter-spacing: 0px;">Perusahaan Layanan <span class="ch_color">Jasa Konsultasi di Bidang Konstruksi</span> dan Non Konstruksi</h1>
                     <p class="cover-text my-5">PT. Multi Visi Karya memiliki lebih dari 40 pengalaman pekerjaan dan telah dipercaya oleh banyak pengguna jasa terkemuka mulai dari jasa perencanaan, pengawasan, dan konsultansi teknik sipil lainnya. Memiliki tenaga ahli dengan Sertifikat Keahlian yang diterbitkan oleh Lembaga Pengembangan Jasa Konstruksi.</p>
@@ -158,7 +158,7 @@ function circle1()
                 </a>
             </div>
         </div>
-    </div>    
+    </div>
 </section>
 
 
@@ -188,14 +188,14 @@ function circle1()
             </div>
             <div class="col-lg-6 text-lg-end text-md-center text-sm-center">
                 <h2 class="text-purple fw-bold">Portofolio</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem reiciendis dolorum doloremque eius facilis voluptatum corporis.</p>
+                <p>Berikut ini merupakan dokumentasi projek yang pernah dilakukan oleh PT Multi Visi Karya</p>
             </div>
         </div>
         <div class="image-portofolio text-center">
             <div class="row fadeInUp" data-wow-delay="0.5s">
                 <div class="portfolioFilter clearfix mb-4">
                     <button class="mx-2 p-2 cursor-pointer mb-3 active" data-kategori="semua">semua</button>
-                    <?php foreach($group_portofolio as $x) : ?>
+                    <?php foreach ($group_portofolio as $x) : ?>
                         <button class="mx-2 p-2 cursor-pointer mb-3" data-kategori="<?= $x['kategori']; ?>"><?= $x['kategori']; ?></button>
                     <?php endforeach; ?>
                 </div>
@@ -203,14 +203,14 @@ function circle1()
             <div class="d-flex justify-content-center">
                 <img src="/img/loaderpurple1.gif" style="width:150px" class="loader-portofolio mt-3 hide">
             </div>
-            <div class="row list-portofolio">                
-                <?php foreach($portofolio as $x) : ?>
+            <div class="row list-portofolio">
+                <?php foreach ($portofolio as $x) : ?>
                     <div class="col-lg-3 col-md-6 col-12 mb-4">
                         <img src="/img/portofolio/<?= $x['gambar']; ?>">
                     </div>
                 <?php endforeach; ?>
             </div>
-           
+
         </div>
 </section>
 
@@ -240,29 +240,29 @@ function circle1()
             $(".moreBox").slice(12, 23).css('display', 'none');
             $('#loadLess').css('display', 'none');
             $('#loadMore').css('display', 'block');
-        });    
+        });
 
-        $('.portfolioFilter button').click(function(){
+        $('.portfolioFilter button').click(function() {
             $('.loader-portofolio').removeClass('hide');
             $('.list-portofolio').html('');
             $(".portfolioFilter button").removeClass('active');
-            $(this).addClass('active');            
+            $(this).addClass('active');
             let kategori = $('.portfolioFilter button.active').data('kategori');
             $.ajax({
-                url : '/getPortofolio/'+kategori,
+                url: '/getPortofolio/' + kategori,
                 type: 'get',
-                dataType : 'json',
-                success: function(result){
+                dataType: 'json',
+                success: function(result) {
                     $('.loader-portofolio').addClass('hide');
-                    if(result.code == '200'){
-                        $.each(result.portofolio, function(index, data){
+                    if (result.code == '200') {
+                        $.each(result.portofolio, function(index, data) {
                             $('.list-portofolio').append(`
                                 <div class="col-lg-3 col-md-6 col-12 mb-4">
-                                    <img src="/img/portofolio/`+data.gambar+`">
+                                    <img src="/img/portofolio/` + data.gambar + `">
                                 </div>
                             `);
                         })
-                    }else{                        
+                    } else {
                         $('.list-portofolio').html(`<div class="alert alert-warning">Data tidak ditemukan</div>`)
                     }
                 }
@@ -279,7 +279,7 @@ function circle1()
                 easing: 'linear',
                 queue: false
             }
-        });      
+        });
     });
 </script>
 
@@ -326,12 +326,12 @@ function circle1()
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <p class="fs-4">
                             <span class="fw-bold">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro esse commodi.
+                                Pembelajaran Kursus yang bagus dan berbobot
                             </span class="fw-bold">
                         </p>
                         <div class="p">
-                            <p class="fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptatibus harum iusto ipsa, temporibus, recusandae sequi accusamus porro hic quibusdam sapiente rerum asperiores impedit saepe debitis ut? Voluptatibus, sapiente quae.</p>
-                            <p class="fs-7">created by <span class="fw-semibold ls-05">natasyafw</span></p>
+                            <p class="fs-6"><i>"Kursus pembelajaran menyajikan materi yang jelas dan lengkap disertai video pembelajaran lagi"</i></p>
+                            <p class="fs-7">ddibuat oleh <span class="fw-semibold ls-05">natasya</span></p>
                         </div>
                     </div>
                 </div>
@@ -347,12 +347,12 @@ function circle1()
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <p class="fs-4">
                             <span class="fw-bold">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro esse commodi.
+                                Portofolio projek perancangan desain arsitektur oleh PT Multi Visi Karya sangat bagus dan terjamin kualitasnya.
                             </span class="fw-bold">
                         </p>
                         <div class="p">
-                            <p class="fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptatibus harum iusto ipsa, temporibus, recusandae sequi accusamus porro hic quibusdam sapiente rerum asperiores impedit saepe debitis ut? Voluptatibus, sapiente quae.</p>
-                            <p class="fs-7">created by <span class="fw-semibold ls-05">natasyafw</span></p>
+                            <p class="fs-6"><i>"Dilihat dari foto portofolio pada website PT Multi Visi Kaya memang perusahaan yang kompeten dan memiliki banyak hasil kerja yang memuaskan disetiap klien pelanggan"</i></p>
+                            <p class="fs-7">dibuat oleh <span class="fw-semibold ls-05">romanoff</span></p>
                         </div>
                     </div>
                 </div>
@@ -368,12 +368,12 @@ function circle1()
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <p class="fs-4">
                             <span class="fw-bold">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro esse commodi.
+                                Fitur website yang mudah digunakan dan terlihat menarik
                             </span class="fw-bold">
                         </p>
                         <div class="p">
-                            <p class="fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptatibus harum iusto ipsa, temporibus, recusandae sequi accusamus porro hic quibusdam sapiente rerum asperiores impedit saepe debitis ut? Voluptatibus, sapiente quae.</p>
-                            <p class="fs-7">created by <span class="fw-semibold ls-05">natasyafw</span></p>
+                            <p class="fs-6"><i>"Saya sebagai pengguna baru dalam menggunakan website ini tidak merasa kesulitan dan paham dengan fitur-fitur yang ada dalam website karena websitenya yang menarik dan responsif"</i></p>
+                            <p class="fs-7">dibuat oleh <span class="fw-semibold ls-05">hackeye</span></p>
                         </div>
                     </div>
                 </div>
