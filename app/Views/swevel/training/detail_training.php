@@ -66,10 +66,10 @@
                             <div class="card border-0 card-training cursor-pointer mb-5 shadow br-15">
                                 <div class="card-body">
                                     <div class="text-center py-3">
-                                        <img src="/img/Frame 57.png" class="card-img-top" alt="..." style="width: 200px;">
+                                        <img src="/img/pos.jpg" class="card-img-top" alt="..." style="width: 200px;">
                                     </div>
-                                    <h5 class="card-title text-purple">Training Softskill</h5>
-                                    <p class="card-text small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h5 class="card-title text-purple">Autocad 3D</h5>
+                                    <p class="card-text small">Buktikan kepada calon pemberi kerja bahwa Anda siap dengan tugas tersebut dengan menjadi Autocad 3D Profesional</p>
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="small text-decoration-line-through">Rp 500.000</div>
