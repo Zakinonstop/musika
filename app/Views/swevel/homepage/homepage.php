@@ -188,10 +188,8 @@ function circle1()
             </div>
             <div class="col-lg-6 text-lg-end text-md-center text-sm-center">
                 <h2 class="text-purple fw-bold">Portofolio</h2>
-                <<<<<<< HEAD <p>Berikut ini merupakan dokumentasi projek yang pernah dilakukan oleh PT Multi Visi Karya</p>
-                    =======
-                    <p>Beberapa proyek yang kami kerjakan</p>
-                    >>>>>>> a83ec728ce8007ada2cfdda06e033c740666173e
+                <p>Berikut ini merupakan dokumentasi projek yang pernah dilakukan oleh PT Multi Visi Karya</p>
+
             </div>
         </div>
         <div class="image-portofolio text-center">
@@ -333,8 +331,8 @@ function circle1()
                             </span class="fw-bold">
                         </p>
                         <div class="p">
-                            <p class="fs-6"><i>"Kursus pembelajaran menyajikan materi yang jelas dan lengkap disertai video pembelajaran lagi"</i></p>
-                            <p class="fs-7">ddibuat oleh <span class="fw-semibold ls-05">natasya</span></p>
+                            <p class="fs-6"><i>"Kursus pembelajaran menyajikan materi yang jelas dan lengkap disertai video pembelajaran lagi."</i></p>
+                            <p class="fs-7">dibuat oleh <span class="fw-semibold ls-05">natasya</span></p>
                         </div>
                     </div>
                 </div>
@@ -350,11 +348,11 @@ function circle1()
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <p class="fs-4">
                             <span class="fw-bold">
-                                Portofolio projek perancangan desain arsitektur oleh PT Multi Visi Karya sangat bagus dan terjamin kualitasnya.
+                                Portofolio projek PT Multi Visi Karya terjamin kualitasnya.
                             </span class="fw-bold">
                         </p>
                         <div class="p">
-                            <p class="fs-6"><i>"Dilihat dari foto portofolio pada website PT Multi Visi Kaya memang perusahaan yang kompeten dan memiliki banyak hasil kerja yang memuaskan disetiap klien pelanggan"</i></p>
+                            <p class="fs-6"><i>"Dilihat dari foto portofolio pada website PT Multi Visi Kaya memang perusahaan yang kompeten dan memiliki banyak hasil kerja yang memuaskan disetiap klien pelanggan."</i></p>
                             <p class="fs-7">dibuat oleh <span class="fw-semibold ls-05">romanoff</span></p>
                         </div>
                     </div>
