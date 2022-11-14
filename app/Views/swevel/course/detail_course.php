@@ -8,16 +8,16 @@
         <div class="h3 text-purple fw-bold mb-4 title-course pt-5"></div>
         <div class="row mb-3">
             <div class="col-lg-6 text-center">
-                <img src="" class="detail-img br-15" alt="course">
+                <img src="" class="detail-img br-15">
                 <div class="container mt-4 d-flex justify-content-center">
                     <a href="/course/materi/<?= $id; ?>" class="btn btn-purple btn-sm w-100 btn-lihat-kurikulum hide">Lihat kurikulum</a>
                 </div>
             </div>
-            <div class="col-lg-5 ms-4" style="position:relative;">
+            <div class="col-lg-5 ms-4 penjelasan-course" style="position:relative;">
                 <div class="h4 text-dark mb-3">Penjelasan Kursus</div>
                 <div class="description-course text-muted"></div>
 
-                <div class="mt-5 w-50 card-price hide" style="position:absolute; bottom:0;">
+                <div class="mt-5 w-50 card-price hide">
                     <h5><s class="old_price">Rp </s></h5>
                     <h4 class="text-orange new_price">Rp </h4>
                     <div class="row ">
@@ -127,9 +127,9 @@
                                 <div class="step-number fw-bold">` + data.order + `</div>
                                 <div class="line-after"></div>
                             </div>
-                            <div class="col-lg-5">
+                            <div class="col-lg-5 col-penjelasan-langkah">
                                 <div class="h5">Langkah ` + data.order + `</div>
-                                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, esse libero. Voluptatibus illum doloremque autem neque at! Dolores, dolorem soluta!</div>
+                                <div>Langkah `+data.order+` akan mempelajari mempelajari `+data.title+`</div>
                             </div>
                         </div>
                     `);

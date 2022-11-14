@@ -704,6 +704,9 @@ section#team {
     color: #61AF11;
 }
 
+
+
+
 /* TRAINING */
 
 #training .most-popular img {
@@ -875,6 +878,11 @@ section#team {
     border-radius: 50%;
 }
 
+.card-price{
+    position:absolute; 
+    bottom:0;
+}
+
 /* ======================== */
 
 /* ADMIN */
@@ -1024,6 +1032,16 @@ section#team {
     #menu-course-training {
         margin-top: -200px;
     }
+    .penjelasan-course{
+        margin-top: 50px;
+    }
+    .card-price{
+        position: relative;
+    }
+    .col-line,
+    .col-penjelasan-langkah{
+        display: none;
+    }    
 }
 
 @media only screen and (max-width: 768px) {
