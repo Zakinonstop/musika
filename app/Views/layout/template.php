@@ -26,12 +26,11 @@
 
     <?= $this->renderSection('content'); ?>
 
-    <!-- Back to Top -->
-    <!-- <a href="#" class="btn btn-primary back-to-top"><i class="bi bi-arrow-up"></i></a> -->
-    <a href="https://wa.me/6282215631539" target="_blank" class="btn btn-purple hubungi-kami pb-2">
+    <!-- Back to Top -->    
+    <a href="02746497816" target="_blank" class="btn btn-purple hubungi-kami pb-2">
         <span class="d-flex">
-            <div class="me-2 my-auto"><i class="fa fa-brands fa-whatsapp"></i></div>
-            <div class="my-auto ms-2 " style="margin-top: 15px;"> Hubungi kami</div>
+            <div class="me-2 my-auto"><i class="fa-solid fa-phone"></i></div>
+            <div class="my-auto ms-2 " style="margin-top: 20px;"> Hubungi kami</div>
         </span>
     </a>
 

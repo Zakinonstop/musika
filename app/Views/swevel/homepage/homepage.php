@@ -40,8 +40,9 @@ function circle1()
     .semi-circle .img {
         clip-path: circle(49.9% at 0 50%);
         width: 350px;
+        height: 450px;
         position: relative;
-        z-index: 5
+        z-index: 5;
     }
 
     .semi-circle .bg {
@@ -93,7 +94,7 @@ function circle1()
             <div class="row">
                 <div class="col-lg-6">
                     <div class="semi-circle justify-content-center">
-                        <img src="/img/image 9.png" alt="" class="img">
+                        <img src="/img/kostruksi.webp" alt="" class="img">
                         <img src="/img/Group 2317.png" alt="" class="bg">
                     </div>
                 </div>
@@ -142,14 +143,14 @@ function circle1()
                             <h3 class="card-title">Pelatihan Teknik</h3>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
-                        <img src="https://img.business.com/w/700/aHR0cHM6Ly9pbWFnZXMuYnVzaW5lc3NuZXdzZGFpbHkuY29tL2FwcC91cGxvYWRzLzIwMjIvMDQvMDQwNzQ1NTMvMTU1NDI0NDAxMC5qcGVn" class="card-img-bottom" alt="...">
+                        <img src="/img/kostruksi.webp" class="card-img-bottom" alt="...">
                     </div>
                 </a>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mb-4 d-flex justify-content-lg-start justify-content-md-center justify-content-sm-center d-flex justify-content-center">
                 <a href="/implementasi" class="text-decoration-none text-dark" data-aos="zoom-in-up">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3">
-                        <img src="https://img.business.com/w/700/aHR0cHM6Ly9pbWFnZXMuYnVzaW5lc3NuZXdzZGFpbHkuY29tL2FwcC91cGxvYWRzLzIwMjIvMDQvMDQwNzQ1NTMvMTU1NDI0NDAxMC5qcGVn" class="card-img-top" alt="...">
+                        <img src="/img/konsultasi.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h3 class="card-title">Konsultasi Projek</h3>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

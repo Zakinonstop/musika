@@ -23,8 +23,8 @@
                     </div>
                     <div class="col-md-7">
                         <div class="card-body">
-                            <h5 class="card-title text-purple-100 fw-bold">Pelatihan Softskill</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque. Dui vivamus arcu felis bibendum ut. </p>
+                            <h5 class="card-title text-purple-100 fw-bold">Pelatihan Softskill dan Hardskill</h5>
+                            <p class="card-text">Pelatihan Desain UI/UX yang akan dipandu oleh mentor Bapak Arif. Sebelum dimulai training akan disediakan modul pelatihan yang akan dipelajari dan tugas yang perlu diselesaikan. Penilaian dari tugas projek akhir akan dinilai dan dapat dijadikan sebagai pengalaman dan bukti karya ynag telah dbuat.</p>
                             <div class="row">
                                 <div class="col-sm-8 col-md-6 col-lg-12">
                                     <p class="card-text h6 text-decoration-line-through text-secondary">Rp 500.000</p>
@@ -44,7 +44,7 @@
 </section>
 
 <script>
-   $('.card-training').click(function(){
+    $('.card-training').click(function() {
         window.location.href = "detail-training";
-   })
+    })
 </script>
