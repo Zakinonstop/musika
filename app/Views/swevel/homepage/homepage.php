@@ -128,7 +128,7 @@ function circle1()
 <section id="service" class="pb-5">
     <div class="container pt-5">
         <div class="text-center mb-5 pb-5 ">
-            <h1 class="fw-bold" style="letter-spacing: 0px;"><span class=" text-purple">Pelayanan</span> Kami</h1>
+            <h1 class="fw-bold" style="letter-spacing: 0px;"><span class=" text-purple">Layanan</span> Kami</h1>
             <div class="">
                 <span class="d-block">Kami juga menyediakan berbagai pelatihan dan jasa konsultasi</span>
                 <span class="d-block">dan juga kursus untuk para pelanggan yang ingin berlanggangan</span>
@@ -180,7 +180,7 @@ function circle1()
     </div>
 </div>
 
-<section id="portofolio" class="">
+<section id="portofolio" class="hide">
     <div class="container py-5 my-5">
         <div class="row">
             <div class="col-lg-6 d-sm-none d-lg-block d-md-none">
@@ -188,7 +188,11 @@ function circle1()
             </div>
             <div class="col-lg-6 text-lg-end text-md-center text-sm-center">
                 <h2 class="text-purple fw-bold">Portofolio</h2>
+<<<<<<< HEAD
                 <p>Berikut ini merupakan dokumentasi projek yang pernah dilakukan oleh PT Multi Visi Karya</p>
+=======
+                <p>Beberapa proyek yang kami kerjakan</p>
+>>>>>>> a83ec728ce8007ada2cfdda06e033c740666173e
             </div>
         </div>
         <div class="image-portofolio text-center">
@@ -288,7 +292,7 @@ function circle1()
     <div class="container pt-5">
         <div class="text-center mb-5 mt-4">
             <h2 class="text-purple-100"><span class="fw-bold">Klien</span> Kami</h2>
-            <p>Colaboration with various top companies</p>
+            <p>Kolaborasi dengan berbagai perusahaan </p>
         </div>
         <div class="pb-5">
             <div class="splide splide-client">
@@ -384,8 +388,7 @@ function circle1()
     <section id="contactUs" class="pb-5" style="background-color: #FAF6FF">
         <div class="container">
             <div class="row">
-                <h1 class="mt-5 fw-bold text-center" style="letter-spacing: 0px;"><span class=" text-dark-purple">Kontak</span> Kami</h1>
-                <p class="text-center">Any question or Remarks? Just Write Us a Message</p>
+                <h1 class="mt-5 fw-bold text-center" style="letter-spacing: 0px;"><span class=" text-dark-purple">Kontak</span> Kami</h1>                
             </div>
             <div class="card mt-5 border-0 shadow">
                 <div class="card-body p-0">
@@ -396,7 +399,7 @@ function circle1()
                                 <div class="row justify-content-center text-white">
                                     <div class="col-12 text-center">
                                         <h3 class="fw-bold">Informasi Kontak</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae id rerum saepe.</p>
+                                        <p>Ada pertanyaan atau Komentar? Cukup Tulis Pesan kepada Kami</p>
                                     </div>
 
                                     <div class="col col-11">
@@ -405,11 +408,7 @@ function circle1()
                                                 <i class="fa-solid fa-phone fs-5"></i>
                                             </div>
                                             <div class="col-10">
-                                                <?php foreach ($kontak as $x) : ?>
-                                                    <?php if ($x['name'] == 'phone') : ?>
-                                                        <span><?= $x['description']; ?></span>
-                                                    <?php endif; ?>
-                                                <?php endforeach; ?>
+                                                <span>(0274) 6497816</span>
                                             </div>
                                         </div>
                                     </div>
@@ -420,11 +419,7 @@ function circle1()
                                                 <i class="fa-regular fa-envelope fs-5"></i>
                                             </div>
                                             <div class="col-10">
-                                                <?php foreach ($kontak as $x) : ?>
-                                                    <?php if ($x['name'] == 'envelope') : ?>
-                                                        <span><?= $x['description']; ?></span>
-                                                    <?php endif; ?>
-                                                <?php endforeach; ?>
+                                                <span>musika_jogja@yahoo.co.id</span>
                                             </div>
                                         </div>
                                     </div>
@@ -435,7 +430,7 @@ function circle1()
                                                 <i class="fa-solid fa-location-dot fs-5"></i>
                                             </div>
                                             <div class="col-10">
-                                                <span>Jl Sutrisno No.032,Candran Rt/Rw 10/05 Sidoarum,Godean kabupaten Kab. Sleman.</span>
+                                                <span>Jl Sutrisno No.032, Candran Rt/Rw 10/05 Sidoarum, Godean, kabupaten Sleman.</span>
                                             </div>
                                         </div>
                                     </div>
@@ -444,39 +439,35 @@ function circle1()
 
                             <div class="col2 col-sm-12 col-md-12 col-lg-8">
                                 <form class="row g-3 justify-content-between p-5">
-                                    <div class="col-sm-12 col-md-5">
-                                        <label class="form-input-label">Nama Pertama</label>
-                                        <input type="text" class="form-control" placeholder="write your first name">
-                                    </div>
-                                    <div class="col-sm-12 col-md-5">
-                                        <label class="form-input-label">Nama Terakhir</label>
-                                        <input type="text" class="form-control" placeholder="write your last name">
-                                    </div>
+                                    <div class="col-sm-12 col-md-12">
+                                        <label class="form-input-label">Nama</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>                                    
                                     <div class="col-sm-12 col-md-5">
                                         <label class="form-input-label">Email</label>
-                                        <input type="email" class="form-control" placeholder="write your mail">
+                                        <input type="email" class="form-control" placeholder="">
                                     </div>
                                     <div class="col-sm-12 col-md-5">
                                         <label class="form-input-label">Telepon</label>
-                                        <input type="text" class="form-control" placeholder="08123456789">
+                                        <input type="text" class="form-control" placeholder="">
                                     </div>
                                     <div class="col-sm-12 col-md-12">
                                         <label class="form-input-label">Pesan</label>
-                                        <textarea class="form-control" placeholder="write your message" rows="1"></textarea>
+                                        <textarea class="form-control" placeholder="" rows="1"></textarea>
                                     </div>
                                     <div class="col-md-12">
                                         <p class="mt-3 fs-7 fw-bold">Apa topik yang ingin ditanyakan?</p>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="softwareDevelopment">
-                                            <label class="form-check-label" for="inlineRadio1">Kursus</label>
+                                            <label class="form-check-label cursor-pointer" for="inlineRadio1">Kursus</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="learningManagement">
-                                            <label class="form-check-label" for="inlineRadio2">Pelatihan</label>
+                                            <label class="form-check-label cursor-pointer" for="inlineRadio2">Pelatihan</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="inlineRadio3" value="other">
-                                            <label class="form-check-label" for="inlineRadio3">lainnya</label>
+                                            <label class="form-check-label cursor-pointer" for="inlineRadio3">lainnya</label>
                                         </div>
                                     </div>
                                     <div class="col-12 text-end mt-5 sendMsg">
@@ -499,6 +490,10 @@ function circle1()
 <script>
     $(document).ready(function() {
         sliderClient();
+
+        setTimeout(function(){
+            $("#portofolio").removeClass('hide');
+        },1000);
     })
 
     let sliderClient = () => {
@@ -514,15 +509,10 @@ function circle1()
         } else {
             var perPage = 4;
         }
-        var splide = new Splide('.splide.splide-client', {
-            // type: 'loop',
+        var splide = new Splide('.splide.splide-client', {            
             perPage: perPage,
             rewind: true,
-            arrows: false,
-            // autoplay: true,
-            // speed: 2000,
-            // width: '100%',
-            // padding: '10px',
+            arrows: false,          
         });
         splide.mount();
     }

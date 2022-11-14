@@ -8,8 +8,8 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-2">
                 <ul class="list-unstyled" id="link">
-                    <li><a class="text-decoration-none" href="/course">Course</a></li>
-                    <li><a class="text-decoration-none" href="/training">Training</a></li>
+                    <li><a class="text-decoration-none" href="/course">Kursus</a></li>
+                    <li><a class="text-decoration-none" href="/training">Pelatihan</a></li>
                     <li><a class="text-decoration-none" href="/implementasi">Implementasi</a></li>                    
                 </ul>
             </div>
