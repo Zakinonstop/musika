@@ -230,13 +230,13 @@
         
         #customer-review .bg1 {
             /* background-image: linear-gradient(to right, #f0e5ff, #fff); */
-            background: url("../../asset/image/contactUs/wave.svg");
+            /* background: url("../../asset/image/contactUs/wave.svg"); */
             background-size: cover;
         }
         
         #customer-review .bg2 {
             /* background-image: linear-gradient(to right, #fff, #f0e5ff); */
-            background: url("../../asset/image/contactUs/wave1.svg");
+            /* background: url("../../asset/image/contactUs/wave1.svg"); */
             background-size: cover;
         }
         
