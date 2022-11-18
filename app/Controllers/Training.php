@@ -25,11 +25,12 @@ class Training extends BaseController
         return view('swevel/training/index', $data);
     }
 
-    public function detailTraining()
+    public function detailTraining($id)
     {
         $data = [
             'title' => 'Training',
             'kontak' => $this->KontakModel->findAll(),
+            'id' => $id,
         ];
         return view('swevel/training/detail_training', $data);
     }

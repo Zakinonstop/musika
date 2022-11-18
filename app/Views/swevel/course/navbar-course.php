@@ -13,7 +13,7 @@
                     <a class="nav-link" aria-current="page" href="/training">Pelatihan</a>
                 </li>
                 <li class="nav-item mx-1">
-                    <a class="nav-link" aria-current="page" href="/implementasi">Impementasi</a>
+                    <a class="nav-link" aria-current="page" href="/implementasi">Implementasi</a>
                 </li>
             </ul>            
             <a href="/login" class="btn fw-bold text-purple text-decoration-none">Login</a>                

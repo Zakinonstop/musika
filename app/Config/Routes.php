@@ -52,6 +52,7 @@ $routes->get("/privacy", 'Home::kebijakanPrivasi');
 // training page
 $routes->get('/training', 'Training::index');
 $routes->get('/detail-training', 'Training::detailTraining');
+$routes->get('/detail-training/(:any)', 'Training::detailTraining/$1');
 
 $routes->get('/event', 'Event::index');
 $routes->get('/detail-event', 'Event::detailEvent');

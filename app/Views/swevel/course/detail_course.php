@@ -47,7 +47,7 @@
         <input type="hidden" name="" id="limit-course" value="3">
         <input type="hidden" id="input-categ" value="semua" readonly>
         <div class="d-flex justify-content-center mt-3">
-            <a href="/course" class="btn btn-purple px-5 btn-more-course hide">Lihat semua</a>
+            <a href="/edu" class="btn btn-purple px-5 btn-more-course hide">Lihat semua</a>
         </div>
     </div>
 </section>
