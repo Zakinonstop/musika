@@ -134,8 +134,13 @@
                 <a href="/#kursus" class="text-decoration-none text-dark" data-aos="zoom-in-up">
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3" style="max-width: 350px;">
                         <div class="card-body">
+<<<<<<< HEAD
                             <h3 class="card-title text-center">Pelatihan Teknik</h3>
                             <p class="card-text text-center">Ikuti berbagai kursus dan pelatihan terkait BIM yang akan difasilitasi oleh mentor handal yang akan membantu menaikkan level keahlian Anda</p>
+=======
+                            <h3 class="card-title">Pelatihan Teknik</h3>
+                            <p class="card-text">Kami menyediakan berbagai macam pelatihan teknik dengan mentor yang akan membimbing dan membina kalian</p>
+>>>>>>> 7a9fde547cd401387d3751c1752701cf7b28f184
                         </div>
                         <img src="/img/kostruksi.webp" class="card-img-bottom" alt="">
                     </div>
@@ -146,8 +151,13 @@
                     <div class="card card-service shadow mb-md-4 mb-sm-4 mx-3" style="max-width: 350px;">
                         <img src="/img/konsultasi.jpg" class="card-img-top" alt="">
                         <div class="card-body">
+<<<<<<< HEAD
                             <h3 class="card-title text-center">Konsultasi Proyek</h3>
                             <p class="card-text text-center">Dukungan tenaga ahli dan tim teknis yang kompeten dan tersertifikasi yang siap membantu menyelesaikan proyek Anda lebih cepat</p>
+=======
+                            <h3 class="card-title">Konsultasi Projek</h3>
+                            <p class="card-text">Kami juga menyediakan jasa konsultasi projek untuk membantu menyelesaikan permasalahan yang dihadapi disegala bidang projek</p>
+>>>>>>> 7a9fde547cd401387d3751c1752701cf7b28f184
                         </div>
                     </div>
                 </a>

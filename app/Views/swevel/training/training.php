@@ -23,6 +23,7 @@
         </div>
     </div>
 </section>
+<<<<<<< HEAD
 
 <section id="course">
     <div class="container my-5">
@@ -45,6 +46,30 @@
                         <div class="input-group mt-5">
                             <input type="text" class="form-control" name="search" data-kategori="course" id="search-course-training" placeholder="Ketik pelatihan yang ingin Anda ikuti">
                             <button class="btn btn-green text-white px-4" id="btn-search-course-training">Cari</button>
+=======
+<section id="training">
+    <div class="training-list mx-lg-5 px-4 mt-5 pt-5">
+        <h2 class="fw-bold mb-5 text-center text-purple">Daftar Pelatihan</h2>
+        <?php for ($i = 1; $i <= 5; $i++) : ?>
+            <div class="card mb-3 border-0 shadow mb-5 py-4 br-15 cursor-pointer card-training">
+                <div class="row g-0">
+                    <div class="col-md-3 text-sm-center">
+                        <img src="/img/pos.jpg" class="img-fluid rounded-start" alt="..." style="max-width: 200px;">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <h5 class="card-title text-purple-100 fw-bold">Autodesk Certified Professional: Revit for Architectural Design Exam Prep (part <?= $i; ?>)</h5>
+                            <p class="card-text">Buktikan kepada calon pemberi kerja bahwa Anda siap dengan tugas tersebut dengan menjadi Autodesk Certified Professional</p>
+                            <div class="row">
+                                <div class="col-sm-8 col-md-6 col-lg-12">
+                                    <p class="card-text h6 text-decoration-line-through text-secondary">Rp 500.000</p>
+                                    <p class="card-text h5 fw-bold text-orange">Rp 325.000</p>
+                                </div>
+                                <div class="col-sm-4 col-md-6 col-lg-12 text-sm-end  text-lg-start">
+                                    <a href="/detail-training" class="btn btn-sm btn-purple-100 mt-2">Lihat detail</a>
+                                </div>
+                            </div>
+>>>>>>> 7a9fde547cd401387d3751c1752701cf7b28f184
                         </div>
                     </div>
                 </div>

@@ -90,50 +90,50 @@
                     <div class="row mt-5">
                         <div class="col-sm-12 col-md-5 justify-content-center d-flex">
                             <ul class="nav flex-column nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-                                <button class="nav-link active fw-normal" data-bs-toggle="pill" data-bs-target="#general" type="button" role="tab" aria-selected="true">Umum</button>
+                                <button class="nav-link active fw-normal" data-bs-toggle="pill" data-bs-target="#pertanyaan" type="button" role="tab" aria-selected="true">Umum</button>
                                 <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#services" type="button" role="tab" aria-selected="false">Layanan</button>
-                                <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#aboutUs" type="button" role="tab" aria-selected="false">Tentang Kita</button>
+                                <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#aboutUs" type="button" role="tab" aria-selected="false">Tentang kami</button>
                                 <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#event" type="button" role="tab" aria-selected="false">Kursus</button>
                                 <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#course" type="button" role="tab" aria-selected="false">Pelatihan</button>
-                                <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#training" type="button" role="tab" aria-selected="false">Implementasi</button>
+                                <button class="nav-link fw-normal" data-bs-toggle="pill" data-bs-target="#training" type="button" role="tab" aria-selected="false">Konsultasi</button>
                             </ul>
                         </div>
                         <div class="col-sm-12 col-md-7">
                             <div class="tab-content" id="pills-tabContent">
 
-                                <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab" tabindex="0">
+                                <div class="tab-pane fade show active" id="pertanyaan" role="tabpanel" aria-labelledby="pertanyaan-tab" tabindex="0">
                                     <div class="accordion accordion-flush" id="accordionFlushExample">
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#general1" aria-expanded="false">
-                                                    General #1
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#general1" aria-expanded="false">
+                                                    1. Apa itu Multi Visi Karya ?
                                                 </button>
                                             </h2>
                                             <div id="general1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body">Sebuah Biro Jasa Konsultasi yang bergerak dalam bidang asa Perencana dan Pengawas Konstruksi yang terdiri dari bidang Arsitektur, Sipil, Jasa Inspeksi Teknis, Tata Lingkungan dan Survey, bahkan Jasa Non Konstruksi (Pendidikan, Perindustrian, Perdagangan, dan lainya).</div>
                                             </div>
                                         </div>
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingTwo">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#general2" aria-expanded="false">
-                                                    General #2
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#general2" aria-expanded="false">
+                                                    2. Dimanakah saya bisa menghubungi admin website ?
                                                 </button>
                                             </h2>
                                             <div id="general2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                                <div class="accordion-body">Melalui fitur hubungi kami. Dan nanti akan diarahkan menuju whatsapp</div>
                                             </div>
                                         </div>
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingThree">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#general3" aria-expanded="false">
-                                                    General #3
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#general3" aria-expanded="false">
+                                                    3. Apakah kita perlu membuat sebuah akun untuk mengakses website ini ?
                                                 </button>
                                             </h2>
                                             <div id="general3" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                                <div class="accordion-body">Jika kita hanya melihat website maka tidak perlu membuat akun. Namun jika kita ingin mengakses layanan kursus maka kita perlu akses login akun.</div>
                                             </div>
                                         </div>
 
@@ -145,12 +145,51 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#services1" aria-expanded="false">
-                                                    Services #1
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#services1" aria-expanded="false">
+                                                    1. Bagaimana cara mengakses kursus dalam website ini?
                                                 </button>
                                             </h2>
                                             <div id="services1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body">
+                                                    <ul>
+                                                        <li>Yang pertama pilihlah materi kursus yang diinginkan.</li>
+                                                        <li>Klik beli kursus, bisa melihat dulu deskripsi singkat tentang kursus dengan klik thumbnail, kemudian beli kursus</li>
+                                                        <li>Kemudian login akun</li>
+                                                        <li>Akhirnya anda dapat mengakses kursus dengan materi, video pembelajaran, dan kuis yang perlu dikerjakan bertahap</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#services1" aria-expanded="false">
+                                                    2. Bagaimana cara mengakses pelatihan dalam website ini?
+                                                </button>
+                                            </h2>
+                                            <div id="services1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <ul>
+                                                        <li>Yang pertama pilihlah materi pelatihan yang diinginkan.</li>
+                                                        <li>Klik beli gabung sekarang, bisa melihat dulu deskripsi singkat tentang kursus dengan klik thumbnail, kemudian beli kursus</li>
+                                                        <li>Anda dapat mengakses pelatihan dengan materi dan modul pembelajaran bersama mentor</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#services1" aria-expanded="false">
+                                                    3. Bagaimana cara melaukan konsutasi projek dalam website ini?
+                                                </button>
+                                            </h2>
+                                            <div id="services1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <ul>
+                                                        <li>Yang pertama pilihlah bagian konsultasi projek.</li>
+                                                        <li>Klik hubungi kami</li>
+                                                        <li>Anda dapat mencoba menghubungi admin grup melalui nomer whatsapp</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -162,12 +201,12 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#aboutus1" aria-expanded="false">
-                                                    About Us #1
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#aboutus1" aria-expanded="false">
+                                                    bagaimana cara menghubungi perusahaan ?
                                                 </button>
                                             </h2>
                                             <div id="aboutus1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body">pada halaman homepage atau halaman depan, klik tombol kontak kami, kemudian akan di arahkan pada halaman kontak. pada halaman tersebut tersedia nomor dan email perusahaan.</div>
                                             </div>
                                         </div>
 
@@ -179,12 +218,12 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#event1" aria-expanded="false">
-                                                    Event #1
+                                                <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#event1" aria-expanded="false">
+                                                    bagaimana cara membeli kursus ?
                                                 </button>
                                             </h2>
                                             <div id="event1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body">Course dapat dibeli dengan mengklik tombol beli kursus pada halaman course</div>
                                             </div>
                                         </div>
 
@@ -196,12 +235,12 @@
 
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
-                                                <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#course1" aria-expanded="false">
-                                                    Course #1
+                                                <button class="accordion-button collapsed fw-normal fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#course1" aria-expanded="false">
+                                                    bagaimana cara membeli kursus ?
                                                 </button>
                                             </h2>
                                             <div id="course1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body">Course dapat dibeli dengan mengklik tombol beli kursus pada halaman course</div>
                                             </div>
                                         </div>
 
@@ -214,11 +253,10 @@
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="flush-headingOne">
                                                 <button class="accordion-button collapsed fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#training1" aria-expanded="false">
-                                                    Training #1
                                                 </button>
                                             </h2>
                                             <div id="training1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body"></div>
                                             </div>
                                         </div>
 

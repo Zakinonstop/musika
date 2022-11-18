@@ -96,66 +96,118 @@ $routes->get('/submission', 'User::submission');
 
 
 // ================== ADMIN ===================
-$routes->get('/dashboard', 'Admin::index');
-$routes->get('/pembayaran', 'Admin::pembayaran');
-$routes->post("/save-pembayaran", 'Admin::simpan_pembayaran');
-$routes->post("/update-pembayaran", 'Admin::update_pembayaran');
-$routes->delete('/delete-pembayaran', 'Admin::hapus_pembayaran');
+// $routes->get('/dashboard', 'Admin::index');
+// $routes->get('/pembayaran', 'Admin::pembayaran');
+// $routes->post("/save-pembayaran", 'Admin::simpan_pembayaran');
+// $routes->post("/update-pembayaran", 'Admin::update_pembayaran');
+// $routes->delete('/delete-pembayaran', 'Admin::hapus_pembayaran');
 
-// milestone
-$routes->get('/admin-milestone', 'Admin::milestone');
-$routes->get('/add-milestone', 'Admin::addMilestone');
-$routes->get('/edit-milestone/(:any)', 'Admin::editMilestone/$1');
-$routes->post('/save-milestone', 'Admin::saveMilestone');
-$routes->post('/update-milestone/(:any)', 'Admin::updateMilestone/$1');
-$routes->delete('/delete-milestone/(:any)', 'Admin::deleteMilestone/$1');
+// // milestone
+// $routes->get('/admin-milestone', 'Admin::milestone');
+// $routes->get('/add-milestone', 'Admin::addMilestone');
+// $routes->get('/edit-milestone/(:any)', 'Admin::editMilestone/$1');
+// $routes->post('/save-milestone', 'Admin::saveMilestone');
+// $routes->post('/update-milestone/(:any)', 'Admin::updateMilestone/$1');
+// $routes->delete('/delete-milestone/(:any)', 'Admin::deleteMilestone/$1');
 
-// Kontak
-$routes->get('/admin-kontak', 'Admin::kontak');
-$routes->post('/add-kontak', 'Admin::addKontak');
-$routes->post('/update-kontak', 'Admin::updateKontak');
-$routes->delete('/delete-kontak', 'Admin::deleteKontak');
+// // Kontak
+// $routes->get('/admin-kontak', 'Admin::kontak');
+// $routes->post('/add-kontak', 'Admin::addKontak');
+// $routes->post('/update-kontak', 'Admin::updateKontak');
+// $routes->delete('/delete-kontak', 'Admin::deleteKontak');
 
-// profile
-$routes->get('/profile', 'Admin::profile');
-$routes->get('/profile/(:any)', 'Admin::editProfile/$1');
-$routes->post('/update-profile/(:any)', 'Admin::updateProfile/$1');
-// $routes->delete('/profile/(:any)', 'Admin::deleteProfile');
+// // profile
+// $routes->get('/profile', 'Admin::profile');
+// $routes->get('/profile/(:any)', 'Admin::editProfile/$1');
+// $routes->post('/update-profile/(:any)', 'Admin::updateProfile/$1');
+// // $routes->delete('/profile/(:any)', 'Admin::deleteProfile');
 
-// FAQ
-$routes->get('/admin-faq', 'Admin::faq');
-$routes->post('/add-faq', 'Admin::addFaq');
-$routes->post('/answer-question', 'Admin::updateAnswerFaq');
-$routes->delete('/delete-faq', 'Admin::deleteFaq');
+// // FAQ
+// $routes->get('/admin-faq', 'Admin::faq');
+// $routes->post('/add-faq', 'Admin::addFaq');
+// $routes->post('/answer-question', 'Admin::updateAnswerFaq');
+// $routes->delete('/delete-faq', 'Admin::deleteFaq');
 
-$routes->get('/admin-about-us', 'Admin::aboutus');
+// $routes->get('/admin-about-us', 'Admin::aboutus');
 
 // Artikel
 // $routes->get('/admin-artikel', 'Admin::article');
-$routes->get('/edit-artikel', 'Admin::editArticle');
-$routes->get('/add-artikel', 'Admin::addArticle');
-$routes->post('/save-artikel', 'Admin::simpanArtikel');
-$routes->post('/update-artikel/(:segment)', 'Admin::updateArtikel/$1');
-$routes->get('/admin-artikel', 'Admin::daftar_artikel');
-$routes->get('/artikel/tambah', 'Admin::tambah_artikel');
-$routes->get('/artikel-edit/(:segment)', 'Admin::edit_artikel/$1');
-$routes->delete('/hapus-artikel', 'Admin::hapus_artikel');
+// $routes->get('/edit-artikel', 'Admin::editArticle');
+// $routes->get('/add-artikel', 'Admin::addArticle');
+// $routes->post('/save-artikel', 'Admin::simpanArtikel');
+// $routes->post('/update-artikel/(:segment)', 'Admin::updateArtikel/$1');
+// $routes->get('/admin-artikel', 'Admin::daftar_artikel');
+// $routes->get('/artikel/tambah', 'Admin::tambah_artikel');
+// $routes->get('/artikel-edit/(:segment)', 'Admin::edit_artikel/$1');
+// $routes->delete('/hapus-artikel', 'Admin::hapus_artikel');
 
+<<<<<<< HEAD
+=======
+// =============================================
+
+// Course
+$routes->get('/course', 'Course::index');
+$routes->get('/course/detail/(:any)', 'Course::detailCourse/$1');
+$routes->get('/kurikulum', 'Course::detailKurikulum');
+
+// API Course 
+$routes->get('/getCourse', 'Course::getApiCourse');
+$routes->get('/searchCourse', 'Course::searchApiCourse');
+$routes->get('/getDetailCourse', 'Course::getApiDetailCourse');
+$routes->post('/course-getApi', 'Course::getApi');
+$routes->get('/course-getApi', 'Course::getApi');
+
+// $routes->get('cobaApi', function () {
+//     $data = ['title' => 'percobaan API'];
+//     return view('swevel/course/coba-api', $data);
+// });
+
+// =============================================
+
+>>>>>>> 7a9fde547cd401387d3751c1752701cf7b28f184
 // Team
-$routes->get('/admin-team', 'Admin::team');
-$routes->post('/add-team', 'Admin::saveTeam');
-$routes->post('/update-team', 'Admin::updateTeam');
-$routes->delete('/delete-team', "Admin::deleteTeam");
+// $routes->get('/admin-team', 'Admin::team');
+// $routes->post('/add-team', 'Admin::saveTeam');
+// $routes->post('/update-team', 'Admin::updateTeam');
+// $routes->delete('/delete-team', "Admin::deleteTeam");
 
-// Portofolio
-$routes->get('/admin-portofolio', 'Admin::portofolio');
-$routes->post('/add-portofolio', 'Admin::addPortofolio');
-$routes->delete('/delete-portofolio', 'Admin::deletePortofolio');
-$routes->get('/getPortofolio/(:any)','Home::getPortofolio/$1');
+// // Portofolio
+// $routes->get('/admin-portofolio', 'Admin::portofolio');
+// $routes->post('/add-portofolio', 'Admin::addPortofolio');
+// $routes->delete('/delete-portofolio', 'Admin::deletePortofolio');
+// $routes->get('/getPortofolio/(:any)','Home::getPortofolio/$1');
 
-$routes->get('/admin-event', 'Admin::event');
+// $routes->get('/admin-event', 'Admin::event');
 
+<<<<<<< HEAD
 $routes->get('/more-event', 'Admin::moreEvent');
+=======
+// $routes->get('/more-event', 'Admin::moreEvent');
+$routes->get('/pembayaran/(:num)', 'Home::payment/$1');
+$routes->get('/pembayaran/detail', 'Home::detail_payment');
+$routes->post('/save-purchase', 'Home::save_purchase');
+
+$routes->get('/notyetapproved', 'Course::not_yet_approved');
+$routes->get('purchase-done', 'Home::purchase_message');
+
+// konsultasi
+$routes->get('/implementasi', 'Konsultasi::index');
+
+
+// ===================== User =====================
+// materi
+// $routes->get('/course-materi/(:any)/', 'Course::materi/$1');
+// $routes->get('/course-materi/(:any)/(:num)', 'Course::materi/$1/$2');
+$routes->get('/status', 'User::status');
+$routes->get("/course/materi/(:any)", "User::materi/$1");
+$routes->get("/video", "Course::getVideo");
+$routes->get('/materi/kuis', 'User::confirmKuis');
+$routes->get("/kuis", "User::kuis");
+$routes->get("/getKuis", "Course::getApiKuis");
+$routes->get("/course-saved", "User::savedCourse");
+$routes->get('/submission', 'User::submission');
+
+>>>>>>> 7a9fde547cd401387d3751c1752701cf7b28f184
 
 // =============================================
 
