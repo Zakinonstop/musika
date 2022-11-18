@@ -164,6 +164,11 @@
             border-color: #61af11 !important;
         }
         
+        .btn-green:hover {
+            background: #88c946 !important;
+            border-color: #88c946 !important;
+        }
+        
         .bg-light-purple {
             background-color: #f0e5ff !important;
         }

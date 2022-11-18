@@ -2,68 +2,67 @@
 <?= $this->section('content'); ?>
 <?= $this->include('swevel/course/navbar-course'); ?>
 
+<style>
+    .search-event .input-group {
+        width: 30em;
+        margin-right: 0;
+    }
+</style>
+
 <section id="course-top">
     <div class="wrapper">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-12 col-12">
-                    <div class="fw-bold text-white h1">Carilah Daftar Course Sesuai kebutuhanmu.</div>
-                    <p class="h3">
-                        Kami menyediakan berbagai macam course yang dapat kamu ikuti sesuai dengan kebutuhanmu dan kemampuanmu. Yuk, cari course yang kamu inginkan!
-                    </p>
+                    <h1 class="fw-bold" style="letter-spacing: 0;">Tingkatkan <span class="ch_color">Level Keahlian</span> Anda!</h1>
+                    <p class="cover-text my-4" style="line-height: 1.8;font-size: 17px;">Kami menyediakan berbagai topik kursus di bidang engineering seperti implementasi BIM dan estimasi biaya proyek konstruksi sesuai kebutuhan dan kemampuan Anda</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="course" class="pb-5 mb-5">
-    <div class="container mt-5">
-        <section id="popular-course">
-            <div class="row my-5 pb-3">
+<section id="course">
+    <div class="container my-5">
+        <div id="popular-course">
+            <div class="row my-5">
                 <div class="col-lg-7">
-                    <div class="h1 fw-bold"><span class="text-purple-100">Kursus</span></div>
-                    <input type="hidden" name="" id="limit-course" value="0">
+                    <h1 class="fw-bold text-purple" style="letter-spacing: 0;">Kursus</h1>
+                    <input type="hidden" id="limit-course" value="0">
                     <div class="list-category-course">
-                        <span class="fw-bold">Kategori : </span>
-                        <input type="hidden" id="input-categ" value="semua" readonly>
-                        <button class="btn btn-purple btn-sm mx-2 btn-category-course" data-categ="semua">Semua</button>
+                        <span style="margin-right: 4px;">Kategori: </span>
+                        <input type="hidden" id="input-categ" value="">
+                        <button class="btn btn-green text-white btn-sm mx-1 px-3 rounded-pill btn-category-course" data-categ="">Semua</button>
+                        <button class="btn btn-light btn-sm mx-1 px-3 rounded-pill btn-category-course" data-categ="basic">Basic</button>
+                        <button class="btn btn-light btn-sm mx-1 px-3 rounded-pill btn-category-course" data-categ="intermediate">Intermediate</button>
+                        <button class="btn btn-light btn-sm mx-1 px-3 rounded-pill btn-category-course" data-categ="advanced">Advanced</button>
                     </div>
                 </div>
                 <div class="col-lg-5 col-search-course">
                     <div class="search-event">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="search" data-kategori="course" id="search-course-training" placeholder="Cari kursus">
-                            <button class="btn btn-purple" type="button" id="btn-search-course-training">Cari</button>
+                        <div class="input-group mt-5">
+                            <input type="text" class="form-control" name="search" data-kategori="course" id="search-course-training" placeholder="Ketik kursus yang ingin Anda ikuti">
+                            <button class="btn btn-green text-white px-4" id="btn-search-course-training">Cari</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="d-flex justify-content-center">
-                <img src="/img/loaderpurple1.gif" alt="" class="skeleton">
+                <img src="/img/loaderpurple1.gif" class="skeleton mb-5" style="width: 60px;">
             </div>
-            <div class="row.">
-                <div class="splide. popular-course">
-                    <div class="splide.__track">
-                        <div class="splide.__list pb-5 row" id="card-list-course"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <div id="card-list-course" class="row" data-aos="zoom-out"></div>
+        </div>
     </div>
-    <div class="container mt-5">
+    
+    <!-- <div class="container mt-5">
         <main id="faq">
             <section id="faqTop">
                 <div class="container">
                     <div class="row justify-content-between flex-row-reverse mt-5">
 
                         <div class="col-sm-12 col-md-4 img">
-                            <!-- <div class="card border-0">
-                    <div class="card-body p-0"> -->
                             <img src="/img/File Musika/FAQ.png" width="100%" alt="">
-                            <!-- </div>
-                </div> -->
                         </div>
 
                         <div class="col-sm-12 col-md-7">
@@ -233,13 +232,102 @@
                 </div>
             </section>
         </main>
-    </div>
+    </div> -->
 </section>
 
 <script>
-    $(document).ready(function() {
+    function refreshCourse() {
+        let inputSearch = $('#search-course-training').val();
+        
+        if (inputSearch === '') {
+            getCourse('https://stufast.id/api/course/author/filter/title/2?title=');
+        } else {
+            getCourse('https://stufast.id/api/course/author/filter/title/2?title=' + inputSearch);
+        }
+    }
+    
+    function getCourse(url) {
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'json',
+            success: function(result) {
+                $('.skeleton').removeClass('hide');
+                $('#card-list-course').html('');
+                
+                let countData = result.length;
+                if (countData > 0) {
+                    $.each(result, function(i, data) {                    
+                        $('#card-list-course').append(`
+                            <div class="col-md-6 col-lg-4 col-sm-12 col-course mb-5">
+                                <div class="card card-course border-0 shadow br-15">                
+                                    <div class="image-content card-thumbnail-course cursor-pointer" data-id="` + data.course_id + `">
+                                        <div class="text-center p-2 btn-light-50-hover-0 position-absolute small br-end-10 mt-3">` + data.category[0].name + `</div> 
+                                        <img src="https://musika.id/img/portofolio/perpustakaan%20(4).jpg" alt="` + data.title + `" style="width: 100%;">
+                                    </div>                
+                                    <div class="card-content card-content-course px-4 py-4">
+                                        <h5 class="card-title fw-bold lh-base cursor-pointer" data-id="` + data.course_id + `">` + data.title + `</h5>                                                                            
+                                        <div class="row">
+                                            <div class="col-sm-8 col-md-6 col-lg-12">
+                                                <p class="card-text h6 text-decoration-line-through text-secondary">Rp ` + formatRupiah(data.old_price) + `</p>
+                                                <p class="card-text h5 fw-bold text-orange">Rp ` + formatRupiah(data.new_price) + `</p>
+                                            </div>                        
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-10">
+                                                <div class="btn btn-green text-white cursor-pointer btn-buy-course" style="width: 108%;">Beli Kursus</div>
+                                            </div>
+                                            <div class="col-md-2 text-center">                        
+                                                <div class="btn-chart-course cursor-pointer"><i class="fa-solid fa-cart-shopping" style="margin-top: 2px;"></i></div>                                             
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                            </div> 
+                        `);
+                    });
+                } else {
+                    $('#card-list-course').append(`
+                        <div class="d-flex justify-content-center">   
+                            <div class="alert alert-warning w-50 text-center br-20" role="alert">
+                                Maaf, kata kunci yang Anda cari tidak ditemukan.<br>
+                                Silakan coba menggunakan kata kunci lain.
+                            </div>
+                        </div> 
+                    `);
+                }
+                
+                $('.skeleton').addClass('hide');
+                
+                $('.card-thumbnail-course, .card-content-course .card-title').click(function() {
+                    let id = $(this).data('id');
+                    window.location.href = '/edu/detail/' + id;
+                })
+                
+                $('.btn-buy-course, .btn-chart-course').click(function() {
+                    window.location.href = '/login';
+                })
+            },
+            error: function(result, ajaxOptions, thrownError) {
+                $('.skeleton').addClass('hide');
+                $('#card-list-course').html('');
+                
+                $('#card-list-course').append(`
+                    <div class="d-flex justify-content-center">   
+                        <div class="alert alert-warning w-50 text-center br-20" role="alert">
+                            Maaf, kursus tidak tersedia untuk saat ini.<br>
+                            Silakan ulangi beberapa saat lagi.
+                        </div>
+                    </div> 
+                `);
+            }
+        })
+    }
 
-        searchHover = function() {
+    $(document).ready(function() {
+        getCourse('https://stufast.id/api/course/author/2');
+        
+        /*searchHover = function() {
             let input = $('#faq .inputfaq input');
             let i = $('#faq .inputfaq i');
             input.on('focus', function() {
@@ -260,12 +348,14 @@
             let mediaMd = window.matchMedia("(min-width: 577px)");
             let ul = $('#question ul');
             let parentUl = ul.parent();
+            
             if (mediaSm.matches) {
                 if (ul.hasClass('flex-column') && parentUl.hasClass('d-flex')) {
                     ul.removeClass('flex-column');
                     parentUl.removeClass('d-flex');
                 }
             }
+            
             if (mediaMd.matches) {
                 if (!ul.hasClass('flex-column') && !parentUl.hasClass('d-flex')) {
                     ul.addClass('flex-column');
@@ -274,28 +364,32 @@
             }
         }
         questionFunc();
+        
         $(window).resize(function() {
             questionFunc();
-        });
-
-        getCourse('https://lms.lazy2.codes/api/course');
-        getBundling();
-
-        $("img").bind("error", function() {
-            $(this).attr("src", "/img/imagenotavailable.jpg");
-        });
-
-        $('#btn-search-course-training').click(function() {
-            refreshCourse();
         })
-        $('#search-course-training').on('keypress', function(e) {
-            if (e.which == 13) {
-                refreshCourse();
-            }
-        });
+
+        getBundling();*/
+    })
+    
+    $('.btn-category-course').click(function(){
+        let getCateg = $(this).data('categ');
+        
+        $('.btn-category-course').removeClass('btn-green text-white').addClass('btn-light');
+        $(this).removeClass('btn-light').addClass('btn-green text-white');
+        $('#input-categ').val(getCateg);
+        
+        getCourse('https://stufast.id/api/course/author/filter/category/2?cat='+getCateg);
+    })
+    
+    $('#btn-search-course-training').click(function() {
+        refreshCourse();
+    })
+    
+    $('#search-course-training').on('keypress', function(e) {
+        if (e.which == 13) refreshCourse();
     })
 </script>
 
-<script src="/js/course.js"></script>
 <?= $this->include('swevel/course/footer-course'); ?>
 <?= $this->endSection(); ?>

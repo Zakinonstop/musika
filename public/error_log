@@ -1,0 +1,25 @@
+[14-Nov-2022 04:49:05 UTC] PHP Warning:  require(/home/musikaid/public_html/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/musikaid/public_html/index.php on line 32
+[14-Nov-2022 04:49:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/musikaid/public_html/../app/Config/Paths.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/musikaid/public_html/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/musikaid/public_html/index.php on line 32
+[14-Nov-2022 04:49:16 UTC] PHP Warning:  require(/home/musikaid/public_html/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/musikaid/public_html/index.php on line 32
+[14-Nov-2022 04:49:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/musikaid/public_html/../app/Config/Paths.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/musikaid/public_html/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/musikaid/public_html/index.php on line 32
+[14-Nov-2022 04:49:17 UTC] PHP Warning:  require(/home/musikaid/public_html/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/musikaid/public_html/index.php on line 32
+[14-Nov-2022 04:49:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/musikaid/public_html/../app/Config/Paths.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/musikaid/public_html/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/musikaid/public_html/index.php on line 32
+[14-Nov-2022 04:49:59 UTC] PHP Warning:  require(/home/musikaid/public_html/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/musikaid/public_html/index.php on line 32
+[14-Nov-2022 04:49:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/musikaid/public_html/../app/Config/Paths.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/musikaid/public_html/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/musikaid/public_html/index.php on line 32
+[14-Nov-2022 04:50:05 UTC] PHP Warning:  require(/home/musikaid/public_html/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/musikaid/public_html/index.php on line 32
+[14-Nov-2022 04:50:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/musikaid/public_html/../app/Config/Paths.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/musikaid/public_html/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/musikaid/public_html/index.php on line 32

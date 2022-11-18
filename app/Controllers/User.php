@@ -21,6 +21,7 @@ class User extends BaseController
         ];
         return view('swevel/admin/dashboard', $data);
     }
+    
     public function materi($id)
     {
         // $email = session()->get('swevel_email');
@@ -37,7 +38,7 @@ class User extends BaseController
         // }        
 
         $data = [
-            'title' => 'Materi',
+            'title' => 'Materi Kursus',
             'category' => 'materi',
             'course' => $id
         ];

@@ -5,7 +5,7 @@ $(document).ajaxComplete(function() {
         
     $("img").bind("error", function() {
         $(this).attr("src", "/img/poster.png");
-    });    
+    });
 })
 // Format Rupiah
 var formatRupiah = function(num) {

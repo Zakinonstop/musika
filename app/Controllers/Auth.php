@@ -15,11 +15,11 @@ class Auth extends BaseController
     {
         $payment = $this->request->getVar('payment');
 
-        if(session()->get('swevel_email')){            
+        if (session()->get('swevel_email')){            
             return redirect('dashboard');
         }
         $data = [
-            'title' => 'Login',
+            'title' => 'Masuk',
             'payment' => $payment
         ];
         return view('swevel/auth', $data);

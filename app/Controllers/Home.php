@@ -27,16 +27,30 @@ class Home extends BaseController
         $this->UsersModel = new UsersModel();
         $this->PurchaseModel = new PurchaseModel();
     }
+    
+    function url_get_contents($url) {
+        if (!function_exists('curl_init')){ 
+            die('CURL is not installed!');
+        }
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $output = curl_exec($ch);
+        curl_close($ch);
+        return $output;
+    }
+    
     public function index()
     {
         $data = [
-            'title' => 'PT Multi Visi Karya',
-            'profile' => $this->ProfileModel->findAll(),
-            'milestoneLimit' => $this->MilestoneModel->orderBy('year', 'asc')->findAll(2),
-            'milestone' => $this->MilestoneModel->orderBy('year', 'asc')->findAll(),
+            'title' => 'Beranda',
+            //'profile' => $this->ProfileModel->findAll(),
+            //'milestoneLimit' => $this->MilestoneModel->orderBy('year', 'asc')->findAll(2),
+            //'milestone' => $this->MilestoneModel->orderBy('year', 'asc')->findAll(),
             'kontak' => $this->KontakModel->findAll(),
-            'team' => $this->TeamModel->findAll(),            
-            'artikel' => $this->ArtikelModel->limit(3)->findAll(),
+            //'team' => $this->TeamModel->findAll(),            
+            //'artikel' => $this->ArtikelModel->limit(3)->findAll(),
+            'kursus' => json_decode($this->url_get_contents('https://stufast.id/api/course/latest/author/2?limit=3')),
             'group_portofolio' => $this->PortofolioModel->groupBy('kategori')->orderBy('kategori','asc')->findAll(),
             'portofolio' => $this->PortofolioModel->findAll(4),
         ];

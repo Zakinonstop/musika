@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?= $title . ' - PT Multi Visi Karya' ?></title>
     <link rel="shortcut icon" href="/img/logo/favi-logo2.png" type="image/x-icon">
+    
     <script src="asset/custom_vendor/jquery/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="/asset/custom_vendor/bootstrap5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/asset/custom_vendor/fontawesome612/css/all.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/swevel_style.css">
     <link rel="stylesheet" href="/asset/css/custom.css">
-    <title>PT Multi Visi Karya | Masuk</title>
+    
+    <style>
+        body { background: #f5fbed; }
+        
+        #auth .wave1 { height: 36%; }
+        
+        #login .form-control {
+            height: 47px;
+            border-radius: 5px;
+            padding-left: 20px;
+            background: #f4f4f4;
+        }
+        
+        .btn-green:hover {
+            background: #88c946 !important;
+            border-color: #88c946 !important;
+            opacity: 1;
+        }
+        
+        .btn-orange {
+            background-color: #ff7f02 !important;
+            border-color: #ff7f02 !important;
+            opacity: 1;
+        }
+        
+        .btn-orange:hover {
+            background-color: #ff9c3b !important;
+            border-color: #ff9c3b !important;
+        }
+    </style>
 </head>
 
 <body id="auth">
     <nav class="navbar navbar-expand-lg bg-transparent position-absolute w-100 shadow-none" style="top: 0;">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="/"><img src="/img/logo/musika-logo2.png" alt="" style="max-width: 150px; height:35px;"></a>
+            <!--<a class="navbar-brand fw-bold" href="/"><img src="/img/logo/favi-logo2.png" alt="" style="max-width: 150px;height: 50px;"></a>-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,82 +63,39 @@
 
         <section id="login">
             <div class="row justify-content-center h-100">
-                <div class="col-sm-12 col-md-10 col-lg-5 my-auto px-4 mt-md-5">
+                <div class="col-sm-12 col-md-10 col-lg-5 my-auto px-4" style="margin-top: 10rem !important;">
                     <div class="card p-3 shadow">
                         <div class="card-body">
-                            <div class="text-center h4 my-4">
-                                Masuk akun
-                            </div>
+                            <center><a class="fw-bold" href="/"><img src="/img/logo/favi-logo2.png" alt="" style="max-width: 150px;height: 50px;"></a></center>
+                            <div class="text-center fw-bold h4 mt-3 mb-5">PT Multi Visi Karya</div>
                             <div class="message-register success my-3"></div>
                             <form action="#" method="POST" autocomplete="off" id="form-login">
                                 <?= csrf_field(); ?>
+                                <input type="hidden" name="payment" value="<?= $payment ?>">
                                 <div class="mb-3">
-                                    <input id="email" type="text" class="form-control" name="email" placeholder="Email" autofocus>
+                                    <input id="email" type="text" class="form-control" name="email" placeholder="Ketik email Anda" autofocus>
                                     <div class="invalid-feedback email"></div>
                                 </div>
                                 <div class="mb-3">
-                                    <input id="password" type="password" class="form-control" name="password" placeholder="Kata sandi">
+                                    <input id="password" type="password" class="form-control" name="password" placeholder="Ketik password Anda">
                                     <div class="invalid-feedback password"></div>                                    
                                 </div>
-                                <div class="mb-3">
-                                    <button id="btnLogin" type="button" class="btn btn-login w-100 text-white" style="background:#61af11;" name="login">Masuk</button>
+                                <div class="mb-5">
+                                    <a href="#" style="color: #407a04;font-style: normal;font-size: 15px;position: absolute;right: 30px;">Lupa Password Anda?</a>                                 
                                 </div>
-                                <input type="hidden" name="payment" id="" value="<?= $payment; ?>">
                             </form>
+                            <div class="mb-1">
+                                <button class="btn btn-orange text-white btn-login mt-2 w-100 rounded-pill" id="btnLogin" name="login" style="letter-spacing: 0;padding: 10px;">MASUK</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section id="register" class="d-none">
-            <div class="row justify-content-center h-100">
-                <div class="col-sm-12 col-md-9 my-auto px-4">
-                    <div class="card p-3">
-                        <div class="card-body">
-                            <div class="text-center fw-bold fs-5 my-4">
-                                Create New Account!
-                            </div>
-                            <div class="message-register failed my-3"></div>
-                            <form action="#register.php" method="POST" id="form-register">
-                                <?= csrf_field(); ?>
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="register-fullname" name="fullname" placeholder="Fullname">
-                                        <div class="invalid-feedback fullname"></div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="register-email" name="email" placeholder="Email">
-                                        <div class="invalid-feedback email"></div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 mb-3">
-                                        <input type="password" class="form-control" id="register-password" name="password" placeholder="Password">
-                                        <div class="invalid-feedback password"></div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 mb-3">
-                                        <input type="password" class="form-control" id="register-confirm-password" name="confirm-password" placeholder="Confirm Password">
-                                        <div class="invalid-feedback confirm-password"></div>
-                                        <div class="small text-end"><input type="checkbox" name="" id="show-password-register"><label for="show-password-register" class="text-muted ms-2 mt-2 cursor-pointer">Lihat password</label></div>
-                                    </div>
-                                </div>
-                                <div class="mb-3 text-center">
-                                    <button type="button" class="btn btn-register w-50" name="create">CREATE</button>
-                                </div>
-                            </form>
-                            <div class="text-center">
-                                <code class="text-dark fw-bold">
-                                    <p class="m-0">Alreade have an account?</p>
-                                    <a id="toLogin" href="#login">Login here</a><br>
-                                </code>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-        </section> -->
-
         <div class="wave2"></div>
     </div>
+    
     <script src="/asset/custom_vendor/bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="/asset/custom_vendor/fontawesome612/js/all.min.js"></script>
 
@@ -121,18 +111,19 @@
                     $('#register').addClass('d-none');
                     $('#login').removeClass('d-none');
                 }
-            });
+            })
 
             $('.navbar-toggler').hide();
 
             $('#toRegister').click(function() {
                 $('#login').addClass('d-none');
                 $('#register').removeClass('d-none');
-            });
+            })
+            
             $('#toLogin').click(function() {
                 $('#register').addClass('d-none');
                 $('#login').removeClass('d-none');
-            });
+            })
 
             $('#show-password-login, #show-password-register').change(function() {
                 if (this.checked) {
@@ -143,7 +134,7 @@
             })
 
             $('#btnLogin').click(function() {
-                $(this).html(`<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>`);
+                /*$(this).html(`<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>`);
                 $('#login #email,#login #password').removeClass("is-invalid");
                 $('.invalid-feedback').html('');
                 $(".message-register.success").removeClass('alert alert-success').html('');
@@ -178,18 +169,21 @@
                             }
                         }
                     })
-                }
-            });
+                }*/
+            })
+            
             $('#login #email,#login #password').keypress(function(e) {
                 if (e.which == 13) {
                     $('#btnLogin').click();
                 }
             })
+            
             $('#register input').keypress(function(e) {
                 if (e.which == 13) {
                     $(".btn-register").click();
                 }
             })
+            
             $('.btn-register').click(function() {
                 $(this).html(`<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>`);
                 $('#register #register-email,#register #register-password,#register #register-fullname, #register #register-confirm-password').removeClass("is-invalid");
@@ -238,9 +232,7 @@
                     })
                 }
             });
-
         });
     </script>
 </body>
-
 </html>

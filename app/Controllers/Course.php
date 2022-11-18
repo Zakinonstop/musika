@@ -19,6 +19,18 @@ class Course extends BaseController
         $this->MateriModel = new MateriModel();
         $this->PurchaseModel = new PurchaseModel();
     }
+    
+    function url_get_contents($url) {
+        if (!function_exists('curl_init')){ 
+            die('CURL is not installed!');
+        }
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $output = curl_exec($ch);
+        curl_close($ch);
+        return $output;
+    }
 
     public function index($category = null)
     {
@@ -27,7 +39,7 @@ class Course extends BaseController
         }
 
         $data = [
-            'title' => 'Course',
+            'title' => 'Kursus',
             'category' => $category,
             'kontak' => $this->KontakModel->findAll(),
         ];
@@ -36,7 +48,6 @@ class Course extends BaseController
 
     public function detailCourse($id)
     {
-
         if (session()->get('swevel_email')) {
             $cek_purchase = $this->PurchaseModel->where('id_course', $id)->first();
             if ($cek_purchase) {
@@ -51,16 +62,18 @@ class Course extends BaseController
         } else {
             $link = '<a href="/payment/' . $id . '" class="btn btn-sm btn-purple-100">Join Now</a>';
         }
+        
         $data = [
-            'title' => 'Detail Course',
+            'title' => 'Detail Kursus',
+            'rincian' => json_decode($this->url_get_contents('https://stufast.id/api/course/detail/'.$id)),
+            'kursus' => json_decode($this->url_get_contents('https://stufast.id/api/course/latest/author/2?limit=3')),
             'kontak' => $this->KontakModel->findAll(),
-            'id' => $id,
             'link' => $link,
         ];
         return view('swevel/course/detail_course', $data);
     }
 
-    public function detailKurikulum()
+    public function detailKurikulum($id)
     {
         $data = [
             'title' => 'Detail Kurikulum',

@@ -11,21 +11,13 @@ class Konsultasi extends BaseController
     {
         $this->KontakModel = new KontakModel();
     }
+    
     public function index()
     {
         $data = [
-            'title' => 'Implementasi',
+            'title' => 'Pendampingan',
             'kontak' => $this->KontakModel->findAll(),
         ];
-        return view('swevel/Implementasi/konsultasi', $data);
+        return view('swevel/pendampingan/pendampingan', $data);
     }
-
-    //     public function detailkonsultasi()
-    //     {
-    //         $data = [
-    //             'title' => 'Detail Konsultasi',
-    //             'konsultasi' => $this->KonsultasiModel->findAll(),
-    //         ];
-    //         return view('swevel/konsultasi/detail_konsultasi', $data);
-    //     }
 }

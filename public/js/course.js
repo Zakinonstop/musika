@@ -5,107 +5,105 @@ $(document).ajaxComplete(function(){
 
     $('.btn-category-course').click(function(){
         let getCateg = $(this).data('categ');
-        $('.btn-category-course').removeClass('btn-purple').addClass('btn-light');
-        $(this).removeClass('btn-light').addClass('btn-purple');
+        $('.btn-category-course').removeClass('btn-green').addClass('btn-light');
+        $(this).removeClass('btn-light').addClass('btn-green');
         $('.skeleton').removeClass('hide');
         $('#card-list-course').html('');
-        
         $('#input-categ').val(getCateg);
-        getCourse('https://lms.lazy2.codes/api/course');                    
-     })
+        getCourse('https://lms.lazy2.codes/api/course/author/2');
+    })
 });
 
 function refreshCourse() {
-     $('.skeleton').removeClass('hide')
-     $('#card-list-course').html('');
+    $('.skeleton').removeClass('hide')
+    $('#card-list-course').html('');
 
-     let inputSearch = $('#search-course-training').val();
-     if (inputSearch == '') {
-         getCourse('https://lms.lazy2.codes/api/course');
-     } else {
-         getCourse('https://lms.lazy2.codes/api/course/find/' + inputSearch);
-     }
- }
+    let inputSearch = $('#search-course-training').val();
+    if (inputSearch === '') {
+        getCourse('https://lms.lazy2.codes/api/course/author/2');
+    } else {
+        getCourse('https://lms.lazy2.codes/api/course/find/' + inputSearch);
+    }
+}
 
- function getCourse(url) {
-     let getUrl = url;
-     $.ajax({
-         url: getUrl,
-         type: 'GET',
-         dataType: 'json',
-         success: function(result) {
-             let countData = result.length;
-             if (countData >= 1) {
-                 $('.skeleton').addClass('hide')
-                 $('#card-list-course').html('');
-                 $.each(result, function(i, data) {                    
+function getCourse(url) {
+    let getUrl = url;
+    
+    $.ajax({
+        url: getUrl,
+        type: 'GET',
+        dataType: 'json',
+        success: function(result) {
+            let countData = result.length;
+            if (countData >= 1) {
+                $('.skeleton').addClass('hide')
+                $('#card-list-course').html('');
+                $.each(result, function(i, data) {                    
                      $('#card-list-course').append(`
-                        <div class="col-md-6 col-lg-4 col-sm-12 col-course mb-5" data-id="` + data.course_id + `">
-                            <div class="card card-course border-0 cursor-pointer shadow br-15" data-id="` + data.course_id + `">                
+                        <div class="col-md-6 col-lg-4 col-sm-12 col-course mb-5">
+                            <div class="card card-course border-0 shadow br-15">                
                                 <div class="image-content card-thumbnail-course cursor-pointer" data-id="` + data.course_id + `">
-                                    <div class="card-image.">
+                                    <div class="card-image">
                                         <div class="course-img-polygon">
                                             <img src="" alt="" class="card-img">
                                         </div>
                                         <div class="text-center p-2 btn-light-50-hover-0 w-50 position-absolute small br-end-10 category-course-other category-course-`+data.course_id+`" style="z-index:5; margin-top: -35px;"></div>                                                                                
                                     </div>
                                 </div>                
-                                <div class="card-content card-content-course cursor-pointer ps-4 py-4"  data-id="` + data.course_id + `">
-                                    <h5 class="card-title fw-bold lh-base ">` + data.title + `</h5>                                                                            
+                                <div class="card-content card-content-course px-4 py-4">
+                                    <h5 class="card-title fw-bold lh-base cursor-pointer" data-id="` + data.course_id + `">` + data.title + `</h5>                                                                            
                                     <div class="row">
                                         <div class="col-sm-8 col-md-6 col-lg-12">
                                             <p class="card-text h6 text-decoration-line-through text-secondary">Rp ` + formatRupiah(data.old_price) + `</p>
                                             <p class="card-text h5 fw-bold text-orange">Rp ` + formatRupiah(data.new_price) + `</p>
                                         </div>                        
                                     </div>
-                                </div>
-                                <div class="row m-0 mb-3">
-                                    <div class="col-10">
-                                        <div class="btn btn-purple btn-sm w-100 btn-buy-course">Beli Kursus</div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-10">
+                                            <div class="btn btn-green text-white btn-buy-course" style="width: 108%;">Beli Kursus</div>
+                                        </div>
+                                        <div class="col-md-2 text-center">                        
+                                            <div class="btn-chart-course"><i class="fa-solid fa-cart-shopping" style="margin-top: 2px;"></i></div>                                             
+                                        </div>
                                     </div>
-                                    <div class="col-2 p-0 align-self-center">                        
-                                        <div class="btn-chart-course"><i class="fa-solid fa-cart-shopping"></i></div>                                                
-                                    </div>
-                                </div>                
+                                </div>          
                             </div>
                          </div>
                         `);
-                 });       
+                });       
 
-                   // sorting ascending list menu sidebar materi
-            var $parentMenu = $("#card-list-course"),
-            $listMenu = $parentMenu.children("div");
-            $listMenu.sort(function(a, b) {
-                var an = a.getAttribute("data-id"),
-                    bn = b.getAttribute("data-id");
-                if (parseInt(an) > parseInt(bn)) {
-                    return 1;
+                // sorting ascending list menu sidebar materi
+                var $parentMenu = $("#card-list-course"),
+                $listMenu = $parentMenu.children("div");
+                $listMenu.sort(function(a, b) {
+                    var an = a.getAttribute("data-id"),
+                        bn = b.getAttribute("data-id");
+                    if (parseInt(an) > parseInt(bn)) {
+                        return 1;
+                    }
+                    if (parseInt(an) < parseInt(bn)) {
+                        return -1;
+                    }
+                    return 0;
+                });
+                $listMenu.detach().appendTo($parentMenu);     
+                // end sorting          
+
+                $('.btn-more-course').removeClass("hide");                 
+
+                let limit = $('#limit-course').val();
+                if (limit > 0) {
+                    $('.col-course').slice(limit, countData).remove();
                 }
-                if (parseInt(an) < parseInt(bn)) {
-                    return -1;
-                }
-                return 0;
-            });
-            $listMenu.detach().appendTo($parentMenu);     
-            // end sorting          
-
-                 $('.btn-more-course').removeClass("hide");                 
-
-                 let limit = $('#limit-course').val();
-                 if (limit > 0) {
-                     $('.col-course').slice(limit, countData).remove();
-                 }
 
                 //  get category course                
-                 $.each(result, function(i, data) {    
+                /*$.each(result, function(i, data) {    
                     if(data.category){
                         if (data.category.length <= 0) {
                             $('.category-course-other').html('-');                            
                         } else {
                             $.each(data.category, function(i, categ) {
-                                $('.list-category-course').append(`
-                                    <button class="btn btn-light btn-sm mx-2 btn-category-course" data-categ="`+categ.name+`">` + categ.name + `</button>
-                                `);                            
+                                $('.list-category-course').append(`<button class="btn btn-light btn-sm mx-2 px-3 rounded-pill btn-category-course" data-categ="`+categ.name+`">` + categ.name + `</button>`);                            
 
                                 $('.category-course-' + categ.course_id).html(categ.name);                                                              
                                 $('.category-course-' + categ.course_id).removeClass('category-course-other');                                                              
@@ -113,10 +111,10 @@ function refreshCourse() {
                                 let categId = $('.category-course-' + categ.course_id);
                                 let getCategVal = $('#input-categ').val();  
                                                             
-                                if(getCategVal == 'semua')  {
+                                if (getCategVal == 'semua')  {
                                     $(categId).parent().parent().parent().show();
                                     $('.category-course-other').parent().parent().parent().parent().show();
-                                }else{                                                                
+                                } else {                                                                
                                     if (getCategVal == categHtml) {          
                                         $('.category-course-other').parent().parent().parent().parent().hide();                          
                                         $(categId).parent().parent().parent().parent().show();                                    
@@ -138,9 +136,7 @@ function refreshCourse() {
                         }
 
                         $.each(data.tag, function(i, dataa) {
-                            $('.menu-tag').append(`                                                    
-                            <button type="button" class="btn btn-light mx-3 tag-name">` + dataa.name + `</button>
-                        `);
+                            $('.menu-tag').append(`<button class="btn btn-light mx-3 tag-name">` + dataa.name + `</button>`);
 
                             // remove duplicate
                             var seen = {};
@@ -153,40 +149,38 @@ function refreshCourse() {
                             });
                             // end remove
                         });
-                    }else{
+                    } else {
                         $('.category-course-other').html('-');                        
                     }
-
-                 });       
-                          
-             } else {
-                 $('.skeleton').addClass('hide')
-                 $('#card-list-course').append(`
+                }); */      
+            } else {
+                $('.skeleton').addClass('hide');
+                $('#card-list-course').append(`
                     <div class="d-flex justify-content-center">   
                         <div class="alert alert-warning w-75 text-center br-20" role="alert">
-                            Maaf, keyword yang anda cari tidak ditemukan.
+                            Maaf, keyword yang Anda cari tidak ditemukan
                         </div>
                     </div> 
                 `)
-             }
+            }
 
-             $('.card-thumbnail-course, .card-content-course').click(function() {
-                 let id = $(this).data('id');
-                 window.location.href = '/course/detail/' + id;
-             })
-         },
-         error: function(result, ajaxOptions, thrownError) {
-             $('.skeleton').addClass('hide')
-             $('#card-list-course').append(`
+            $('.card-thumbnail-course, .card-content-course .card-title').click(function() {
+                let id = $(this).data('id');
+                window.location.href = '/edu/detail/' + id;
+            })
+        },
+        error: function(result, ajaxOptions, thrownError) {
+            $('.skeleton').addClass('hide');
+            $('#card-list-course').append(`
                 <div class="d-flex justify-content-center">   
                     <div class="alert alert-warning w-75 text-center br-20" role="alert">
-                        Maaf, course tidak tersedia.
+                        Maaf, course tidak tersedia
                     </div>
                 </div> 
             `);
-         }
-     })
- }
+        }
+    })
+}
  
 
 function selectKategori() {
